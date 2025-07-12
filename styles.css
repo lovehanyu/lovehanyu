@@ -152,6 +152,11 @@ body {
   padding: 3rem 1rem;
   position: relative;
 }
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;  /* ⬅ Giúp ảnh nhân vật căn đáy */
+}
 .hero h1 {
   color: var(--main-purple);
   font-size: 2rem;
