@@ -204,8 +204,13 @@ body {
   align-items: center;
 }
 .nv-img {
-  transform: scale(1.8); /* phóng to 120% */
+  align-self: flex-end;   
+  height: auto;
+  max-height: 100%;        
+  transform: scale(1.8);   
+  object-fit: contain;
 }
+
 /* CTA button */
 .cta-button {
   margin-top: 1.5rem;
