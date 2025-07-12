@@ -149,10 +149,10 @@ body {
 /* HERO bên ngoài */
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
-  padding: 3rem 1rem 0; /* 🧨 bỏ padding-bottom */
+  padding: 3rem 1rem 2rem; /* ✅ thêm 2rem padding-bottom */
   position: relative;
-  height: 700px; /* ✳️ hoặc đặt cố định chiều cao nếu cần */
-  overflow: hidden; /* tránh tràn ảnh nếu nhân vật quá cao */
+  height: auto; /* ⚠️ dùng auto để tính chiều cao theo nội dung */
+  overflow: hidden;
 }
 .hero h1 {
   color: var(--main-purple);
