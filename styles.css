@@ -199,12 +199,10 @@ body {
   position: absolute;
   bottom: 0;              /* ✅ Sát đáy khối .hero */
   right: 5rem;            /* 📏 Cách lề phải một khoảng */
-  height: 800px;          /* Tuỳ chọn: tăng/giảm kích thước */
-  transform: none;        /* Bỏ scale nếu cần chính xác */
-  z-index: 1;             /* Đảm bảo nổi trên background */
-}
-  /* ✅ Cố định căn đáy của nhân vật với ảnh nền */
-  align-self: flex-end;
+  height: 800px;          /* Tăng chiều cao nếu cần */
+  transform: none;
+  z-index: 1;
+  align-self: flex-end;   /* ✅ Căn đáy với phần còn lại */
   margin-bottom: 0;
 }
 
