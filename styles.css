@@ -60,8 +60,8 @@ body {
   letter-spacing: 2px;
   animation: glow 4s infinite alternate;
   cursor: default;
-  line-height: **1.7**; /* tăng thêm chiều cao dòng */
-  padding: **1rem 0 1.2rem**; /* tăng padding trên & dưới */
+  line-height: 1.7; 
+  padding: 1rem 0 1.2rem;
   overflow: visible;
 }
 @keyframes glow {
