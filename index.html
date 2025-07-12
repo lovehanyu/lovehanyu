@@ -3,43 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Love Hanyu - Trang chủ</title>
-  <!-- Font hỗ trợ tiếng Việt + tiếng Trung -->
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Noto+Sans+SC&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>Love Hanyu - Học Tiếng Trung Giao Tiếp</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="top-container">
+<!-- 🔱 HEADER -->
+<header class="header-container">
   <div class="header-top">
-    <!-- Logo và domain -->
-    <div class="logo-section">
+    <div class="logo-block">
       <img src="logo.png" alt="Logo">
-      <div class="domain">www.<span>lovehanyu</span>.com</div>
+      <div class="domain-text">www.<span>lovehanyu</span>.com</div>
     </div>
-
-    <!-- Slogan + icon -->
-    <div class="slogan-section">
-      <span class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</span>
+    <div class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
+    <div class="social-search">
       <div class="social-icons">
         <img src="fb.png" alt="Facebook">
         <img src="tiktok.png" alt="TikTok">
         <img src="yt.png" alt="YouTube">
-        <img src="phone-icon.png" alt="Call">
+        <img src="phone-icon.png" alt="Phone">
         <img src="mail-icon.png" alt="Email">
       </div>
-    </div>
-
-    <!-- Ô tìm kiếm -->
-    <div class="search-box">
-      <input type="text" placeholder="Tìm kiếm...">
-      <img src="find-icon.png" alt="Tìm">
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Tìm kiếm...">
+        <img src="find-icon.png" id="search-btn" alt="Search">
+      </div>
     </div>
   </div>
 
-  <!-- MENU ngang -->
-  <nav class="main-menu">
-    <a href="index.html"><img src="home-icon.png" class="icon"> TRANG CHỦ</a>
+  <!-- 📌 MENU -->
+  <nav class="main-nav">
+    <a href="#trang-chu"><img src="home-icon.png" class="icon"> TRANG CHỦ</a>
     <a href="#gioi-thieu">GIỚI THIỆU</a>
     <a href="#khoa-hoc">KHOÁ HỌC</a>
     <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
@@ -48,165 +43,119 @@
     <a href="#tai-lieu">TÀI LIỆU</a>
     <a href="#bai-viet">BÀI VIẾT</a>
   </nav>
-</div>
-  
-  <section class="hero">
-    <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
-    <div class="learning-options">
-      <div class="item">
-        <h3>TỰ HỌC TIẾNG TRUNG</h3>
-        <p>Hướng dẫn tự học Tiếng Trung theo lộ trình</p>
-      </div>
-      <div class="item">
-        <h3>HỌC TIẾNG TRUNG LỚP ONLINE</h3>
-        <p>Học online với giáo viên qua Zoom, lớp học khoảng 6–8 học viên</p>
-      </div>
-      <div class="item">
-        <h3>HỌC TIẾNG TRUNG TẠI TRUNG TÂM</h3>
-        <p>Học trực tiếp với giáo viên tại trung tâm Love Hanyu (Phổ Yên – Thái Nguyên)</p>
-      </div>
+</header>
+
+<!-- 💡 SECTION TRANG CHỦ -->
+<section class="hero" id="trang-chu">
+  <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
+  <div class="learning-options">
+    <div class="item">
+      <h3>TỰ HỌC TIẾNG TRUNG</h3>
+      <p>Lộ trình bài bản dành cho người mới bắt đầu.</p>
     </div>
-    <a href="#dang-ky" class="cta-button">ĐĂNG KÝ NGAY >>></a>
-    <div class="side-icons">
-      <img src="phone-icon.png" alt="Gọi">
-      <img src="messenger-icon.png" alt="Messenger">
-      <img src="zalo-icon.png" alt="Zalo">
+    <div class="item">
+      <h3>HỌC ONLINE</h3>
+      <p>Học qua Zoom với giáo viên, lớp nhỏ 6-8 học viên.</p>
     </div>
-    <img src="nv trang chu.png" alt="Nhân vật" class="nv-img">
-  </section>
-
-  <!-- Section: Giới thiệu -->
-<section id="gioi-thieu" style="padding: 3rem 1rem; background-color: #f9f3fc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Giới thiệu về Love Hanyu</h2>
-    <p style="line-height: 1.6; font-size: 1rem; margin-bottom: 1rem;">
-      Love Hanyu là trung tâm đào tạo tiếng Trung được thành lập với sứ mệnh giúp mọi người học ngôn ngữ một cách hiệu quả, dễ hiểu và thú vị. Với đội ngũ giáo viên trẻ trung, nhiệt huyết và nhiều năm kinh nghiệm, chúng tôi mong muốn tạo nên một cộng đồng học tập tích cực, truyền cảm hứng và gần gũi.
-    </p>
-    <p style="line-height: 1.6; font-size: 1rem;">
-      Tại Love Hanyu, bạn có thể học từ cơ bản đến nâng cao, luyện thi HSK hoặc chỉ đơn giản là học để giao tiếp hàng ngày. Chúng tôi kết hợp phương pháp giảng dạy truyền thống và công nghệ hiện đại để mang đến trải nghiệm học tập tốt nhất cho từng học viên.
-    </p>
+    <div class="item">
+      <h3>HỌC TẠI TRUNG TÂM</h3>
+      <p>Giao tiếp trực tiếp cùng giáo viên tại Phổ Yên – Thái Nguyên.</p>
+    </div>
   </div>
+  <a href="#dang-ky" class="cta-button">ĐĂNG KÝ NGAY >>></a>
+  <div class="side-icons">
+    <img src="phone-icon.png" alt="Call">
+    <img src="messenger-icon.png" alt="Messenger">
+    <img src="zalo-icon.png" alt="Zalo">
+  </div>
+  <img src="nv trang chu.png" alt="Nhân vật" class="nv-img">
 </section>
 
-<!-- Section: Khoá học -->
-<section id="khoa-hoc" style="padding: 3rem 1rem; background-color: #fffafc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Khoá học tại Love Hanyu</h2>
-    <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
-      <li>Khoá học Sơ cấp 1 & 2 – nền tảng vững chắc cho người mới bắt đầu.</li>
-      <li>Khoá học Trung cấp – mở rộng từ vựng, luyện phản xạ và ngữ pháp nâng cao.</li>
-      <li>Khoá luyện thi HSK 3, 4, 5 – chiến lược ôn luyện & đề thi chuẩn.</li>
-      <li>Khoá học Giao tiếp – tình huống thực tế, thực hành hàng ngày.</li>
-      <li>Khoá học cho trẻ em – học qua hình ảnh, âm thanh, trò chơi.</li>
-    </ul>
-  </div>
+<!-- 📖 GIỚI THIỆU -->
+<section id="gioi-thieu" class="section">
+  <h2>Giới thiệu về Love Hanyu</h2>
+  <p>Love Hanyu được thành lập từ 2017, đã đào tạo hơn 3000 học viên với sứ mệnh "Giúp bạn yêu thích và thành thạo tiếng Trung giao tiếp". Trung tâm kết hợp phương pháp học hiện đại và cá nhân hoá.</p>
 </section>
 
-<!-- Section: Lịch khai giảng -->
-<section id="lich-khai-giang" style="padding: 3rem 1rem; background-color: #f9f3fc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Lịch khai giảng</h2>
-    <p style="line-height: 1.6; font-size: 1rem;">Khóa mới khai giảng vào đầu mỗi tháng. Đăng ký sớm để giữ chỗ và nhận tài liệu học miễn phí!</p>
-    <ul style="margin-top: 1rem; line-height: 1.6;">
-      <li><strong>Ngày 5 hàng tháng:</strong> Lớp sơ cấp (online + offline)</li>
-      <li><strong>Ngày 10 hàng tháng:</strong> Lớp luyện thi HSK</li>
-      <li><strong>Ngày 15 hàng tháng:</strong> Lớp giao tiếp ứng dụng</li>
-    </ul>
-  </div>
+<!-- 🎓 KHOÁ HỌC -->
+<section id="khoa-hoc" class="section light">
+  <h2>Các khoá học</h2>
+  <ul>
+    <li>Sơ cấp (SC1, SC2): 10 tuần - nền tảng vững chắc.</li>
+    <li>Trung cấp: luyện ngữ pháp và phản xạ nâng cao.</li>
+    <li>Luyện HSK 3–5: Chiến lược và đề thi chuẩn.</li>
+    <li>Giao tiếp ứng dụng theo chủ đề.</li>
+  </ul>
 </section>
 
-<!-- Section: Tự học -->
-<section id="tu-hoc" style="padding: 3rem 1rem; background-color: #fffafc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Tự học tiếng Trung</h2>
-    <p style="line-height: 1.6; font-size: 1rem;">Bạn có thể bắt đầu tự học tiếng Trung với tài liệu được biên soạn bởi Love Hanyu, bao gồm:</p>
-    <ul style="margin-top: 1rem; line-height: 1.6;">
-      <li>1000 từ vựng tiếng Trung phổ biến nhất</li>
-      <li>50 cấu trúc ngữ pháp quan trọng</li>
-      <li>Bài luyện nghe, nói và đọc mỗi ngày</li>
-      <li>Flashcard, app luyện viết chữ Hán</li>
-    </ul>
-  </div>
+<!-- 🗓 LỊCH KHAI GIẢNG -->
+<section id="lich-khai-giang" class="section">
+  <h2>Lịch khai giảng</h2>
+  <p>Lớp mới bắt đầu vào các ngày 5, 15, và 25 hàng tháng.</p>
 </section>
 
-<!-- Section: Thi thử HSK -->
-<section id="thi-thu-hsk" style="padding: 3rem 1rem; background-color: #f9f3fc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Thi thử HSK miễn phí</h2>
-    <p style="line-height: 1.6; font-size: 1rem;">Luyện đề thi thật, đếm giờ và chấm điểm tự động.</p>
-    <ul style="margin-top: 1rem; line-height: 1.6;">
-      <li>HSK 3 – 4 – 5</li>
-      <li>Hiển thị đáp án & giải thích ngay sau khi nộp bài</li>
-      <li>Có thể thi lại nhiều lần để nâng điểm</li>
-    </ul>
-  </div>
+<!-- 💻 TỰ HỌC -->
+<section id="tu-hoc" class="section light">
+  <h2>Tự học tiếng Trung</h2>
+  <ul>
+    <li>1000 từ vựng + Flashcard luyện nhớ nhanh.</li>
+    <li>50 cấu trúc ngữ pháp ứng dụng thực tế.</li>
+    <li>Audio, video luyện nghe - nói - đọc - viết.</li>
+  </ul>
 </section>
 
-<!-- Section: Tài liệu học tập -->
-<section id="tai-lieu" style="padding: 3rem 1rem; background-color: #fffafc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Tài liệu học tập</h2>
-    <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
-      <li>PDF ngữ pháp & từ vựng theo từng chủ đề</li>
-      <li>Video bài giảng ngắn dễ hiểu</li>
-      <li>Danh sách từ HSK cấp 1–6</li>
-      <li>Audio luyện nghe – chép chính tả</li>
-    </ul>
-  </div>
+<!-- 🧪 THI THỬ -->
+<section id="thi-thu-hsk" class="section">
+  <h2>Thi thử HSK miễn phí</h2>
+  <p>Luyện đề online – chấm điểm tự động – giải thích chi tiết.</p>
 </section>
 
-<!-- Section: Đăng ký -->
-<section id="dang-ky" style="padding: 3rem 1rem; background-color: #fff;">
-  <div style="max-width: 600px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">Đăng ký học thử miễn phí</h2>
-    <form action="#" method="post" style="display: flex; flex-direction: column; gap: 1rem;">
-      <input type="text" name="fullname" placeholder="Họ và tên" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
-      <input type="email" name="email" placeholder="Email" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
-      <input type="tel" name="phone" placeholder="Số điện thoại" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
-      <textarea name="note" rows="4" placeholder="Ghi chú thêm (nếu có)" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;"></textarea>
-      <button type="submit" style="padding: 0.8rem; background: var(--main-purple); color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Gửi đăng ký</button>
-    </form>
-  </div>
+<!-- 📚 TÀI LIỆU -->
+<section id="tai-lieu" class="section light">
+  <h2>Tài liệu học tập</h2>
+  <ul>
+    <li>PDF từ vựng – ngữ pháp – luyện viết.</li>
+    <li>Kho video bài giảng từng chủ đề.</li>
+  </ul>
 </section>
 
-<!-- Section: Bài viết -->
-<section id="bai-viet" style="padding: 3rem 1rem; background-color: #f9f3fc;">
-  <div style="max-width: 960px; margin: auto;">
-    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Bài viết nổi bật</h2>
-    <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
-      <li>Cách phát âm tiếng Trung chuẩn Bắc Kinh</li>
-      <li>5 bước ghi nhớ từ vựng lâu hơn</li>
-      <li>Luyện nghe tiếng Trung cho người mới bắt đầu</li>
-      <li>Kinh nghiệm luyện thi HSK 4 trong 2 tháng</li>
-    </ul>
-  </div>
+<!-- ✍️ BÀI VIẾT -->
+<section id="bai-viet" class="section">
+  <h2>Bài viết nổi bật</h2>
+  <ul>
+    <li>Phân biệt "了" và "过" – Cách dùng chuẩn xác</li>
+    <li>5 bước luyện nghe tiếng Trung hiệu quả</li>
+    <li>Tự học tiếng Trung từ con số 0 – Chia sẻ thật</li>
+  </ul>
 </section>
 
-  <footer>
-    <p>© 2025 Love Hanyu. Thiết kế bởi bạn và ChatGPT.</p>
-  </footer>
+<!-- 📝 ĐĂNG KÝ -->
+<section id="dang-ky" class="section light">
+  <h2>Đăng ký học thử</h2>
+  <form>
+    <input type="text" placeholder="Họ tên" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="SĐT" required>
+    <textarea placeholder="Ghi chú thêm..."></textarea>
+    <button type="submit">Gửi đăng ký</button>
+  </form>
+</section>
 
-  <!-- JavaScript cho nút tìm kiếm -->
-  <script>
-  const input = document.getElementById("search-input");
-  const btn = document.getElementById("search-btn");
-  function searchKeyword() {
-    const keyword = input.value.toLowerCase();
-    const sections = document.querySelectorAll("section");
-    let found = false;
-    sections.forEach(section => {
-      if (section.innerText.toLowerCase().includes(keyword)) {
-        section.scrollIntoView({ behavior: "smooth" });
-        found = true;
-      }
-    });
-    if (!found) alert("Không tìm thấy nội dung phù hợp.");
-  }
-  input.addEventListener("keypress", e => {
-    if (e.key === "Enter") searchKeyword());
+<!-- 🔚 FOOTER -->
+<footer>
+  <p>© 2025 Love Hanyu. Thiết kế bởi bạn và ChatGPT.</p>
+</footer>
+
+<!-- 🔍 SCRIPT TÌM KIẾM GIẢ LẬP -->
+<script>
+  document.getElementById('search-btn').addEventListener('click', () => {
+    const keyword = document.getElementById('search-input').value.toLowerCase();
+    if (keyword.includes("hsk")) location.href = "#thi-thu-hsk";
+    else if (keyword.includes("tài liệu")) location.href = "#tai-lieu";
+    else if (keyword.includes("khoá")) location.href = "#khoa-hoc";
+    else location.href = "#trang-chu";
   });
-  btn.addEventListener("click", searchKeyword);
 </script>
-  
+
 </body>
 </html>
