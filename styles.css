@@ -203,12 +203,12 @@ body {
   transform: translateY(-50%); /* 🎯 Canh giữa chính xác */
   display: flex;
   flex-direction: column;
-  gap: 1rem;       /* 📏 Khoảng cách giữa các icon */
+  gap: 1.5rem;       /* 📏 Khoảng cách giữa các icon */
   z-index: 1000;   /* 🔼 Hiển thị trên cùng */
 }
 
 .side-icons img {
-  width: 40px;
+  width: 50px;
   animation: shake 1.5s infinite;
 }
 
