@@ -56,12 +56,12 @@ body {
   color: #922ea9; /* màu tím nổi bật */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 6px rgba(140, 0, 180, 0.25);
+  text-shadow: 2px 2px 4px rgba(140, 0, 180, 0.2);
   letter-spacing: 2px;
   animation: glow 4s infinite alternate;
   cursor: default;
-  line-height: **1.5**; /* tăng thêm chiều cao dòng */
-  padding: **0.8rem 0 1rem**; /* tăng padding trên & dưới */
+  line-height: **1.7**; /* tăng thêm chiều cao dòng */
+  padding: **1rem 0 1.2rem**; /* tăng padding trên & dưới */
   overflow: visible;
 }
 @keyframes glow {
