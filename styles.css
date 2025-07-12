@@ -51,7 +51,6 @@ body {
   font-size: 1rem;
   color: #333;
   line-height: 1;
-  margin-top: -5px;
 }
 .logo-text span {
   color: var(--main-purple);
