@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,10 +6,310 @@
   <title>Love Hanyu - Trang chủ</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* ... (rút gọn vì nội dung dài, đã được chèn đầy đủ trước đó) ... */
+    :root {
+      --main-purple: #922ea9;
+      --light-purple: #f2e7f5;
+      --deep-purple: #6a1b9a;
+      --white: #ffffff;
+      --gray: #f5f5f5;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--white);
+      color: #333;
+    }
+    .top-header {
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    .top-header .social-icons img {
+      height: 20px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .main-header {
+      background: url('nen header.jpg') no-repeat center/cover;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .main-header .logo-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .main-header .logo-block img {
+      height: 60px;
+    }
+    nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+      background: url('nen hoa thanh task.jpg') repeat-x center;
+      padding: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      background: var(--white);
+      border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: var(--main-purple);
+      color: white;
+    }
+    .hero {
+      background: url('nen nv.jpg') no-repeat center/cover;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--main-purple);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+      margin-bottom: 1.5rem;
+    }
+    .learning-options {
+      max-width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .learning-options .item {
+      border: 2px solid var(--main-purple);
+      border-radius: 10px;
+      padding: 1rem;
+      background: white;
+      text-align: left;
+    }
+    .learning-options .item h3 {
+      background: var(--main-purple);
+      color: white;
+      display: inline-block;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .cta-button {
+      margin-top: 1.5rem;
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: var(--main-purple);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+    }
+    .hero .nv-img {
+      max-height: 300px;
+      margin-top: 2rem;
+    }
+    .hero .side-icons {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .hero .side-icons img {
+      width: 40px;
+      animation: shake 1.5s infinite;
+    }
+    @keyframes shake {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(1px, -2px); }
+      50% { transform: translate(-1px, 2px); }
+      75% { transform: translate(2px, 1px); }
+      100% { transform: translate(0, 0); }
+    }
+    footer {
+      text-align: center;
+      background: var(--gray);
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
-  <!-- ... nội dung trang web ... -->
+  <div class="top-header">
+    <span>HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</span>
+    <div class="social-icons">
+      <img src="fb.png" alt="Facebook">
+      <img src="tiktok.png" alt="TikTok">
+      <img src="yt.png" alt="YouTube">
+      <img src="phone-icon.png" alt="Call">
+      <img src="mail-icon.png" alt="Email">
+    </div>
+  </div>
+
+  <div class="main-header">
+    <div class="logo-block">
+      <img src="logo.png" alt="logo">
+      strong>www.<span style="color: var(--main-purple); font-weight: bold;">lovehanyu</span>.com/strong>
+    </div>
+    <input type="text" placeholder="Tìm kiếm...">
+  </div>
+
+  <nav>
+  <a href="index.html"><img src="home-icon.png" alt="Home" style="height: 18px; vertical-align: middle; margin-right: 4px;"> TRANG CHỦ</a>
+  <a href="#gioi-thieu">GIỚI THIỆU</a>
+  <a href="#khoa-hoc">KHOÁ HỌC</a>
+  <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
+  <a href="#tu-hoc">TỰ HỌC TIẾNG TRUNG</a>
+  <a href="#thi-thu-hsk">THI THỬ HSK</a>
+  <a href="#tai-lieu">TÀI LIỆU</a>
+  <a href="#bai-viet">BÀI VIẾT</a>
+</nav>
+
+  <section class="hero">
+    <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
+    <div class="learning-options">
+      <div class="item">
+        <h3>TỰ HỌC TIẾNG TRUNG</h3>
+        <p>Hướng dẫn tự học Tiếng Trung theo lộ trình</p>
+      </div>
+      <div class="item">
+        <h3>HỌC TIẾNG TRUNG LỚP ONLINE</h3>
+        <p>Học online với giáo viên qua Zoom, lớp học khoảng 6–8 học viên</p>
+      </div>
+      <div class="item">
+        <h3>HỌC TIẾNG TRUNG TẠI TRUNG TÂM</h3>
+        <p>Học trực tiếp với giáo viên tại trung tâm Love Hanyu (Phổ Yên – Thái Nguyên)</p>
+      </div>
+    </div>
+    <a href="#dang-ky" class="cta-button">ĐĂNG KÝ NGAY >>></a>
+    <div class="side-icons">
+      <img src="phone-icon.png" alt="Gọi">
+      <img src="messenger-icon.png" alt="Messenger">
+      <img src="zalo-icon.png" alt="Zalo">
+    </div>
+    <img src="nv trang chu.png" alt="Nhân vật" class="nv-img">
+  $1
+  <section id="gioi-thieu" style="padding: 3rem 1rem; background-color: #f9f3fc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Giới thiệu về Love Hanyu</h2>
+      <p style="line-height: 1.6; font-size: 1rem; margin-bottom: 1rem;">
+        Love Hanyu là trung tâm đào tạo tiếng Trung được thành lập với sứ mệnh giúp mọi người học ngôn ngữ một cách hiệu quả, dễ hiểu và thú vị. Với đội ngũ giáo viên trẻ trung, nhiệt huyết và nhiều năm kinh nghiệm, chúng tôi mong muốn tạo nên một cộng đồng học tập tích cực, truyền cảm hứng và gần gũi.
+      </p>
+      <p style="line-height: 1.6; font-size: 1rem;">
+        Tại Love Hanyu, bạn có thể học từ cơ bản đến nâng cao, luyện thi HSK hoặc chỉ đơn giản là học để giao tiếp hàng ngày. Chúng tôi kết hợp phương pháp giảng dạy truyền thống và công nghệ hiện đại để mang đến trải nghiệm học tập tốt nhất cho từng học viên.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section: Khóa học -->
+  <section id="khoa-hoc" style="padding: 3rem 1rem; background-color: #fffafc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Khoá học tại Love Hanyu</h2>
+      <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
+        <li>Khoá học Sơ cấp 1 & 2 – nền tảng vững chắc cho người mới bắt đầu.</li>
+        <li>Khoá học Trung cấp – mở rộng từ vựng, luyện phản xạ và ngữ pháp nâng cao.</li>
+        <li>Khoá luyện thi HSK 3, 4, 5 – chiến lược ôn luyện & đề thi chuẩn.</li>
+        <li>Khoá học Giao tiếp – tình huống thực tế, thực hành hàng ngày.</li>
+        <li>Khoá học cho trẻ em – học qua hình ảnh, âm thanh, trò chơi.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Lịch khai giảng -->
+  <section id="lich-khai-giang" style="padding: 3rem 1rem; background-color: #f9f3fc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Lịch khai giảng</h2>
+      <p style="line-height: 1.6; font-size: 1rem;">Khóa mới khai giảng vào đầu mỗi tháng. Đăng ký sớm để giữ chỗ và nhận tài liệu học miễn phí!</p>
+      <ul style="margin-top: 1rem; line-height: 1.6;">
+        <li><strong>Ngày 5 hàng tháng:</strong> Lớp sơ cấp (online + offline)</li>
+        <li><strong>Ngày 10 hàng tháng:</strong> Lớp luyện thi HSK</li>
+        <li><strong>Ngày 15 hàng tháng:</strong> Lớp giao tiếp ứng dụng</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Tự học tiếng Trung -->
+  <section id="tu-hoc" style="padding: 3rem 1rem; background-color: #fffafc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Tự học tiếng Trung</h2>
+      <p style="line-height: 1.6; font-size: 1rem;">Bạn có thể bắt đầu tự học tiếng Trung với tài liệu được biên soạn bởi Love Hanyu, bao gồm:</p>
+      <ul style="margin-top: 1rem; line-height: 1.6;">
+        <li>1000 từ vựng tiếng Trung phổ biến nhất</li>
+        <li>50 cấu trúc ngữ pháp quan trọng</li>
+        <li>Bài luyện nghe, nói và đọc mỗi ngày</li>
+        <li>Flashcard, app luyện viết chữ Hán</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Thi thử HSK -->
+  <section id="thi-thu-hsk" style="padding: 3rem 1rem; background-color: #f9f3fc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Thi thử HSK miễn phí</h2>
+      <p style="line-height: 1.6; font-size: 1rem;">Luyện đề thi thật, đếm giờ và chấm điểm tự động.</p>
+      <ul style="margin-top: 1rem; line-height: 1.6;">
+        <li>HSK 3 – 4 – 5</li>
+        <li>Hiển thị đáp án & giải thích ngay sau khi nộp bài</li>
+        <li>Có thể thi lại nhiều lần để nâng điểm</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Tài liệu học tập -->
+  <section id="tai-lieu" style="padding: 3rem 1rem; background-color: #fffafc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Tài liệu học tập</h2>
+      <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
+        <li>PDF ngữ pháp & từ vựng theo từng chủ đề</li>
+        <li>Video bài giảng ngắn dễ hiểu</li>
+        <li>Danh sách từ HSK cấp 1–6</li>
+        <li>Audio luyện nghe – chép chính tả</li>
+      </ul>
+    </div>
+  <section id="dang-ky" style="padding: 3rem 1rem; background-color: #fff;">
+  <div style="max-width: 600px; margin: auto;">
+    <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem; text-align: center;">Đăng ký học thử miễn phí</h2>
+    <form action="#" method="post" style="display: flex; flex-direction: column; gap: 1rem;">
+      <input type="text" name="fullname" placeholder="Họ và tên" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="email" name="email" placeholder="Email" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+      <input type="tel" name="phone" placeholder="Số điện thoại" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;">
+      <textarea name="note" rows="4" placeholder="Ghi chú thêm (nếu có)" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+      <button type="submit" style="padding: 0.8rem; background: var(--main-purple); color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer;">Gửi đăng ký</button>
+    </form>
+  </div>
+</section>
+
+$1
+  <section id="bai-viet" style="padding: 3rem 1rem; background-color: #f9f3fc;">
+    <div style="max-width: 960px; margin: auto;">
+      <h2 style="color: var(--main-purple); font-size: 1.8rem; margin-bottom: 1rem;">Bài viết nổi bật</h2>
+      <ul style="line-height: 1.6; font-size: 1rem; list-style: disc inside;">
+        <li>Cách phát âm tiếng Trung chuẩn Bắc Kinh</li>
+        <li>5 bước ghi nhớ từ vựng lâu hơn</li>
+        <li>Luyện nghe tiếng Trung cho người mới bắt đầu</li>
+        <li>Kinh nghiệm luyện thi HSK 4 trong 2 tháng</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Love Hanyu. Thiết kế bởi bạn và ChatGPT.</p>
+  </footer>
 </body>
 </html>
