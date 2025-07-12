@@ -56,12 +56,12 @@ body {
   background: linear-gradient(90deg, #9c27b0, #ce93d8, #ab47bc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(140, 0, 180, 0.2);
+  text-shadow: 2px 2px 6px rgba(140, 0, 180, 0.25);
   letter-spacing: 2px;
   animation: glow 4s infinite alternate;
   cursor: default;
-  line-height: **1.4**;
-  padding: 0.5rem 0 **0.9rem**;     /* thêm padding dưới */
+  line-height: **1.5**; /* tăng thêm chiều cao dòng */
+  padding: **0.8rem 0 1rem**; /* tăng padding trên & dưới */
   overflow: visible;
 }
 @keyframes glow {
