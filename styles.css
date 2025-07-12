@@ -149,8 +149,10 @@ body {
 /* HERO bên ngoài */
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 0; /* 🧨 bỏ padding-bottom */
   position: relative;
+  height: auto; /* ✳️ hoặc đặt cố định chiều cao nếu cần */
+  overflow: hidden; /* tránh tràn ảnh nếu nhân vật quá cao */
 }
 .hero h1 {
   color: var(--main-purple);
@@ -197,15 +199,12 @@ body {
 }
 .nv-img {
   position: absolute;
-  bottom: 0;              /* ✅ Sát đáy khối .hero */
-  right: 5rem;            /* 📏 Cách lề phải một khoảng */
-  height: 800px;          /* Tăng chiều cao nếu cần */
-  transform: none;
+  bottom: 0;
+  right: 5rem;
+  height: 800px;      /* Hoặc 100% nếu bạn dùng height cố định cho .hero */
+  object-fit: contain;
   z-index: 1;
-  align-self: flex-end;   /* ✅ Căn đáy với phần còn lại */
-  margin-bottom: 0;
 }
-
 
 /* CTA button */
 .cta-button {
