@@ -14,8 +14,8 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background: var(--white);
+  font-family: 'Noto Sans', 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+  background-color: var(--white);
   color: #333;
   line-height: 1.6;
 }
