@@ -195,27 +195,18 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-.character-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 100%;
-  padding-right: 2rem; /* tuỳ chỉnh khoảng cách với lề phải */
-}
 .nv-img {
   position: absolute;
   bottom: 0;              /* ✅ Sát đáy khối .hero */
-  right: 2rem;            /* 📏 Cách lề phải một khoảng */
-  height: 600px;          /* Tuỳ chọn: tăng/giảm kích thước */
+  right: 5rem;            /* 📏 Cách lề phải một khoảng */
+  height: 800px;          /* Tuỳ chọn: tăng/giảm kích thước */
   transform: none;        /* Bỏ scale nếu cần chính xác */
   z-index: 1;             /* Đảm bảo nổi trên background */
 }
-
   /* ✅ Cố định căn đáy của nhân vật với ảnh nền */
   align-self: flex-end;
   margin-bottom: 0;
 }
-
 
 
 /* CTA button */
