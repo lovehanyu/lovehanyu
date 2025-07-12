@@ -11,6 +11,36 @@ body {
   background-color: var(--white);
   color: #333;
 }
+/* Bọc toàn bộ phần header */
+.header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  background: white;
+  gap: 1rem;
+}
+
+/* LOGO + domain */
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.3rem;
+}
+.logo-block img {
+  height: 100px;
+}
+.logo-text {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.logo-text span {
+  color: #922ea9;
+}
+
 /* 🔥 PHẦN TOP HEADER GIỮA (slogan + mạng xã hội) */
 .top-header {
   flex: 1;
@@ -35,102 +65,56 @@ body {
   cursor: pointer;
 }
 
-}
-/* Layout chính của hàng đầu */
-.header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end; /* Quan trọng để đáy logo & menu thẳng hàng */
-  padding: 0.5rem 1rem;
-  background: white;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* LOGO + DOMAIN */
-.logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px;               /* Khoảng cách logo & domain */
-  padding-bottom: 8px;     /* Căn domain ngang với đáy menu */
-}
-.logo-block img {
-  height: 90px;
-}
-.logo-text {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1;
-}
-.logo-text span {
-  color: var(--main-purple);
-  font-weight: bold;
-}
-/* NAV + TÌM KIẾM bên phải */
-.nav-search-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-/* Tìm kiếm nằm TRÊN menu */
+/* TÌM KIẾM */
 .search-box {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   margin-bottom: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
-  height: 40px;
-  padding-left: 0.5rem;
 }
 .search-box input {
-  border: none;
-  outline: none;
-  padding: 0.6rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
   font-size: 1rem;
-  width: 250px;
 }
 .search-box img {
   height: 20px;
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-/* MENU nằm dưới tìm kiếm */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  gap: 0.5rem;
-}
-.main-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  height: 60px;
   background: white;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-weight: bold;
+  border-left: none;
+  padding: 0.5rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* MENU */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.main-nav a {
   text-decoration: none;
   color: black;
-  flex: 1;
-  min-width: 100px;
-  white-space: nowrap;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
 }
 .main-nav a:hover {
-  background: var(--main-purple);
+  background: #922ea9;
   color: white;
 }
 .main-nav .icon {
   height: 18px;
+  vertical-align: middle;
   margin-right: 6px;
 }
+
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
   padding: 2rem 1rem;
