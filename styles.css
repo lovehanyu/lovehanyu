@@ -203,10 +203,15 @@ body {
   padding-right: 2rem;
 }
 .nv-img {
-  transform: scale(1.7);      /* phóng to nhân vật */
-  max-height: 100%;           /* đảm bảo không vượt chiều cao section */
+  transform: scale(1.6);
+  max-height: none;
   height: auto;
+
+  /* ✅ Cố định căn đáy của nhân vật với ảnh nền */
+  align-self: flex-end;
+  margin-bottom: 0;
 }
+
 
 
 /* CTA button */
