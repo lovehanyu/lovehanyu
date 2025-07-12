@@ -448,81 +448,51 @@ body {
 }
 
 /* ===== KHOÁ TỰ HỌC TIẾNG TRUNG GIAO DIỆN===== */
-.self-learn-courses {
+.self-study-grid {
   display: flex;
   gap: 2rem;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.self-course-card {
-  width: 280px;
+.self-study-card {
   border: 2px solid var(--main-purple);
   border-radius: 10px;
   padding: 1rem;
-  text-align: center;
+  width: 300px;
   background: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
 }
-
-.self-course-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.self-study-card:hover {
+  transform: translateY(-5px);
 }
-
-.course-lesson-list ul {
-  list-style: none;
-  padding: 0;
-  max-width: 600px;
-  margin: auto;
-}
-.course-lesson-list li {
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-.course-lesson-list li a {
-  color: var(--main-purple);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.lesson-detail {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
-.video-wrapper iframe {
-  width: 100%;
-  height: 400px;
-  margin-bottom: 2rem;
-}
-.vocab-box, .exercise-box {
-  background: #f9f0fb;
-  padding: 1rem;
-  border-left: 4px solid var(--main-purple);
-  margin-bottom: 2rem;
-}
-.exercise-box input {
-  padding: 0.5rem;
-  width: 60%;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-.exercise-box button {
-  margin-left: 1rem;
+.study-btn {
+  display: inline-block;
+  margin-top: 1rem;
   background: var(--main-purple);
   color: white;
-  border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 5px;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
-
-
-
+.video-wrapper {
+  margin: 1rem 0;
+  text-align: center;
+}
+.lesson-list li {
+  margin-bottom: 0.5rem;
+}
+.lesson-list a {
+  text-decoration: none;
+  color: var(--main-purple);
+  font-weight: bold;
+}
+.lesson-list a:hover {
+  text-decoration: underline;
+}
 
 
 /* ==== CÁC SECTION CHUNG ==== */
