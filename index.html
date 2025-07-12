@@ -19,31 +19,101 @@
     </div>
   </div>
 
-  <div class="header-bar">
-  <div class="logo-section">
-    <img src="logo.png" alt="logo">
-    <div class="logo-text">
-      <strong>www.<span>lovehanyu</span>.com</strong>
-    </div>
-  </div>
+  .header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 1rem 0.2rem;
+  background: white;
+  flex-wrap: wrap;
+}
 
-  <div class="menu-section">
-    <nav class="main-nav">
-      <a href="index.html"><img src="home-icon.png" alt="Home" class="icon"> TRANG CHỦ</a>
-      <a href="#gioi-thieu">GIỚI THIỆU</a>
-      <a href="#khoa-hoc">KHOÁ HỌC</a>
-      <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
-      <a href="#tu-hoc">TỰ HỌC TIẾNG TRUNG</a>
-      <a href="#thi-thu-hsk">THI THỬ HSK</a>
-      <a href="#tai-lieu">TÀI LIỆU</a>
-      <a href="#bai-viet">BÀI VIẾT</a>
-    </nav>
-    <div class="search-container">
-      <input type="text" id="search-input" placeholder="Tìm kiếm...">
-      <img src="find-icon.png" alt="Tìm" id="search-btn">
-    </div>
-  </div>
-</div>
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: -10px; /* giúp logo sát top-header hơn */
+}
+
+.logo-block img {
+  height: 100px;
+}
+
+.logo-text strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.logo-text span {
+  color: var(--main-purple);
+  font-weight: bold;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-left: 0.5rem;
+  background: white;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 220px; /* gấp 1.5 lần chiều rộng cũ ~150px */
+}
+
+.search-container img {
+  height: 20px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-nav a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 1rem;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: black;
+  background: var(--white);
+  white-space: nowrap;
+  font-size: 1rem;
+  flex: 1;
+  justify-content: center;
+  min-width: 110px;
+  margin: 0.2rem;
+  height: 60px;
+}
+
+.main-nav a:hover {
+  background: var(--main-purple);
+  color: white;
+}
+
+.main-nav a .icon {
+  height: 18px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
 
   <section class="hero">
     <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
