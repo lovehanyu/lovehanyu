@@ -204,7 +204,7 @@ body {
   align-items: center;
 }
 .nv-img {
-  transform: scale(1.2); /* phóng to 120% */
+  transform: scale(2); /* phóng to 120% */
 }
 /* CTA button */
 .cta-button {
