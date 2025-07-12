@@ -264,11 +264,12 @@ body {
 
 /* ===== GIỚI THIỆU GIÁO VIÊN ===== */
 .teacher-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 cột bằng nhau */
+  gap: 2rem;                               /* khoảng cách giữa các ô */
+  max-width: 1200px;                      /* căn giữa theo trang */
+  margin: 2rem auto;                      /* auto margin để căn giữa */
+  padding: 0 2rem;                        /* cách lề trái/phải */
 }
 
 .teacher-card {
@@ -276,9 +277,11 @@ body {
   border: 2px solid var(--main-purple);
   border-radius: 10px;
   padding: 1rem;
-  width: 300px;
   box-shadow: 0 4px 10px rgba(146, 46, 169, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .teacher-card:hover {
@@ -307,9 +310,15 @@ body {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .teacher-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột trên tablet */
+  }
+}
 @media (max-width: 768px) {
-  .teacher-card {
-    width: 100%;
+  .teacher-grid {
+    grid-template-columns: 1fr; /* 1 cột trên mobile */
+    padding: 0 1rem;
   }
 }
 
