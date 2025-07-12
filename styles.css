@@ -61,7 +61,7 @@ body {
   animation: glow 4s infinite alternate;
   cursor: default;
   line-height: **1.4**;
-  padding: 0.5rem 0 **0.7rem**;     /* thêm padding dưới */
+  padding: 0.5rem 0 **0.9rem**;     /* thêm padding dưới */
   overflow: visible;
 }
 @keyframes glow {
