@@ -326,8 +326,8 @@ body {
 /* ==== CÁC SECTION CHUNG ==== */
 .section {
   padding: 3rem 1rem;
-  max-width: 960px;
-  margin: auto;
+  max-width: 1400px;   /* ⬅️ tăng giới hạn chiều rộng */
+  margin: 0 auto;      /* căn giữa */
 }
 .section.light {
   background: #fdf8fd;
