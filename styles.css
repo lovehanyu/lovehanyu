@@ -81,7 +81,13 @@ body {
   font-size: 1rem;
 }
 .search-box img {
-  height: 20px;
+  height: 60px;
+  background: white;
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 0.5rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
 .menu-search-wrap {
   display: flex;
