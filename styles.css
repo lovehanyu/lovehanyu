@@ -221,8 +221,20 @@ body {
 }
 
 .nv-img {
-  max-height: 300px;
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 2rem; /* 👈 Đặt bên trái nội dung */
+  height: 600px; /* 👈 Gấp ~3 lần chiều cao cũ */
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .nv-img {
+    position: static;
+    display: block;
+    margin: 2rem auto 0;
+    height: 300px; /* Giữ hợp lý trên mobile */
+  }
 }
 
 /* ==== CÁC SECTION CHUNG ==== */
