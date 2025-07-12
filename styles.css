@@ -199,9 +199,9 @@ body {
 }
 .nv-img {
   position: absolute;
-  bottom: 0;
+  bottom: -30px; /* 👈 đẩy ảnh xuống thấp hơn 30px */
   right: 5rem;
-  height: 800px;      /* Hoặc 100% nếu bạn dùng height cố định cho .hero */
+  height: 800px;
   object-fit: contain;
   z-index: 1;
 }
