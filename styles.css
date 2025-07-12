@@ -204,9 +204,7 @@ body {
   align-items: center;
 }
 .nv-img {
-  height: 3000px;
-  max-width: 100%;
-  object-fit: contain;
+  transform: scale(1.2); /* phóng to 120% */
 }
 /* CTA button */
 .cta-button {
