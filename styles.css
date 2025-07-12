@@ -203,9 +203,13 @@ body {
   padding-right: 2rem; /* tuỳ chỉnh khoảng cách với lề phải */
 }
 .nv-img {
-  transform: scale(1.5);
-  max-height: none;
-  height: auto;
+  position: absolute;
+  bottom: 0;              /* ✅ Sát đáy khối .hero */
+  right: 2rem;            /* 📏 Cách lề phải một khoảng */
+  height: 600px;          /* Tuỳ chọn: tăng/giảm kích thước */
+  transform: none;        /* Bỏ scale nếu cần chính xác */
+  z-index: 1;             /* Đảm bảo nổi trên background */
+}
 
   /* ✅ Cố định căn đáy của nhân vật với ảnh nền */
   align-self: flex-end;
