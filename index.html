@@ -185,28 +185,28 @@
   <footer>
     <p>© 2025 Love Hanyu. Thiết kế bởi bạn và ChatGPT.</p>
   </footer>
-<script>
-  document.getElementById('search-btn').addEventListener('click', handleSearch);
-  document.getElementById('search-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') handleSearch();
-  });
 
-  function handleSearch() {
-    const keyword = document.getElementById('search-input').value.toLowerCase();
-    if (!keyword) return;
-
-    const sections = document.querySelectorAll('section');
+  <!-- JavaScript cho nút tìm kiếm -->
+  <script>
+  const input = document.getElementById("search-input");
+  const btn = document.getElementById("search-btn");
+  function searchKeyword() {
+    const keyword = input.value.toLowerCase();
+    const sections = document.querySelectorAll("section");
     let found = false;
-
     sections.forEach(section => {
       if (section.innerText.toLowerCase().includes(keyword)) {
-        section.scrollIntoView({ behavior: 'smooth' });
+        section.scrollIntoView({ behavior: "smooth" });
         found = true;
       }
     });
-
     if (!found) alert("Không tìm thấy nội dung phù hợp.");
   }
+  input.addEventListener("keypress", e => {
+    if (e.key === "Enter") searchKeyword());
+  });
+  btn.addEventListener("click", searchKeyword);
 </script>
+  
 </body>
 </html>
