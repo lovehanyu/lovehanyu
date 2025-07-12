@@ -1,38 +1,36 @@
 :root {
   --main-purple: #922ea9;
-  --white: #ffffff;
-}
-
-:root {
-  --main-purple: #922ea9;
-  --white: #ffffff;
 }
 
 body {
   font-family: 'Quicksand', 'Noto Sans SC', sans-serif;
   margin: 0;
-  background: white;
-  color: #333;
+  padding: 0;
 }
 
-/* Header trên: logo + slogan + tìm kiếm */
-.header-top {
+/* Tổng container */
+.header-wrap {
+  background: white;
+  width: 100%;
+}
+
+/* DÒNG TRÊN: LOGO - SLOGAN - TÌM KIẾM */
+.header-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1rem;
+  padding: 1rem 2rem;
   flex-wrap: wrap;
-  gap: 1rem;
 }
 
-/* Logo + domain */
-.logo-group {
+/* LOGO + DOMAIN */
+.logo-block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.logo {
-  height: 90px;
+.logo-block img {
+  height: 80px;
 }
 .domain {
   font-weight: bold;
@@ -42,18 +40,17 @@ body {
   color: var(--main-purple);
 }
 
-/* Slogan + icon */
-.slogan-group {
-  flex: 1;
+/* SLOGAN + ICON */
+.slogan-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.3rem;
 }
 .slogan {
   color: var(--main-purple);
-  font-size: 1.2rem;
   font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 .social-icons {
@@ -62,46 +59,45 @@ body {
 }
 .social-icons img {
   height: 20px;
-  cursor: pointer;
 }
 
-/* Tìm kiếm */
+/* TÌM KIẾM */
 .search-box {
   display: flex;
   align-items: center;
+  margin-top: 0.5rem;
 }
 .search-box input {
-  padding: 0.5rem 0.8rem;
-  font-size: 1rem;
+  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px 0 0 5px;
+  font-size: 1rem;
 }
 .search-box img {
   height: 20px;
+  padding: 0.5rem;
   background: white;
   border: 1px solid #ccc;
   border-left: none;
-  padding: 0.5rem;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
-/* Menu ngang bên dưới */
+/* DÒNG DƯỚI: MENU */
 .main-nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   gap: 0.5rem;
   background: white;
 }
 .main-nav a {
   flex: 1 1 auto;
-  min-width: 120px;
+  min-width: 100px;
   text-align: center;
   text-decoration: none;
   color: black;
-  background: white;
   border: 1px solid #ccc;
   padding: 0.8rem;
   border-radius: 6px;
@@ -117,7 +113,6 @@ body {
   vertical-align: middle;
   margin-right: 5px;
 }
-
 
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
