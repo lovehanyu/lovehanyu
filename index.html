@@ -270,6 +270,12 @@
     else location.href = "#trang-chu";
   });
 </script>
-
+<!--  SCRIPT ĐIỀU HƯỚNG CÁC KHOÁ HỌC -->
+<script>
+  const slider = document.querySelector('.course-slider');
+  document.querySelector('.course-nav.prev').onclick = () => slider.scrollBy({ left: -300, behavior: 'smooth' });
+  document.querySelector('.course-nav.next').onclick = () => slider.scrollBy({ left: 300, behavior: 'smooth' });
+</script>
+ 
 </body>
 </html>
