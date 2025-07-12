@@ -14,21 +14,21 @@ body {
 /* Bọc toàn bộ phần header */
 .header-row {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+  align-items: flex-end;
   flex-wrap: wrap;
   padding: 0.5rem 1rem;
   background: white;
   gap: 1rem;
 }
 
-/* LOGO + domain */
+/* Logo và domain */
 .logo-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.3rem;
+  gap: 6px;
 }
 .logo-block img {
   height: 100px;
@@ -41,36 +41,10 @@ body {
   color: #922ea9;
 }
 
-/* 🔥 PHẦN TOP HEADER GIỮA (slogan + mạng xã hội) */
-.top-header {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background: transparent;
-  height: 40px;
-  gap: 0.5rem;
-}
-.top-header .social-icons {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-left: 1rem;
-}
-.top-header .social-icons img {
-  height: 20px;
-  cursor: pointer;
-}
-
-/* TÌM KIẾM */
+/* Tìm kiếm */
 .search-box {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 0.5rem;
 }
 .search-box input {
   padding: 0.5rem 0.8rem;
@@ -88,13 +62,34 @@ body {
   cursor: pointer;
 }
 
-/* MENU */
+/* ✅ TOP HEADER nằm giữa logo và tìm kiếm */
+.top-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--main-purple);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+.top-header .social-icons {
+  display: flex;
+  gap: 8px;
+}
+.top-header .social-icons img {
+  height: 20px;
+}
+
+/* Menu dưới cùng */
 .main-nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: white;
 }
 .main-nav a {
   text-decoration: none;
@@ -114,6 +109,7 @@ body {
   vertical-align: middle;
   margin-right: 6px;
 }
+
 
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
