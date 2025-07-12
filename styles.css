@@ -151,7 +151,7 @@ body {
   background: url('nen nv.jpg') no-repeat center/cover;
   padding: 3rem 1rem 0; /* 🧨 bỏ padding-bottom */
   position: relative;
-  height: 1000px; /* ✳️ hoặc đặt cố định chiều cao nếu cần */
+  height: 700px; /* ✳️ hoặc đặt cố định chiều cao nếu cần */
   overflow: hidden; /* tránh tràn ảnh nếu nhân vật quá cao */
 }
 .hero h1 {
