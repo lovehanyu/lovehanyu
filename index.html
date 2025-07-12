@@ -19,26 +19,30 @@
     </div>
   </div>
 
-  <div class="main-header">
-    <div class="logo-block">
-  <img src="logo.png" alt="logo">
-  <div class="logo-text">
-    <strong>www.<span>lovehanyu</span>.com</strong>
+  <div class="header-bar">
+  <div class="logo-block">
+    <img src="logo.png" alt="logo">
+    <div class="logo-text">
+      <strong>www.<span>lovehanyu</span>.com</strong>
+    </div>
+  </div>
+  <div class="nav-and-search">
+    <nav>
+      <a href="index.html"><img src="home-icon.png" alt="Home" class="icon"> TRANG CHỦ</a>
+      <a href="#gioi-thieu">GIỚI THIỆU</a>
+      <a href="#khoa-hoc">KHOÁ HỌC</a>
+      <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
+      <a href="#tu-hoc">TỰ HỌC TIẾNG TRUNG</a>
+      <a href="#thi-thu-hsk">THI THỬ HSK</a>
+      <a href="#tai-lieu">TÀI LIỆU</a>
+      <a href="#bai-viet">BÀI VIẾT</a>
+    </nav>
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Tìm kiếm...">
+      <img src="find-icon.png" alt="Tìm" id="search-btn">
+    </div>
   </div>
 </div>
-    <input type="text" placeholder="Tìm kiếm...">
-  </div>
-
-  <nav>
-    <a href="index.html"><img src="home-icon.png" alt="Home" style="height: 18px; vertical-align: middle; margin-right: 4px;"> TRANG CHỦ</a>
-    <a href="#gioi-thieu">GIỚI THIỆU</a>
-    <a href="#khoa-hoc">KHOÁ HỌC</a>
-    <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
-    <a href="#tu-hoc">TỰ HỌC TIẾNG TRUNG</a>
-    <a href="#thi-thu-hsk">THI THỬ HSK</a>
-    <a href="#tai-lieu">TÀI LIỆU</a>
-    <a href="#bai-viet">BÀI VIẾT</a>
-  </nav>
 
   <section class="hero">
     <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
@@ -175,5 +179,28 @@
   <footer>
     <p>© 2025 Love Hanyu. Thiết kế bởi bạn và ChatGPT.</p>
   </footer>
+<script>
+  document.getElementById('search-btn').addEventListener('click', handleSearch);
+  document.getElementById('search-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') handleSearch();
+  });
+
+  function handleSearch() {
+    const keyword = document.getElementById('search-input').value.toLowerCase();
+    if (!keyword) return;
+
+    const sections = document.querySelectorAll('section');
+    let found = false;
+
+    sections.forEach(section => {
+      if (section.innerText.toLowerCase().includes(keyword)) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        found = true;
+      }
+    });
+
+    if (!found) alert("Không tìm thấy nội dung phù hợp.");
+  }
+</script>
 </body>
 </html>
