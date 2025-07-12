@@ -76,28 +76,34 @@ body {
   cursor: pointer;
 }
 .search-box {
-  position: relative;
-  width: 250px; /* hoặc auto theo thiết kế */
-  margin-top: 0.5rem;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 0.5rem 2.5rem 0.5rem 0.8rem; /* thêm padding bên phải để không che chữ */
+  position: fixed;          /* ❄️ Cố định trên màn hình */
+  top: 10px;                /* 📌 Cách top 10px */
+  right: 20px;              /* 📌 Cách phải 20px */
+  z-index: 2000;            /* 🔼 Luôn hiển thị trên cùng */
+  display: flex;
+  align-items: center;
+  background: white;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  padding: 0 0.5rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  height: 40px;             /* 👁️ Gán chiều cao cố định nếu cần */
 }
-
-/* Icon nằm bên trong input */
+/* Ô input */
+.search-box input {
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  width: 180px;
+}
+/* Icon tìm kiếm */
 .search-box img {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 16px;
+  height: 20px;
+  margin-left: 0.5rem;
   cursor: pointer;
 }
+
 .menu-search-wrap {
   display: flex;
   justify-content: space-between;
