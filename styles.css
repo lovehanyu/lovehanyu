@@ -159,10 +159,10 @@ body {
   margin-bottom: 2rem;
 }
 /* Chia layout bên trong hero */
-.hero-inner {
+.hero-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   max-width: 1200px;
   margin: auto;
   flex-wrap: wrap;
@@ -195,12 +195,12 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-.right-content {
+.character-wrapper {
   width: 33.33%;
   display: flex;
-  justify-content: flex-end; /* 👉 đẩy ảnh sang phải */
-  align-items: flex-end;      /* căn đáy cùng nội dung bên trái */
-  padding-right: 2rem;        /* 📏 tạo khoảng cách với lề phải */
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 2rem;
 }
 .nv-img {
   transform: scale(1.7);      /* phóng to nhân vật */
