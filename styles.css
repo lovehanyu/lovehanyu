@@ -11,22 +11,30 @@ body {
   background-color: var(--white);
   color: #333;
 }
+/* 🔥 PHẦN TOP HEADER GIỮA (slogan + mạng xã hội) */
 .top-header {
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  background: url('nen header.jpg') no-repeat center/cover;
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  height: 40px;
+  gap: 0.5rem;
+}
+.top-header .social-icons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 1rem;
 }
 .top-header .social-icons img {
-  height: 30px;
-  margin-left: 20px;
-  vertical-align: middle;
+  height: 20px;
+  cursor: pointer;
+}
+
 }
 /* Layout chính của hàng đầu */
 .header-row {
