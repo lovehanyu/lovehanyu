@@ -494,6 +494,57 @@ body {
   text-decoration: underline;
 }
 
+/* ==== THI THỬ HSK ==== */
+.hsk-test-section {
+  background: #f9f4fd;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.hsk-test-section h2 {
+  color: var(--main-purple);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hsk-test-section .intro {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+.hsk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.hsk-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-top: 5px solid var(--main-purple);
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: all 0.3s;
+}
+.hsk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(146, 46, 169, 0.2);
+}
+/* Tuỳ chỉnh màu từng cấp độ */
+.hsk-card.hsk-1 { border-color: #fbc02d; }
+.hsk-card.hsk-2 { border-color: #29b6f6; }
+.hsk-card.hsk-3 { border-color: #ff7043; }
+.hsk-card.hsk-4 { border-color: #e53935; }
+.hsk-card.hsk-5 { border-color: #8e24aa; }
+.hsk-card.hsk-6 { border-color: #c62828; }
+.hsk-card.hsk-7 { border-color: #6a1b9a; }
+
+
 
 /* ==== CÁC SECTION CHUNG ==== */
 .section {
