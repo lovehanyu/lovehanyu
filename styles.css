@@ -203,7 +203,7 @@ body {
   padding-right: 2rem; /* tuỳ chỉnh khoảng cách với lề phải */
 }
 .nv-img {
-  transform: scale(1.6);
+  transform: scale(1.5);
   max-height: none;
   height: auto;
 
