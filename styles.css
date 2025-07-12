@@ -28,11 +28,10 @@ body {
 .header-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-end; /* 👈 QUAN TRỌNG để đáy bằng nhau */
   padding: 0.5rem 1rem;
-  flex-wrap: wrap;
   background: white;
-  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /* LOGO + DOMAIN */
@@ -41,6 +40,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  padding-bottom: 8px; /* 👈 để dòng chữ domain nằm ngang đáy menu */
 }
 .logo-block img {
   height: 90px;
