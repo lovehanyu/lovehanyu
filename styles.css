@@ -121,7 +121,7 @@ body {
   justify-content: center;
   gap: 1rem;
   padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.95); /* sáng nhẹ */
+    background: var(--light-purple); /* ✅ Màu tím nhạt */
   backdrop-filter: blur(6px);
   position: sticky;
   top: 0; /* dính sát top khi cuộn */
