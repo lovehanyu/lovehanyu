@@ -199,9 +199,9 @@ body {
 }
 .nv-img {
   position: absolute;
-  bottom: -30px; /* 👈 đẩy ảnh xuống thấp hơn 30px */
+  bottom: -100px; /* 👈 đẩy ảnh xuống thấp hơn 30px */
   right: 5rem;
-  height: 800px;
+  height: 700px;
   object-fit: contain;
   z-index: 1;
 }
