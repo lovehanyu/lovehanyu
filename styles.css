@@ -195,15 +195,17 @@ body {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
-/* Bên phải (1/3) */
 .right-content {
   width: 33.33%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end; /* 👉 đẩy ảnh sang phải */
+  align-items: flex-end;      /* căn đáy cùng nội dung bên trái */
+  padding-right: 2rem;        /* 📏 tạo khoảng cách với lề phải */
 }
 .nv-img {
-  transform: scale(1.7); /* phóng to 120% */
+  transform: scale(1.7);      /* phóng to nhân vật */
+  max-height: 100%;           /* đảm bảo không vượt chiều cao section */
+  height: auto;
 }
 
 
