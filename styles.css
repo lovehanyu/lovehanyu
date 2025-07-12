@@ -61,6 +61,14 @@ body {
   animation: glow 4s infinite alternate;
   cursor: default;
 }
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(146, 46, 169, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(146, 46, 169, 0.5);
+  }
+}
 .social-search {
   display: flex;
   flex-direction: column;
