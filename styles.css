@@ -1,161 +1,198 @@
+/* ==== Biến màu chủ đạo ==== */
 :root {
   --main-purple: #922ea9;
+  --light-purple: #f2e7f5;
+  --deep-purple: #6a1b9a;
   --white: #ffffff;
+  --gray: #f5f5f5;
 }
 
-.top-container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: var(--white);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==== HEADER ==== */
+.header-container {
+  background: url('nen header.jpg') no-repeat center/cover;
   padding: 1rem;
-  background: white;
 }
 
 .header-top {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.8rem;
-}
-
-.logo-section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-}
-.logo-section img {
-  height: 100px;
-}
-.logo-section .domain {
-  font-weight: bold;
-  margin-top: 0.5rem;
-}
-.logo-section .domain span {
-  color: #922ea9;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-/* Slogan và icon */
-.slogan-section {
-  flex: 1;
+.logo-block {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.3rem;
 }
-.slogan {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #922ea9;
-}
-.social-icons {
-  display: flex;
-  gap: 0.5rem;
-}
-.social-icons img {
-  height: 40px; /* để bằng chiều cao ô tìm kiếm */
+
+.logo-block img {
+  height: 90px;
 }
 
-/* Tìm kiếm */
+.domain-text {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.domain-text span {
+  color: var(--main-purple);
+}
+
+.slogan {
+  flex: 1;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--main-purple);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.social-search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  height: 28px;
+  cursor: pointer;
+}
+
 .search-box {
   display: flex;
   align-items: center;
 }
+
 .search-box input {
-  padding: 0.6rem;
+  padding: 0.5rem 0.8rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px 0 0 5px;
 }
+
 .search-box img {
-  height: 40px; /* bằng icon */
+  height: 34px;
+  padding: 0.3rem;
   border: 1px solid #ccc;
   border-left: none;
-  border-radius: 0 5px 5px 0;
   background: white;
-  padding: 0.4rem;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
 
-/* MENU */
-.main-menu {
+/* ==== MENU ==== */
+.main-nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 0.5rem 0;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 999;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-.main-menu a {
-  padding: 0.8rem 1rem;
-  background: white;
-  border: 1px solid #ccc;
+
+.main-nav a {
+  padding: 0.8rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
+  background: var(--white);
+  border: 1px solid #ccc;
   font-weight: bold;
   color: black;
-  text-align: center;
-}
-.main-menu a:hover {
-  background: #922ea9;
-  color: white;
-}
-.main-menu .icon {
-  height: 18px;
-  vertical-align: middle;
-  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
 }
 
+.main-nav a:hover {
+  background: var(--main-purple);
+  color: white;
+  border-color: var(--main-purple);
+}
+
+.icon {
+  height: 18px;
+}
+
+/* ==== HERO ==== */
 .hero {
   background: url('nen nv.jpg') no-repeat center/cover;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   text-align: center;
   position: relative;
 }
+
 .hero h1 {
-  font-size: 2.2rem;
   color: var(--main-purple);
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
+
 .learning-options {
-  max-width: 800px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  max-width: 800px;
+  margin: auto;
 }
+
 .learning-options .item {
   border: 2px solid var(--main-purple);
   border-radius: 10px;
   padding: 1rem;
   background: white;
-  text-align: left;
 }
-.learning-options .item h3 {
+
+.learning-options h3 {
   background: var(--main-purple);
   color: white;
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
+
 .cta-button {
   margin-top: 1.5rem;
   display: inline-block;
   padding: 0.8rem 2rem;
   background: var(--main-purple);
   color: white;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
   border-radius: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
 }
-.hero .nv-img {
-  max-height: 300px;
-  margin-top: 2rem;
-}
-.hero .side-icons {
+
+.side-icons {
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -164,10 +201,12 @@
   flex-direction: column;
   gap: 1rem;
 }
-.hero .side-icons img {
+
+.side-icons img {
   width: 40px;
   animation: shake 1.5s infinite;
 }
+
 @keyframes shake {
   0% { transform: translate(0, 0); }
   25% { transform: translate(1px, -2px); }
@@ -175,9 +214,66 @@
   75% { transform: translate(2px, 1px); }
   100% { transform: translate(0, 0); }
 }
+
+.nv-img {
+  max-height: 300px;
+  margin-top: 2rem;
+}
+
+/* ==== CÁC SECTION CHUNG ==== */
+.section {
+  padding: 3rem 1rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.section.light {
+  background: #fdf8fd;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  color: var(--main-purple);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background: var(--main-purple);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==== FOOTER ==== */
 footer {
   text-align: center;
   background: var(--gray);
   padding: 1rem;
-  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
 }
