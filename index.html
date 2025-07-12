@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Love Hanyu - Trang chủ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <!-- Font hỗ trợ tiếng Việt + tiếng Trung -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- Header tổng thể -->
-<div class="header-bar">
-  <!-- Cột trái: logo + domain -->
-  <div class="left-block">
-    <img src="logo.png" alt="Logo">
-    <div class="logo-text">
-      <strong>www.<span>lovehanyu</span>.com</strong>
-    </div>
+<!-- HÀNG TRÊN: LOGO + SLOGAN + TÌM KIẾM -->
+<div class="header-top">
+  <!-- Logo + domain -->
+  <div class="logo-group">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="domain">www.<span>lovehanyu</span>.com</div>
   </div>
 
-  <!-- Cột giữa: slogan + MXH -->
-  <div class="top-header">
-    <span>HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</span>
+  <!-- Slogan + Icon mạng xã hội -->
+  <div class="slogan-group">
+    <span class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</span>
     <div class="social-icons">
       <img src="fb.png" alt="Facebook">
       <img src="tiktok.png" alt="TikTok">
@@ -31,14 +30,14 @@
     </div>
   </div>
 
-  <!-- Cột phải: ô tìm kiếm -->
+  <!-- Ô tìm kiếm -->
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Tìm kiếm...">
-    <img src="find-icon.png" id="search-btn" alt="Tìm">
+    <input type="text" placeholder="Tìm kiếm...">
+    <img src="find-icon.png" alt="Tìm">
   </div>
 </div>
 
-<!-- Thanh menu -->
+<!-- HÀNG DƯỚI: MENU GIÃN ĐỀU -->
 <nav class="main-nav">
   <a href="index.html"><img src="home-icon.png" class="icon"> TRANG CHỦ</a>
   <a href="#gioi-thieu">GIỚI THIỆU</a>
