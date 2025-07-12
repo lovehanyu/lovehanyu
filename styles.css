@@ -197,13 +197,14 @@ body {
 }
 
 .side-icons {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: fixed; /* 🔒 Cố định theo màn hình */
+  top: 50%;        /* 🟪 Căn giữa theo chiều dọc */
+  right: 1rem;     /* 📍 Cách mép phải 1rem */
+  transform: translateY(-50%); /* 🎯 Canh giữa chính xác */
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem;       /* 📏 Khoảng cách giữa các icon */
+  z-index: 1000;   /* 🔼 Hiển thị trên cùng */
 }
 
 .side-icons img {
