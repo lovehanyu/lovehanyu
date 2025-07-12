@@ -40,7 +40,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 8px; /* 👈 để dòng chữ domain nằm ngang đáy menu */
+  gap: 8px; /* 👈 khoảng cách giữa logo và dòng chữ */
+  padding-bottom: 8px;
 }
 .logo-block img {
   height: 90px;
