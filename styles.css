@@ -403,6 +403,57 @@ body {
   right: 10px;
 }
 
+/* ===== LỊCH KHAI GIẢNG ===== */
+.schedule-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.95rem;
+  overflow-x: auto;
+}
+
+.schedule-table .row {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr 1fr 1.2fr 1fr 1fr auto;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--main-purple);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  align-items: center;
+}
+
+.schedule-table .row.header {
+  font-weight: bold;
+  background: var(--light-purple);
+  border: none;
+  box-shadow: none;
+}
+
+.schedule-table .price {
+  color: var(--deep-purple);
+  font-weight: bold;
+}
+
+.register-btn {
+  background: var(--main-purple);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: var(--deep-purple);
+}
+
+
+
 /* ==== CÁC SECTION CHUNG ==== */
 .section {
   padding: 3rem 1rem;
