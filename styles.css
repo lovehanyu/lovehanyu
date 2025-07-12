@@ -23,7 +23,7 @@ body {
 /* ==== HEADER ==== */
 .header-container {
   background: url('nen header.jpg') no-repeat center/cover;
-  padding: 1rem;
+ padding: 0.5rem 1rem 0.5rem 1rem; /* trên phải dưới trái */
 }
 .header-top {
   display: flex;
