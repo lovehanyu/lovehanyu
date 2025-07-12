@@ -51,10 +51,12 @@ body {
 .slogan {
   flex: 1;
   text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: var(--main-purple);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  color: #8e24aa; /* tím nghệ thuật rực hơn */
+  text-shadow: 2px 2px 5px rgba(146, 46, 169, 0.2); /* bóng mờ tím */
+  letter-spacing: 1px;
 }
 .social-search {
   display: flex;
