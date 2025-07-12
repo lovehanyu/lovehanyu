@@ -53,23 +53,23 @@ body {
   text-align: center;
   font-size: 2.5rem;
   font-family: 'Pacifico', cursive;
-  color: #922ea9; /* màu tím nổi bật */
+  background: linear-gradient(90deg, #922ea9, #ab47bc, #ce93d8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(140, 0, 180, 0.2);
+  text-shadow: 2px 2px 4px rgba(140, 0, 180, 0.3);
   letter-spacing: 2px;
   animation: glow 4s infinite alternate;
   cursor: default;
-  line-height: 1.7; 
-  padding: 1rem 0 1.2rem;
+  line-height: 1.6;
+  padding: 1rem 0 1.5rem;
   overflow: visible;
 }
 @keyframes glow {
   0% {
-    text-shadow: 0 0 10px rgba(146, 46, 169, 0.2);
+    text-shadow: 0 0 8px rgba(146, 46, 169, 0.2);
   }
   100% {
-    text-shadow: 0 0 20px rgba(146, 46, 169, 0.5);
+    text-shadow: 0 0 16px rgba(146, 46, 169, 0.6);
   }
 }
 .social-search {
