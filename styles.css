@@ -698,11 +698,63 @@ form button {
   cursor: pointer;
 }
 
-/* ==== FOOTER ==== */
-footer {
-  text-align: center;
-  background: var(--gray);
-  padding: 1rem;
+/* ===== FOOTER ===== */
+.main-footer {
+  background: #c70039;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: 'Noto Sans', sans-serif;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+.footer-left, .footer-map, .footer-right {
+  flex: 1 1 300px;
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.footer-logo img {
+  width: 60px;
+}
+.footer-name h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.footer-name p {
   font-size: 0.9rem;
-  color: #555;
+  margin: 0;
+}
+.footer-branch ul {
+  padding-left: 1rem;
+}
+.footer-branch li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+.footer-hotline h4,
+.footer-contact h4,
+.footer-social h4,
+.footer-branch h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: #fff7c4;
+}
+.footer-contact a,
+.footer-contact p {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.footer-social .social-icons img {
+  width: 32px;
+  margin-right: 0.8rem;
 }
