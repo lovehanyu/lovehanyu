@@ -4,27 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Love Hanyu - Học Tiếng Trung Giao Tiếp</title>
-<!-- ✅ Thêm các file CSS header & footer tại đây -->
+  
+<!-- ✅ CSS -->
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/responsive.css" /> 
-  <!-- Font nghệ thuật cho slogan -->
+  
+  <!-- ✅ Font -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <!-- Font tổng thể toàn trang hỗ trợ đa ngôn ngữ -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-
 </head>
+ 
 <body>
+  <!-- ✅ HEADER -->
   <div id="header-placeholder"></div>
-<script>
-  fetch("components/_header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
-    });
-</script>
-
+  
 <!-- 💡 SECTION TRANG CHỦ -->
 <section class="hero" id="trang-chu">
   <h1>TIẾNG TRUNG GIAO TIẾP LOVE HANYU</h1>
@@ -447,8 +443,29 @@
     <button type="submit">Gửi đăng ký</button>
   </form>
 </section>
-
+  
+<!-- ✅ FOOTER -->
 <div id="footer-placeholder"></div>
+
+  <!-- ✅ Load header/footer từ file HTML -->
+  <script>
+    // Tải header
+    fetch("components/_header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    // Tải footer (nếu có)
+    fetch("components/_footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
+
+  <!-- ✅ JavaScript cần được đặt cuối cùng để chắc chắn DOM đã tải -->
+  <script src="js/search.js"></script>
 
   <script src="js/include.js"></script>
 </body>
