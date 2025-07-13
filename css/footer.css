@@ -2,7 +2,7 @@
 
 /* 1. Dùng hình nền thay vì màu đơn */
 .main-footer {
-  background: url("nen footer.png") no-repeat center center;
+  background: url("assets/images/footer-bg.png") no-repeat center center;
   background-size: cover;
   color: white;
   padding: 2rem 1rem;
