@@ -1,19 +1,9 @@
-// include.js
+<body>
+  <div id="header-placeholder"></div>
 
-function includeHTML(id, url) {
-  fetch(url)
-    .then(res => {
-      if (!res.ok) throw new Error(`Cannot fetch ${url}`);
-      return res.text();
-    })
-    .then(data => {
-      document.getElementById(id).innerHTML = data;
-    })
-    .catch(err => {
-      console.error('Include error:', err);
-    });
-}
+  <!-- Nội dung chính của trang -->
+  
+  <div id="footer-placeholder"></div>
 
-// Gọi hàm để nhúng
-includeHTML("header-include", "header.html");
-includeHTML("footer-include", "footer.html");
+  <script src="js/include.js"></script>
+</body>
