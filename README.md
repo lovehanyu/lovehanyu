@@ -1,16 +1,17 @@
-## Hi there 👋
+# Website học tiếng Trung
 
-<!--
-**lovehanyu/lovehanyu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Cấu trúc thư mục
 
-Here are some ideas to get you started:
+- `assets/`: Ảnh, âm thanh, video, icon, font
+- `components/`: Các phần HTML tái sử dụng (header, footer,...)
+- `css/`: Giao diện và responsive
+- `js/`: Logic tương tác
+- `page/`: Các trang nội dung chia theo chức năng
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Triển khai
+Trang web đang được triển khai trên: https://yourusername.github.io/
+
+## TODO
+- [ ] Hoàn thiện phần HSK 2~9
+- [ ] Bổ sung tìm kiếm nâng cao
+- [ ] Thêm hiệu ứng chuyển trang
