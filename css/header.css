@@ -96,7 +96,7 @@
   backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
   transition: all 0.3s ease;
