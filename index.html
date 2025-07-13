@@ -22,22 +22,6 @@
   <!-- ✅ HEADER -->
   <div id="header-top-placeholder"></div>
   <div id="menu-placeholder"></div>
-
-  <script>
-  // Load file header-top
-  fetch('components/_header-top.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('header-top-placeholder').innerHTML = data;
-    });
-
-  // Load file menu
-  fetch('components/_nav-menu.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('menu-placeholder').innerHTML = data;
-    });
-</script>
   
 <!-- 💡 SECTION TRANG CHỦ -->
 <section class="hero" id="trang-chu">
@@ -467,6 +451,16 @@
 
 <!-- ✅ Load footer từ file HTML -->
  <script>
+  fetch('components/_header-top.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('header-top-placeholder').innerHTML = data;
+    });
+  fetch('components/_nav-menu.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('menu-placeholder').innerHTML = data;
+    });
    fetch("components/_footer.html")
      .then(res => res.text())
      .then(data => {
