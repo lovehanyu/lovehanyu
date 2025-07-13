@@ -597,15 +597,19 @@ body {
   margin-top: 2rem;
 }
 .post-card {
-  background: white;
-  border-radius: 10px;
+  display: block;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(150, 0, 200, 0.1);
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 .post-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(100, 0, 200, 0.15);
 }
 .post-card img {
   width: 100%;
@@ -613,9 +617,9 @@ body {
   object-fit: cover;
 }
 .post-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  padding: 0.8rem 1rem 0 1rem;
   color: var(--main-purple);
-  margin: 0.8rem 1rem 0.5rem;
 }
 .post-card p {
   font-size: 0.9rem;
