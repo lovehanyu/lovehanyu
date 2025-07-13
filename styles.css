@@ -714,7 +714,7 @@ form button {
   gap: 2rem;
 }
 .footer-left, .footer-map, .footer-right {
-  flex: 1 1 300px;
+  flex: 1 1 220px;
 }
 .footer-logo {
   display: flex;
