@@ -1,9 +1,13 @@
-<body>
-  <div id="header-placeholder"></div>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("components/_header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
 
-  <!-- Nội dung chính của trang -->
-  
-  <div id="footer-placeholder"></div>
-
-  <script src="js/include.js"></script>
-</body>
+  fetch("components/_footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+});
