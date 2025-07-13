@@ -17,7 +17,13 @@
 </head>
 <body>
   <div id="header-placeholder"></div>
- 
+<script>
+  fetch("components/_header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
 
 <!-- 💡 SECTION TRANG CHỦ -->
 <section class="hero" id="trang-chu">
