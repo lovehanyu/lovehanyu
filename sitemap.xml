@@ -1,5 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://lovehanyu.github.io/</loc></url>
-  <url><loc>https://lovehanyu.github.io/page/about.html</loc></url>
-  ...
+
+  <!-- Trang chính -->
+  <url>
+    <loc>https://lovehanyu.github.io/</loc>
+  </url>
+
+  <!-- Giới thiệu -->
+  <url>
+    <loc>https://lovehanyu.github.io/about.html</loc>
+  </url>
+
+  <!-- Liên hệ -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/lien-he/lien-he.html</loc>
+  </url>
+
+  <!-- Tự học -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/tu-hoc/index.html</loc>
+  </url>
+  <url>
+    <loc>https://lovehanyu.github.io/page/tu-hoc/tre-em/bai-1-tre-em.html</loc>
+  </url>
+
+  <!-- Tài liệu -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/tai-lieu/index.html</loc>
+  </url>
+
+  <!-- Thi thử HSK -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/thi-thu-hsk/index.html</loc>
+  </url>
+  <url>
+    <loc>https://lovehanyu.github.io/page/thi-thu-hsk/hsk5/de-1.html</loc>
+  </url>
+
+  <!-- Bài viết -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/bai-viet/index.html</loc>
+  </url>
+  <url>
+    <loc>https://lovehanyu.github.io/page/bai-viet/tu-vung/bai-viet-1.html</loc>
+  </url>
+  <url>
+    <loc>https://lovehanyu.github.io/page/bai-viet/phat-am/van-mau/index.html</loc>
+  </url>
+
+  <!-- Giải trí -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/giai-tri/index.html</loc>
+  </url>
+
+  <!-- Khóa học -->
+  <url>
+    <loc>https://lovehanyu.github.io/page/khoa-hoc/index.html</loc>
+  </url>
+
 </urlset>
