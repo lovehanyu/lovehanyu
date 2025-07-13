@@ -698,11 +698,18 @@ form button {
   cursor: pointer;
 }
 
-/* ===== FOOTER ===== */
+/* ===== Footer đã chỉnh sửa ===== */
+
+/* 1. Dùng hình nền thay vì màu đơn */
 .main-footer {
   background: url("nen footer.png") no-repeat center center;
   background-size: cover;
+  color: white;
+  padding: 2rem 1rem;
+  font-family: 'Noto Sans', sans-serif;
 }
+
+/* 2. Căn bố cục */
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -711,36 +718,49 @@ form button {
   margin: auto;
   gap: 2rem;
 }
+
+/* 3. Cột chia */
 .footer-left, .footer-map, .footer-right {
   flex: 1 1 220px;
 }
-.footer-name {
-  text-align: left;
-}
+
+/* 4. Căn phải logo và chữ */
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 1rem;
   justify-content: flex-start;
 }
+
 .footer-logo img {
   width: 60px;
 }
+
+.footer-name {
+  text-align: left;
+}
+
 .footer-name h3 {
   font-size: 1.1rem;
   margin: 0;
 }
+
 .footer-name p {
   font-size: 0.9rem;
   margin: 0;
 }
+
+/* 5. Danh sách cơ sở */
 .footer-branch ul {
   padding-left: 1rem;
 }
+
 .footer-branch li {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
 }
+
+/* 6. Tiêu đề các phần */
 .footer-hotline h4,
 .footer-contact h4,
 .footer-social h4,
@@ -749,41 +769,52 @@ form button {
   font-size: 1.05rem;
   color: #fff7c4;
 }
+
+/* 7. Thông tin liên hệ */
 .footer-contact a,
 .footer-contact p {
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
 }
+
+/* 8. Icon mạng xã hội */
 .footer-social .social-icons img {
   width: 32px;
   margin-right: 0.8rem;
 }
-footer .footer-copyright {
-  text-align: center;
-  font-size: 0.85rem;
-  padding-top: 1rem;
-  color: #fff;
-  opacity: 0.8;
-}
-/* ===== Tối ưu hơn ở đt ===== */
+
+/* 9. Responsive trên mobile */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .footer-left, .footer-map, .footer-right {
     width: 100%;
   }
+
   .footer-logo {
     flex-direction: column;
     align-items: center;
   }
+
   .footer-name {
     text-align: center;
   }
+
   .social-icons img {
     margin-right: 0.5rem;
   }
+}
+
+/* 10. Dòng bản quyền dưới cùng */
+footer .footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  color: #fff;
+  opacity: 0.8;
 }
