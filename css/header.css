@@ -1,7 +1,10 @@
 /* ==== HEADER ==== */
 .header-container {
   background: url('../assets/images/header-bg.jpg') no-repeat center/cover;
-   padding: 0rem 1rem;
+  padding: 1rem;
+  min-height: 150px;
+  position: relative;
+  z-index: 1;
 }
 
 .header-top {
