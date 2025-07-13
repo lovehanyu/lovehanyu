@@ -2,7 +2,7 @@
 .header-container {
   background: url('../assets/images/header-bg.jpg') no-repeat center/cover;
   padding: 1rem;
-  min-height: 80px;
+  min-height: 40px;
   position: relative;
   z-index: 1;
 }
