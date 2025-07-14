@@ -58,30 +58,34 @@
 .contact-area {
   flex: 1.5;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.9rem;
-  text-align: right;
-  min-width: 180px;
+}
+
+.contact-area span,
+.contact-area a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 .contact-area i {
-  margin-right: 4px;
+  font-size: 1rem;          /* Cố định kích thước icon */
   color: #922ea9;
-}
-
-.contact-area a {
-  color: #000;
-  text-decoration: none;
+  display: inline-block;
+  width: 1em;               /* Đảm bảo cùng chiều rộng */
+  text-align: center;       /* Icon nằm giữa khối */
 }
 
 .contact-area a:hover {
   color: #922ea9;
 }
-
 /* === NAVIGATION MENU === */
 nav {
   background-color: #922ea9;
