@@ -1,262 +1,176 @@
-/* Reset cơ bản */
+/* RESET CƠ BẢN */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
- .site-header {
-  height: auto;
-  overflow: visible;
-  /*position: relative;*/
-  font-family: 'Arial', sans-serif;
-  z-index: 1000;
-  background-color: white;
-
+.site-header {
+  width: 100%;
+  background: #fff;
+  font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-/* === TOP HEADER === */
+/* TOP HEADER */
 .top-header {
-  display: grid;
-  grid-template-columns: 1fr 5fr 4fr;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 20px;
-  background-color: #f5f5f5;
+  padding: 10px 2%;
+  border-bottom: 1px solid #ddd;
 }
 
-/* Logo + Domain */
 .logo-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex: 1;
 }
-.logo-area .logo {
-  width: 80px;
-  margin-top: 0px;
+.logo-area img {
+  height: 50px;
 }
 .logo-area .domain {
   font-size: 0.9rem;
   color: #922ea9;
-  margin-top: 1px;
 }
 
-/* Slogan */
 .slogan-area {
-  text-align: left;
+  flex: 3;
+  text-align: center;
 }
 .slogan {
-  font-size: 2.2rem;
   font-family: 'Pacifico', cursive;
+  font-size: 2rem;
   color: #922ea9;
-  white-space: nowrap;
 }
 
-/* Contact Info */
 .contact-area {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 12px;
-  font-size: 1rem;
-  font-weight: 500;
+  flex: 2;
+  font-size: 0.9rem;
+  text-align: right;
 }
-
 .contact-area a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  color: #222;
-  transition: color 0.3s ease;
+  color: #922ea9;
+  margin: 0 4px;
 }
 
-.contact-area a:hover {
-  color: #922ea9; /* Tím chủ đạo khi hover */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  border: none;
+  color: #922ea9;
 }
 
-.contact-area img {
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
-  border-radius: 50%; /* Làm tròn icon */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.contact-area img:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* === NAVIGATION === */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #922ea9;
-  padding: 10px 20px;
+/* NAVIGATION BAR */
+.nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #922ea9;
+  padding: 10px 2%;
 }
 
-/* Menu trái */
-.menu {
+.nav-left {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   gap: 20px;
-  flex: 8;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 1.2rem;
-}
-.menu li {
-  position: relative;
+  flex-wrap: wrap;
 }
 
-/* ✅ Thêm hiệu ứng “nút bấm” cho menu chính */
-.menu > li > a {
-  text-decoration: none;
+.nav-left li a {
   color: white;
   font-weight: bold;
-  padding: 8px 14px;
-  display: block;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  text-transform: uppercase;
+  padding: 5px;
+  transition: color 0.2s;
 }
-.menu > li > a:hover {
-  background-color: white;
-  color: #922ea9;
-  border-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Giữ nguyên hiệu ứng dropdown */
-.menu a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  display: block;
-}
-/* Không cần dòng này nữa nếu đã có .menu > li > a ở trên
-.menu a:hover {
+.nav-left li a:hover {
   color: #ffe6ff;
 }
-*/
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #c682d8;
-  top: 100%;
-  left: 0;
-  min-width: 150px;
-  z-index: 10;
+.has-dropdown {
+  position: relative;
 }
-.dropdown-content li a {
-  padding: 8px 12px;
-  border-radius: 4px;
-}
-.dropdown-content li a:hover {
-  background-color: #b24fc4;
-  color: white;
-}
-.dropdown:hover .dropdown-content {
+.has-dropdown:hover .dropdown {
   display: block;
 }
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.dropdown li a {
+  display: block;
+  padding: 8px 12px;
+  white-space: nowrap;
+  color: #922ea9;
+}
 
-/* Menu phải */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex: 2;
 }
+
 .login-btn {
+  background: white;
   color: #922ea9;
-  background-color: white;
-  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
   font-weight: bold;
-  padding: 8px 14px;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  display: inline-block;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-.login-btn:hover {
-  background-color: #ffe6ff;
-  color: #922ea9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
 }
 
 .search-box {
-  position: relative;
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 5px;
+  padding: 2px 8px;
 }
 .search-box input {
-  padding: 5px 30px 5px 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
 }
 .search-box img {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
-/* Mobile Styles */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .top-header .slogan-area,
-  .top-header .contact-area {
+  .slogan-area,
+  .contact-area {
     display: none;
-  }
-
-  nav {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start; /* ✅ Căn trái nội dung */
-    text-align: left;        /* ✅ Căn trái chữ */
-    padding-left: 0.1rem;      /* ✅ Cách mép trái 1 chút (tuỳ chọn) */
-    width: 100%;
-  }
-
-  nav .menu.show {
-    display: flex;
-  }
-
-  nav .menu li {
-    width: 100%; /* ✅ Đảm bảo mỗi mục chiếm toàn bộ chiều ngang */
-  }
-
-  nav .menu a {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
   }
 
   .menu-toggle {
     display: block;
   }
 
-  nav .menu li ul {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-left {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #922ea9;
+  }
+
+  .nav-left.active {
+    display: flex;
+  }
+
+  .nav-right {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
   }
 }
