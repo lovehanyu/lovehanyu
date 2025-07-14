@@ -1,49 +1,100 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Love Hanyu - Học tiếng Trung dễ dàng</title>
-  <meta name="description" content="Chia sẻ kinh nghiệm học tiếng Trung hiện đại, trực quan, dễ hiểu.">
-  <link rel="icon" href="assets/icons/logo.png" type="image/png" />
-  
-  <!-- Font Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Noto+Sans+TC&display=swap" rel="stylesheet">
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/footer.css" />
+header {
+  font-family: 'Segoe UI', sans-serif;
+}
 
-  <!-- JS -->
-  <script src="js/include.js" defer></script>
-  <script src="js/main.js" defer></script>
-</head>
-<body>
-  <!-- Nhúng header -->
-  <div w3-include-html="components/_header.html"></div>
+/* Top Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 5%;
+  border-bottom: 1px solid #ddd;
+}
 
-  <!-- Nội dung -->
-  <main>
-    <section class="hero">
-      <h1>Chào mừng đến với Love Hanyu</h1>
-      <p>Trang học tiếng Trung hiện đại, dễ hiểu và đầy cảm hứng
-        Đây là nơi bạn có thể học tiếng Trung một cách hiện đại, dễ hiểu và đầy cảm hứng.
-        Hãy bắt đầu hành trình cùng chúng tôi! 
-        Hi! Mái trường - ngôi nhà thứ hai luôn là nơi lưu lại những dấu ấn đáng nhớ nhất cuộc đời mỗi con người. Ở nơi đó, thầy cô là cha mẹ, bạn bè là anh em gắn bó với nhau như ruột thịt và cùng nhau tạo nên những kỉ niệm khó phai.
-Suốt những năm tháng cắp sách đến trường, chắc hẳn ai cũng có ấn tượng với một thầy cô giáo nào đó. Những người để lại cho ta kinh nghiệm suốt đời hay vực ta đứng dạy từng những nơi tối tăm, hay đơn giản là cách giảng bài sâu sắc mà không sao quên được. Tôi cũng vậy, suốt ba năm phổ thông cô Hưng dạy văn là người tôi nhớ nhất. Viết về hình tượng cô giáo ngay từ bé chúng tôi đã được nhào nặn trong trí tưởng tượng đó là cô giáo với mái tóc đen dài bóng mượt, cặp gọn gàng bằng một chiếc kẹp giản dị, da trắng môi đỏ, luôn mặc áo dài thướt tha và dáng đi khoan thai, nhẹ nhàng. Với tôi, chắc chắn đó là cô giáo bước ra từ giấc mơ. Ngày đầu ngỡ ngàng bước vào lớp mười, buổi đầu tiên gặp gỡ, cô bước vào lớp với cặp kính râm to đen, chúng tôi có chút nhốn nháo và bất ngờ, cô hóm hỉnh giải thích: “Buổi đầu chào cả lớp mà cô giống mafia quá, cô xin lỗi các em nhưng nếu bây giờ cô bỏ kính ra thì cả lớp chắc không ai học được vì sợ vừa vì cười đấy. Cô bị ngã xe, cả lớp thông cảm cho cô nhé!” và kèm theo đó là nụ cười rạng rỡ. Tôi cũng phát hiện ra rằng không phải cô giáo dạy văn nào cũng có giọng nói ngọt như mía lùi hay lanh lảnh như chim hót. Cô Hưng giọng khá trầm và khàn nhưng chưa bao giờ chúng tôi cảm thấy ngao ngán với tiết văn của cô.
-Ngày đầu tiên ấy, cô còn giới thiệu và kể thêm vài câu chuyện vui về “cái tên giống tên con trai” của cô. Vậy là giờ dạy mở màn, cô đã đốn tim trọn vẹn bốn mươi lăm thành viên lớp 10A3, đặc biệt là tôi, cảm nhận được một tâm hồn đồng điệu. Nhắc đến cô giáo, người ta luôn mường tượng ra sự ân cần, nhẹ nhàng, dạy dỗ chỉ bảo tận tình, sự nhiệt huyết và yêu trẻ. Cô Hưng cũng không phải ngoại lệ. Nhưng điều đặc biệt hơn cả, cô là người rất cá tính và hiện đại. Cô luôn có cách lôi kéo chúng tôi không thể rời khỏi lời giảng của cô một giây phút nào. Cô vẫn giữ những nét truyền thống của một nhà giáo, không sai lệch về tư tưởng, đạo đức nhưng cô cũng không quên bỏ vào đó một chút cái tôi cá nhân riêng để học sinh có thể nhớ về cô mãi. Ông nội tôi trước đây là một nhà Nho dạy chữ Hán vì vậy ông rất thích con cháu nối nghiệp ông. Mỗi lần về thăm quê, ông lại thủ thỉ với tôi: “Làm giáo viên con nhé! Tôi chỉ biết mỉm cười và lẳng lặng gật đầu”. Tôi yêu trẻ con nhưng nóng tính mà ngành giáo luôn cần sự kiên nhẫn và tôi đã tự nhủ rằng “không bao giờ mình thi sư phạm”. Nhưng rỗi mỗi tiết văn của cô lại truyền thêm cho tôi cảm hứng. Tôi sẽ đứng trên bục giảng, thổi hồn vào từng câu chữ và học sinh sẽ quý mến tôi như chúng tôi kính trọng, yêu quý cô bây giờ. Tôi sẽ niềm nở, hài hước và thân thiện giống cô. Tôi sẽ dạy cho những đứa con thứ hai của tôi không chỉ tri thức mà còn cả cách làm người, cách yêu thương cuộc sống, cách gieo lòng nhân hậu với những con người ra chưa từng biết, chưa từng gặp qua mỗi trang sách giống như cô dạy chúng tôi trong mỗi tiết học. Cô Hưng mang dáng dấp của người phụ nữ hiện đại nhưng cũng không quên đi nét truyền thống trong mình. Không phải phóng đại, nhưng cô là người phụ nữ giỏi việc nước, đảm việt nhà. Cô luôn nhiệt tình tham gia các hoạt động Đoàn trường, nhiều năm đạt danh hiệu Giáo viên xuất sắc. Năm học 2012 - 2013, lần đầu tiên cô bồi dưỡng học sinh giỏi lớp 12 mang lại thành tích rực rỡ như thế: Ba giải nhì, một giải ba và một giải khuyến khích, đứng nhất tỉnh năm đó. Ở nhà, hai con của cô luôn là những con ngoan trò giỏi. Hai em luôn đạt danh hiệu học sinh giỏi qua từng năm học. Niềm vinh dự hơn cả là con trai cô từng đạt giải học sinh tỉnh lớp 5.
-Cô là người giữ lửa và ngọn lửa ấy luôn bùng cháy trong gia đình nhỏ hạnh phúc của cô. Tôi đang cảm nhận từng ngày trọn vẹn khi còn là học sinh, khi còn được ngồi trên ghế nhà trường. Và tôi không thể nào quên những kỉ niệm thời áo trắng bên bạn bè, trang sức cùng hình ảnh người cô miệt mài bên giáo án. Người đã truyền dạy cho tôi bao tri thức, bao ước mơ và hy vọng
-      </p>
-    </section>
-  </main>
+.logo-area {
+  flex: 1;
+  text-align: left;
+}
+.logo-area img {
+  height: 50px;
+}
+.logo-area .domain {
+  font-size: 0.9rem;
+  color: #666;
+}
 
-  <!-- Nhúng footer -->
-  <div w3-include-html="components/_footer.html"></div>
+.slogan-area {
+  flex: 3;
+  text-align: center;
+}
+.slogan-area h1 {
+  font-size: 1.8rem;
+  color: #922ea9;
+  font-family: 'Pacifico', cursive;
+}
 
-  <script>
-    includeHTML(); // Kích hoạt import header/footer
-  </script>
-</body>
-</html>
+.contact-area {
+  flex: 2;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+}
+.contact-area img {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.contact-area .socials a img {
+  height: 20px;
+  margin-left: 8px;
+}
+
+/* Bottom Header */
+.bottom-header {
+  background-color: #922ea9;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
+}
+.main-menu ul li {
+  position: relative;
+}
+.main-menu ul li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+.main-menu ul li:hover {
+  background: #7a1f8d;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dropdown-menu li a {
+  color: #333;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
       
