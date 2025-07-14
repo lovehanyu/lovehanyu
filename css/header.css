@@ -1,68 +1,99 @@
-/* Header cố định */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: white;
-  border-bottom: 2px solid #922ea9;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+header {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Top Header */
 .top-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  font-family: 'Pacifico', cursive;
-  background-color: #fdf8fd;
+  align-items: center;
+  background: #fff;
+  padding: 15px 5%;
+  border-bottom: 1px solid #ddd;
 }
 
-.top-header .logo-area img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-.top-header .slogan {
+.logo-area {
   flex: 1;
-  font-size: 1.5rem;
-  text-align: right;
+  text-align: left;
+}
+.logo-area img {
+  height: 50px;
+}
+.logo-area .domain {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.slogan-area {
+  flex: 3;
+  text-align: center;
+}
+.slogan-area h1 {
+  font-size: 1.8rem;
   color: #922ea9;
+  font-family: 'Pacifico', cursive;
 }
 
-.navbar {
+.contact-area {
+  flex: 2;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #333;
+}
+.contact-area img {
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.contact-area .socials a img {
+  height: 20px;
+  margin-left: 8px;
+}
+
+/* Bottom Header */
+.bottom-header {
+  background-color: #922ea9;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.main-menu ul {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: #922ea9;
+  list-style: none;
+  justify-content: center;
+  padding: 10px 0;
 }
-
-.navbar nav a {
-  color: white;
-  padding: 10px;
-  margin: 0 5px;
-  font-weight: bold;
-}
-
-.navbar .right {
-  display: flex;
-  gap: 10px;
-}
-
-.navbar .search-box {
+.main-menu ul li {
   position: relative;
 }
-
-.navbar .search-box input {
-  padding: 5px 30px 5px 10px;
-  border-radius: 5px;
-  border: none;
+.main-menu ul li a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
 }
-
-.navbar .search-box img {
+.main-menu ul li:hover {
+  background: #7a1f8d;
+}
+.dropdown-menu {
+  display: none;
   position: absolute;
-  right: 5px;
-  top: 5px;
-  height: 20px;
-  cursor: pointer;
+  top: 100%;
+  background: #fff;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.dropdown-menu li a {
+  color: #333;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
