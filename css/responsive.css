@@ -1,9 +1,10 @@
-/* MOBILE: nhỏ hơn 768px */
 @media screen and (max-width: 768px) {
-  /* Top Header */
+  .desktop-only {
+    display: none;
+  }
+
   .top-header {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
 
@@ -11,41 +12,43 @@
   .top-header .center,
   .top-header .right {
     width: 100%;
-    margin-bottom: 10px;
-  }
-
-  /* Menu */
-  .nav-bar {
-    flex-direction: column;
     align-items: center;
   }
 
-  .nav-bar .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .nav-bar .menu li {
+  .mobile-menu-icon {
     display: block;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
   }
 
-  /* Search box và nút đăng nhập gọn lại */
-  .nav-bar .search-login {
+  .main-menu {
+    display: none;
     flex-direction: column;
     width: 100%;
+    background-color: #5c0d84;
+    text-align: center;
   }
 
+  .main-menu.active {
+    display: flex;
+  }
+
+  .main-menu > li {
+    padding: 12px 0;
+  }
+
+  .main-menu > li .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .search-login {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .login-button,
   .search-box input {
-    width: 90%;
-    margin-bottom: 10px;
-  }
-
-  .login-button {
-    width: 90%;
+    width: 100%;
   }
 }
-
