@@ -90,6 +90,9 @@
 
 /* === NAVIGATION === */
 .nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: #922ea9;
   padding: 10px 20px;
   display: flex;
@@ -98,13 +101,6 @@
   flex-wrap: wrap;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-/* 🟣 Sticky nav */
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
 
 /* Menu trái */
 .menu {
