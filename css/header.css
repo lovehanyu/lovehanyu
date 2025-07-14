@@ -1,125 +1,121 @@
-/* Reset cơ bản */
+/* Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #fdfdfd;
+  background: #fefefe;
   color: #333;
 }
 
-/* ===== Top Header ===== */
+/* Top Header */
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #f8f3f9;
+  background: #f4edf8;
   border-bottom: 1px solid #ccc;
 }
 
-.top-header .logo img {
+.logo img {
   height: 50px;
 }
 
-.top-header .logo p {
-  font-size: 0.9rem;
+.logo p {
+  font-size: 0.8rem;
   color: #555;
 }
 
-.top-header .slogan {
-  font-size: 1.6rem;
+.slogan {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
   font-family: 'Pacifico', cursive;
   color: #922ea9;
-  text-align: center;
-  flex: 1;
 }
 
-.top-header .contact {
+.contact {
   text-align: right;
   font-size: 0.9rem;
 }
 
-.top-header .contact .social a {
-  margin-left: 0.5rem;
-  text-decoration: none;
-  color: #922ea9;
-}
-
-/* ===== Bottom Header (Sticky Menu) ===== */
+/* Bottom Header (Sticky Navigation) */
 .bottom-header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background-color: #922ea9;
+  z-index: 999;
+  background: #922ea9;
   padding: 0.5rem 2rem;
 }
 
-.bottom-header ul.menu {
+.bottom-header .menu {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
+  justify-content: center;
 }
 
-.bottom-header ul.menu li {
+.bottom-header .menu li {
   position: relative;
 }
 
-.bottom-header ul.menu li a {
+.bottom-header .menu li a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   font-weight: bold;
   padding: 0.5rem 1rem;
   display: block;
 }
 
-.bottom-header ul.menu li a:hover {
-  background-color: #7a1e92;
+.bottom-header .menu li a:hover {
+  background: #7a1e92;
   border-radius: 4px;
 }
 
 /* Dropdown */
-.bottom-header ul.menu li .dropdown-content {
+.menu .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  min-width: 160px;
+  background: #fff;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1001;
+  z-index: 1000;
 }
 
-.bottom-header ul.menu li .dropdown-content li a {
+.menu .dropdown-content li a {
   color: #922ea9;
   padding: 10px;
 }
 
-.bottom-header ul.menu li:hover .dropdown-content {
+.menu .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Hero Section */
+/* Nội dung */
 .hero {
-  padding: 4rem 2rem;
-  background: #fce4ff;
+  padding: 3rem 2rem;
+  background: #fce9ff;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
   color: #922ea9;
 }
 
-/* Nội dung */
-.about, .content {
+.content {
   padding: 2rem;
-  max-width: 960px;
-  margin: auto;
 }
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  background: #f3f3f3;
+  color: #666;
+}
+
