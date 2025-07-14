@@ -166,10 +166,9 @@ nav .menu a:hover {
     padding: 10px 0;
   }
 
-  nav.active .menu {
-  display: flex;
-  flex-direction: column;
-}
+    nav.active {
+    display: flex; /* Hiện menu khi có class active */
+  }
 
   nav .menu {
     flex-direction: column;
