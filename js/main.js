@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.querySelector("nav");
+  const menu = document.getElementById("main-menu");
 
   menuToggle.addEventListener("click", function () {
-    nav.classList.toggle("active");
+    menu.classList.toggle("show");
   });
 });
