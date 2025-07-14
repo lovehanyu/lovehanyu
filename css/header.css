@@ -150,10 +150,24 @@
   flex: 2;
 }
 .login-btn {
-  color: white;
+  color: #922ea9;
+  background-color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
+.login-btn:hover {
+  background-color: #ffe6ff;
+  color: #922ea9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 .search-box {
   position: relative;
 }
