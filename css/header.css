@@ -9,19 +9,21 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* === TOP HEADER === */
 .top-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* Chia 3 vùng: trái - giữa - phải */
   align-items: center;
-  justify-content: flex-start; /* Căn trái toàn bộ nội dung */
   padding: 10px 20px;
   background-color: #f5f5f5;
   position: relative;
-  gap: 15px; /* Tạo khoảng cách tự nhiên giữa các phần */
 }
 
+/* VÙNG TRÁI: Logo + domain (căn giữa trong vùng của nó) */
 .logo-area {
-  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -35,12 +37,14 @@
   margin-top: 5px;
 }
 
+/* VÙNG GIỮA: Slogan (căn trái trong vùng giữa) */
 .slogan-area {
+  justify-self: start;
   font-weight: bold;
   font-size: 1rem;
   color: #922ea9;
-  white-space: nowrap; /* Tránh xuống dòng */
-  margin-left: 10px;    /* Khoảng cách với logo */
+  white-space: nowrap;
+  padding-left: 10px;
 }
 
 .slogan {
@@ -49,18 +53,28 @@
   color: #922ea9;
 }
 
+/* VÙNG PHẢI: Liên hệ (căn phải trong vùng của nó) */
 .contact-area {
-  flex: 3;
+  justify-self: end;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 10px;
   font-size: 0.9rem;
+  flex-wrap: wrap;
 }
 
-.contact-area img {
-  width: 18px;
-  vertical-align: middle;
+.contact-area i {
+  margin-right: 4px;
+  color: #922ea9;
+}
+
+.contact-area a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-area a:hover {
+  color: #922ea9;
 }
 
 /* === NAVIGATION MENU === */
