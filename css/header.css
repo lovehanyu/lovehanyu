@@ -82,6 +82,7 @@
   flex: 8;
   justify-content: center; /* ✅ Căn ngang */
   align-items: center;
+  color: white;
 }
 .menu li {
   position: relative;
