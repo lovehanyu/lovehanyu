@@ -88,15 +88,16 @@
 
 /* === NAVIGATION === */
 .nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #922ea9;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 999; /* đảm bảo nổi lên trên nội dung */
-  background-color: #922ea9;
-  padding: 10px 20px;
   flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* Menu trái */
