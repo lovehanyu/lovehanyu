@@ -1,100 +1,23 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang web học tập</title>
+  <link rel="stylesheet" href="css/header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Nhúng header -->
+  <div w3-include-html="components/_header.html"></div>
 
-header {
-  font-family: 'Segoe UI', sans-serif;
-}
+  <!-- Nội dung chính -->
+  <main style="padding: 40px; max-width: 960px; margin: auto;">
+    <h2>Chào mừng bạn đến với LoveHanyu</h2>
+    <p>Trang web chia sẻ kiến thức học tiếng Trung với nội dung sinh động, dễ tiếp cận và hoàn toàn miễn phí.</p>
+  </main>
 
-/* Top Header */
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
-  padding: 15px 5%;
-  border-bottom: 1px solid #ddd;
-}
+  <script src="js/include.js"></script>
+</body>
+</html>
 
-.logo-area {
-  flex: 1;
-  text-align: left;
-}
-.logo-area img {
-  height: 50px;
-}
-.logo-area .domain {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.slogan-area {
-  flex: 3;
-  text-align: center;
-}
-.slogan-area h1 {
-  font-size: 1.8rem;
-  color: #922ea9;
-  font-family: 'Pacifico', cursive;
-}
-
-.contact-area {
-  flex: 2;
-  text-align: right;
-  font-size: 0.9rem;
-  color: #333;
-}
-.contact-area img {
-  height: 16px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.contact-area .socials a img {
-  height: 20px;
-  margin-left: 8px;
-}
-
-/* Bottom Header */
-.bottom-header {
-  background-color: #922ea9;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-.main-menu ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding: 10px 0;
-}
-.main-menu ul li {
-  position: relative;
-}
-.main-menu ul li a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-  font-weight: 500;
-}
-.main-menu ul li:hover {
-  background: #7a1f8d;
-}
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background: #fff;
-  min-width: 150px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-.dropdown-menu li a {
-  color: #333;
-}
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-      
