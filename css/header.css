@@ -1,143 +1,93 @@
-/* ==== HEADER ==== */
-.header-container {
-  background: white;
-  padding: 1rem;
-  min-height: 40px;
-  position: relative;
-  z-index: 1;
-}
+<!-- File: components/_header.html -->
+<header class="top-header">
+  <div class="header-top">
+    <div class="logo-section">
+      <img src="../assets/icons/logo.png" alt="Love Hanyu Logo" class="logo">
+      <div class="domain">www.lovehanyu.com</div>
+    </div>
 
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
+    <div class="slogan-section">
+      <p class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</p>
+    </div>
 
-/* 🔹 LOGO + domain */
-.logo-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-}
-.logo-block img {
-  height: 80px;
-}
-.domain-text {
-  font-size: 1rem;
-  font-weight: bold;
-}
-.domain-text span {
-  color: var(--main-purple);
-}
+    <div class="contact-section">
+      <img src="../assets/icons/phone-icon.png" alt="Phone">
+      <span>0123456987 / 987654321</span>
+      <img src="../assets/icons/mail-icon.png" alt="Email">
+      <span>lovehanyu@gmail.com</span>
+      <a href="#"><img src="../assets/icons/fb.png" alt="Facebook"></a>
+      <a href="#"><img src="../assets/icons/yt.png" alt="YouTube"></a>
+      <a href="#"><img src="../assets/icons/tiktok.png" alt="TikTok"></a>
+    </div>
+  </div>
 
-/* 🔹 SLOGAN */
-.slogan {
-  flex: 1;
-  text-align: center;
-  font-size: 2.2rem;
-  font-family: 'Pacifico', cursive;
-  color: #922ea9;
-  text-shadow: 1px 1px 2px rgba(140, 0, 180, 0.2);
-  letter-spacing: 2px;
-  cursor: default;
-  line-height: 1.5;
-  padding: 1rem 0 1.2rem;
-}
+  <div class="header-nav">
+    <nav class="menu-left">
+      <ul>
+        <li class="dropdown">TRANG CHỦ
+          <ul class="dropdown-content">
+            <li><a href="#">Trang con 1</a></li>
+            <li><a href="#">Trang con 2</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">GIỚI THIỆU
+          <ul class="dropdown-content">
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Tầm nhìn</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">KHOÁ HỌC
+          <ul class="dropdown-content">
+            <li><a href="#">HSK</a></li>
+            <li><a href="#">Giao tiếp</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">LỊCH KHAI GIẢNG
+          <ul class="dropdown-content">
+            <li><a href="#">Tháng 7</a></li>
+            <li><a href="#">Tháng 8</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">TỰ HỌC
+          <ul class="dropdown-content">
+            <li><a href="#">Cho trẻ em</a></li>
+            <li><a href="#">Người lớn</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">THI THỬ HSK
+          <ul class="dropdown-content">
+            <li><a href="#">HSK 4</a></li>
+            <li><a href="#">HSK 5</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">BÀI VIẾT
+          <ul class="dropdown-content">
+            <li><a href="#">Từ vựng</a></li>
+            <li><a href="#">Ngữ pháp</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">TÀI LIỆU
+          <ul class="dropdown-content">
+            <li><a href="#">PDF</a></li>
+            <li><a href="#">Video</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">GIẢI TRÍ
+          <ul class="dropdown-content">
+            <li><a href="#">Phim</a></li>
+            <li><a href="#">Trò chơi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
-/* 🔹 SOCIAL + SEARCH */
-.social-search {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1.2rem;
-}
-.social-icons {
-  display: flex;
-  gap: 10px;
-  margin-top: 30px;
-}
-.social-icons img {
-  height: 28px;
-  cursor: pointer;
-}
-
-/* 🔍 Ô tìm kiếm */
-.search-box {
-  display: flex;
-  align-items: center;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 0 0.5rem;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  height: 40px;
-}
-.search-box input {
-  border: none;
-  outline: none;
-  padding: 0.5rem 0.5rem;
-  font-size: 1rem;
-  width: 140px;
-}
-.search-box img {
-  height: 20px;
-  margin-left: 0.5rem;
-  cursor: pointer;
-}
-
-/* ==== MENU ==== */
-.main-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  background: var(--light-purple);
-  backdrop-filter: blur(6px);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  transition: all 0.3s ease;
-}
-.main-nav a {
-  padding: 0.8rem 1.2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  background: var(--white);
-  border: 1px solid #ccc;
-  font-weight: bold;
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: 0.3s;
-}
-.main-nav a:hover {
-  background: var(--main-purple);
-  color: white;
-  border-color: var(--main-purple);
-}
-.icon {
-  height: 18px;
-}
-
-/* 📱 Responsive (tuỳ chọn) */
-@media (max-width: 768px) {
-  .slogan {
-    font-size: 1.6rem;
-    padding: 0.5rem 0;
-  }
-  .search-box input {
-    width: 100px;
-  }
-  .main-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+    <div class="menu-right">
+      <button class="login-btn">ĐĂNG NHẬP</button>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm...">
+        <img src="../assets/icons/find-icon.png" alt="Tìm kiếm">
+      </div>
+    </div>
+  </div>
+</header>
 
