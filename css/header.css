@@ -1,106 +1,125 @@
-/* Reset */
+/* Reset cơ bản */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #333;
 }
 
-/* Top Header */
+/* ===== Top Header ===== */
 .top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  background-color: #f8f3f9;
+  border-bottom: 1px solid #ccc;
 }
 
-.logo-area {
-  flex: 1;
-}
-.logo-area img {
+.top-header .logo img {
   height: 50px;
 }
-.logo-area .domain {
+
+.top-header .logo p {
   font-size: 0.9rem;
-  color: #666;
+  color: #555;
 }
 
-.slogan-area {
-  flex: 2;
-  text-align: center;
-}
-.slogan-area h1 {
-  font-size: 1.8rem;
-  color: #922ea9;
+.top-header .slogan {
+  font-size: 1.6rem;
   font-family: 'Pacifico', cursive;
+  color: #922ea9;
+  text-align: center;
+  flex: 1;
 }
 
-.contact-area {
-  flex: 1.5;
+.top-header .contact {
   text-align: right;
   font-size: 0.9rem;
-  color: #333;
-}
-.contact-area img {
-  height: 16px;
-  vertical-align: middle;
-  margin-right: 5px;
-}
-.contact-area .socials img {
-  height: 20px;
-  margin-left: 10px;
 }
 
-/* Bottom Header */
+.top-header .contact .social a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+  color: #922ea9;
+}
+
+/* ===== Bottom Header (Sticky Menu) ===== */
 .bottom-header {
-  background-color: #922ea9;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  background-color: #922ea9;
+  padding: 0.5rem 2rem;
 }
 
-.main-menu ul {
-  display: flex;
+.bottom-header ul.menu {
   list-style: none;
+  display: flex;
   justify-content: center;
+  gap: 2rem;
 }
 
-.main-menu ul li {
+.bottom-header ul.menu li {
   position: relative;
 }
 
-.main-menu ul li a {
-  color: white;
-  padding: 15px 20px;
-  display: block;
+.bottom-header ul.menu li a {
   text-decoration: none;
-  font-weight: 500;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
 }
 
-.main-menu ul li:hover {
-  background-color: #7a1f8d;
+.bottom-header ul.menu li a:hover {
+  background-color: #7a1e92;
+  border-radius: 4px;
 }
 
-/* Dropdown menu */
-.dropdown-menu {
+/* Dropdown */
+.bottom-header ul.menu li .dropdown-content {
   display: none;
   position: absolute;
   top: 100%;
-  background: white;
+  left: 0;
+  background-color: #fff;
   min-width: 160px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1001;
 }
 
-.dropdown-menu li a {
-  color: #333;
+.bottom-header ul.menu li .dropdown-content li a {
+  color: #922ea9;
   padding: 10px;
 }
 
-.dropdown:hover .dropdown-menu {
+.bottom-header ul.menu li:hover .dropdown-content {
   display: block;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 2rem;
+  background: #fce4ff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #922ea9;
+}
+
+/* Nội dung */
+.about, .content {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
 }
