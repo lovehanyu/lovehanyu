@@ -157,7 +157,8 @@ nav .menu a:hover {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: none) {
+    width: 100%;
   .top-header .slogan-area,
   .top-header .contact-area {
     display: none;
