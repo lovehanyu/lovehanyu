@@ -1,8 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".nav-left");
-
-  toggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
+// Hiệu ứng cuộn: Thêm class 'sticky' vào header khi cuộn xuống
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".site-header");
+  if (window.scrollY > 50) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 });
