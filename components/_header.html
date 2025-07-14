@@ -1,93 +1,102 @@
-<!-- 🔱 HEADER TOP -->
-<!-- File: components/_header.html -->
-<header class="top-header">
-  <div class="header-top">
-    <div class="logo-section">
-      <img src="../assets/icons/logo.png" alt="Love Hanyu Logo" class="logo">
-      <div class="domain">www.lovehanyu.com</div>
+<header class="site-header">
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="left">
+      <img src="assets/icons/logo.png" alt="Logo" class="logo" />
+      <p class="domain-name">www.lovehanyu.com</p>
     </div>
 
-    <div class="slogan-section">
+    <div class="center desktop-only">
       <p class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</p>
     </div>
 
-    <div class="contact-section">
-      <img src="../assets/icons/phone-icon.png" alt="Phone">
-      <span>0123456987 / 987654321</span>
-      <img src="../assets/icons/mail-icon.png" alt="Email">
-      <span>lovehanyu@gmail.com</span>
-      <a href="#"><img src="../assets/icons/fb.png" alt="Facebook"></a>
-      <a href="#"><img src="../assets/icons/youtube.png" alt="YouTube"></a>
-      <a href="#"><img src="../assets/icons/tiktok.png" alt="TikTok"></a>
-    </div>
-  </div>
-
-  <div class="header-nav">
-    <nav class="menu-left">
-      <ul>
-        <li class="dropdown">TRANG CHỦ
-          <ul class="dropdown-content">
-            <li><a href="#">Trang con 1</a></li>
-            <li><a href="#">Trang con 2</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">GIỚI THIỆU
-          <ul class="dropdown-content">
-            <li><a href="#">Về chúng tôi</a></li>
-            <li><a href="#">Tầm nhìn</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">KHOÁ HỌC
-          <ul class="dropdown-content">
-            <li><a href="#">HSK</a></li>
-            <li><a href="#">Giao tiếp</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">LỊCH KHAI GIẢNG
-          <ul class="dropdown-content">
-            <li><a href="#">Tháng 7</a></li>
-            <li><a href="#">Tháng 8</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">TỰ HỌC
-          <ul class="dropdown-content">
-            <li><a href="#">Cho trẻ em</a></li>
-            <li><a href="#">Người lớn</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">THI THỬ HSK
-          <ul class="dropdown-content">
-            <li><a href="#">HSK 4</a></li>
-            <li><a href="#">HSK 5</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">BÀI VIẾT
-          <ul class="dropdown-content">
-            <li><a href="#">Từ vựng</a></li>
-            <li><a href="#">Ngữ pháp</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">TÀI LIỆU
-          <ul class="dropdown-content">
-            <li><a href="#">PDF</a></li>
-            <li><a href="#">Video</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">GIẢI TRÍ
-          <ul class="dropdown-content">
-            <li><a href="#">Phim</a></li>
-            <li><a href="#">Trò chơi</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="menu-right">
-      <button class="login-btn">ĐĂNG NHẬP</button>
-      <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm...">
-        <img src="../assets/icons/find-icon.png" alt="Tìm kiếm">
+    <div class="right desktop-only">
+      <div><img src="assets/icons/phone-icon.png" /> 0123456987 / 987654321</div>
+      <div><img src="assets/icons/mail-icon.png" /> lovehanyu@gmail.com</div>
+      <div class="social-icons">
+        <a href="#"><img src="assets/icons/fb.png" alt="Facebook" /></a>
+        <a href="#"><img src="assets/icons/yt.png" alt="YouTube" /></a>
+        <a href="#"><img src="assets/icons/tiktok.png" alt="TikTok" /></a>
       </div>
     </div>
   </div>
+
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="mobile-menu-icon" onclick="toggleMenu()">☰</div>
+
+    <ul class="main-menu">
+      <li>
+        TRANG CHỦ
+        <ul class="dropdown">
+          <li><a href="#">Giới thiệu nhanh</a></li>
+          <li><a href="#">Lịch sử phát triển</a></li>
+        </ul>
+      </li>
+      <li>
+        GIỚI THIỆU
+        <ul class="dropdown">
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Sứ mệnh</a></li>
+        </ul>
+      </li>
+      <li>
+        KHOÁ HỌC
+        <ul class="dropdown">
+          <li><a href="#">HSK 1-4</a></li>
+          <li><a href="#">HSK 5-9</a></li>
+        </ul>
+      </li>
+      <li>
+        LỊCH KHAI GIẢNG
+        <ul class="dropdown">
+          <li><a href="#">Lịch tháng này</a></li>
+          <li><a href="#">Đăng ký học</a></li>
+        </ul>
+      </li>
+      <li>
+        TỰ HỌC
+        <ul class="dropdown">
+          <li><a href="#">Tự học nghe</a></li>
+          <li><a href="#">Tự học viết</a></li>
+        </ul>
+      </li>
+      <li>
+        THI THỬ HSK
+        <ul class="dropdown">
+          <li><a href="#">HSK 4</a></li>
+          <li><a href="#">HSK 5</a></li>
+        </ul>
+      </li>
+      <li>
+        BÀI VIẾT
+        <ul class="dropdown">
+          <li><a href="#">Phát âm</a></li>
+          <li><a href="#">Từ vựng</a></li>
+        </ul>
+      </li>
+      <li>
+        TÀI LIỆU
+        <ul class="dropdown">
+          <li><a href="#">Tài liệu PDF</a></li>
+          <li><a href="#">Từ điển</a></li>
+        </ul>
+      </li>
+      <li>
+        GIẢI TRÍ
+        <ul class="dropdown">
+          <li><a href="#">Video học</a></li>
+          <li><a href="#">Phim phụ đề</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="search-login">
+      <button class="login-button">ĐĂNG NHẬP</button>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <img src="assets/icons/find-icon.png" alt="Search" />
+      </div>
+    </div>
+  </nav>
 </header>
