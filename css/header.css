@@ -10,6 +10,8 @@
   position: relative;
   z-index: 1000;
   background-color: white;
+  height: auto;
+  overflow: visible;
 }
 
 /* === TOP HEADER === */
