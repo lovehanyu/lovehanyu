@@ -54,14 +54,35 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
+  gap: 12px;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
+
+.contact-area a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.contact-area a:hover {
+  color: #922ea9; /* Tím chủ đạo khi hover */
+}
+
 .contact-area img {
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
+  border-radius: 50%; /* Làm tròn icon */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-area img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 /* === NAVIGATION === */
