@@ -1,15 +1,12 @@
-function includeHTML() {
-  const z = document.querySelectorAll('[w3-include-html]');
-  z.forEach(elm => {
-    const file = elm.getAttribute("w3-include-html");
-    if (file) {
-      fetch(file)
-        .then(response => response.text())
-        .then(data => {
-          elm.innerHTML = data;
-          elm.removeAttribute("w3-include-html");
-          includeHTML();
-        });
-    }
+// include.js
+document.addEventListener("DOMContentLoaded", function () {
+  const includes = document.querySelectorAll('[w3-include-html]');
+  includes.forEach(el => {
+    const file = el.getAttribute("w3-include-html");
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        el.innerHTML = data;
+      });
   });
-}
+});
