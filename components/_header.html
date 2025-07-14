@@ -1,41 +1,93 @@
 <!-- 🔱 HEADER TOP -->
-<header class="header-container">
+<!-- File: components/_header.html -->
+<header class="top-header">
   <div class="header-top">
-    <div class="logo-block">
-      <img src="assets/icons/logo.png" alt="Logo">
-      <div class="domain-text">www.<span>lovehanyu</span>.com</div>
+    <div class="logo-section">
+      <img src="../assets/icons/logo.png" alt="Love Hanyu Logo" class="logo">
+      <div class="domain">www.lovehanyu.com</div>
     </div>
 
-    <div class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
+    <div class="slogan-section">
+      <p class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</p>
+    </div>
 
-    <!-- 🔹 Mạng xã hội + Tìm kiếm -->
-    <div class="social-search">
-      <div class="social-icons">
-        <img src="assets/icons/fb.png" alt="Facebook">
-        <img src="assets/icons/tiktok.png" alt="TikTok">
-        <img src="assets/icons/yt.png" alt="YouTube">
-        <img src="assets/icons/phone-icon.png" alt="Phone">
-        <img src="assets/icons/mail-icon.png" alt="Email">
-      </div>
-
-      <!-- ✅ Ô tìm kiếm -->
-      <div class="search-box">
-        <input type="text" id="search-input" placeholder="Tìm kiếm...">
-        <img src="assets/icons/find-icon.png" id="search-btn" alt="Tìm">
-      </div>
+    <div class="contact-section">
+      <img src="../assets/icons/phone-icon.png" alt="Phone">
+      <span>0123456987 / 987654321</span>
+      <img src="../assets/icons/mail-icon.png" alt="Email">
+      <span>lovehanyu@gmail.com</span>
+      <a href="#"><img src="../assets/icons/fb.png" alt="Facebook"></a>
+      <a href="#"><img src="../assets/icons/yt.png" alt="YouTube"></a>
+      <a href="#"><img src="../assets/icons/tiktok.png" alt="TikTok"></a>
     </div>
   </div>
 
-  <!-- 📌 MAIN MENU -->
-<nav class="main-nav">
-  <a href="#trang-chu"><img src="assets/icons/home-icon.png" class="icon"> TRANG CHỦ</a>
-  <a href="#gioi-thieu">GIỚI THIỆU</a>
-  <a href="#khoa-hoc">KHOÁ HỌC</a>
-  <a href="#lich-khai-giang">LỊCH KHAI GIẢNG</a>
-  <a href="#tu-hoc">TỰ HỌC TIẾNG TRUNG</a>
-  <a href="#thi-thu-hsk">THI THỬ HSK</a>
-  <a href="#tai-lieu">TÀI LIỆU</a>
-  <a href="#bai-viet">BÀI VIẾT</a>
-  <a href="#giai-tri">GIẢI TRÍ</a>
-</nav>
+  <div class="header-nav">
+    <nav class="menu-left">
+      <ul>
+        <li class="dropdown">TRANG CHỦ
+          <ul class="dropdown-content">
+            <li><a href="#">Trang con 1</a></li>
+            <li><a href="#">Trang con 2</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">GIỚI THIỆU
+          <ul class="dropdown-content">
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Tầm nhìn</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">KHOÁ HỌC
+          <ul class="dropdown-content">
+            <li><a href="#">HSK</a></li>
+            <li><a href="#">Giao tiếp</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">LỊCH KHAI GIẢNG
+          <ul class="dropdown-content">
+            <li><a href="#">Tháng 7</a></li>
+            <li><a href="#">Tháng 8</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">TỰ HỌC
+          <ul class="dropdown-content">
+            <li><a href="#">Cho trẻ em</a></li>
+            <li><a href="#">Người lớn</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">THI THỬ HSK
+          <ul class="dropdown-content">
+            <li><a href="#">HSK 4</a></li>
+            <li><a href="#">HSK 5</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">BÀI VIẾT
+          <ul class="dropdown-content">
+            <li><a href="#">Từ vựng</a></li>
+            <li><a href="#">Ngữ pháp</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">TÀI LIỆU
+          <ul class="dropdown-content">
+            <li><a href="#">PDF</a></li>
+            <li><a href="#">Video</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">GIẢI TRÍ
+          <ul class="dropdown-content">
+            <li><a href="#">Phim</a></li>
+            <li><a href="#">Trò chơi</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="menu-right">
+      <button class="login-btn">ĐĂNG NHẬP</button>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm...">
+        <img src="../assets/icons/find-icon.png" alt="Tìm kiếm">
+      </div>
+    </div>
+  </div>
 </header>
