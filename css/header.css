@@ -80,13 +80,34 @@
   list-style: none;
   gap: 30px;
   flex: 8;
-  justify-content: center; /* ✅ Căn ngang */
+  justify-content: center;
   align-items: center;
   color: white;
 }
 .menu li {
   position: relative;
 }
+
+/* ✅ Thêm hiệu ứng “nút bấm” cho menu chính */
+.menu > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.menu > li > a:hover {
+  background-color: white;
+  color: #922ea9;
+  border-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Giữ nguyên hiệu ứng dropdown */
 .menu a {
   text-decoration: none;
   color: white;
@@ -94,10 +115,12 @@
   padding: 5px 10px;
   display: block;
 }
-}
+/* Không cần dòng này nữa nếu đã có .menu > li > a ở trên
 .menu a:hover {
   color: #ffe6ff;
 }
+*/
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -109,6 +132,11 @@
 }
 .dropdown-content li a {
   padding: 8px 12px;
+  border-radius: 4px;
+}
+.dropdown-content li a:hover {
+  background-color: #b24fc4;
+  color: white;
 }
 .dropdown:hover .dropdown-content {
   display: block;
