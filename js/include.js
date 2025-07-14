@@ -1,8 +1,9 @@
 function includeHTML(callback) {
   const elements = document.querySelectorAll("[w3-include-html]");
   let total = elements.length;
+
   if (total === 0) {
-    callback(); // Gọi ngay nếu không có file cần nhúng
+    if (typeof callback === "function") callback();
     return;
   }
 
@@ -18,23 +19,23 @@ function includeHTML(callback) {
           el.innerHTML = data;
           el.removeAttribute("w3-include-html");
           total--;
-          if (total === 0) callback(); // Gọi callback sau khi tất cả file đã load xong
+          if (total === 0 && typeof callback === "function") callback();
         })
         .catch((err) => {
           el.innerHTML = "Lỗi khi tải file: " + err.message;
           total--;
-          if (total === 0) callback();
+          if (total === 0 && typeof callback === "function") callback();
         });
     } else {
       total--;
-      if (total === 0) callback();
+      if (total === 0 && typeof callback === "function") callback();
     }
   });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   includeHTML(function () {
-    // ✅ Đảm bảo DOM đã nhúng xong mới gắn sự kiện toggle menu
+    // ✅ Gắn sự kiện toggle menu sau khi đã nhúng xong
     const toggleBtn = document.querySelector(".menu-toggle");
     const menu = document.querySelector("nav .menu");
 
