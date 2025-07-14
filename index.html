@@ -36,7 +36,17 @@
   <!-- Script JavaScript điều khiển menu mobile -->
   <script src="js/main.js" defer></script>
 </head>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav .menu");
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("show");
+      });
+    }
+  });
+</script>
 <body>
   <!-- Header: sẽ được tự động nhúng -->
   <div w3-include-html="components/_header.html"></div>
