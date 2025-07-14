@@ -6,12 +6,13 @@
 }
 
  .site-header {
-  font-family: 'Arial', sans-serif;
-  position: relative;
-  z-index: 1000;
-  background-color: white;
   height: auto;
   overflow: visible;
+  /*position: relative;*/
+  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+  background-color: white;
+
 }
 
 /* === TOP HEADER === */
