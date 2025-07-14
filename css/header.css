@@ -178,4 +178,37 @@
   .menu.show {
     display: flex;
   }
+  /* Ẩn menu mặc định trên mobile */
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #922ea9;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Hiện menu khi active */
+.navbar-menu.active {
+  display: flex;
+}
+
+/* Ẩn dropdown trên mobile */
+@media (max-width: 768px) {
+  .navbar-menu li ul {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block; /* hiện nút 3 gạch */
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    width: 25px;
+  }
 }
