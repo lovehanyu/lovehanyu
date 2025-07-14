@@ -1,6 +1,6 @@
 .site-header {
   font-family: 'Arial', sans-serif;
-  background-color: white;
+  background-color: ;
   color: white;
   width: 100%;
 }
@@ -83,10 +83,10 @@
   transition: background 0.3s;
 }
 .main-menu > li:hover {
-  background-color: #922ea9;
+  background-color: ;
 }
 .main-menu li a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
