@@ -80,6 +80,7 @@
   list-style: none;
   gap: 20px;
   flex: 8;
+  justify-content: center; /* ✅ Căn ngang */
 }
 .menu li {
   position: relative;
