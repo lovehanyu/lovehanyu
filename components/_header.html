@@ -1,32 +1,27 @@
 <header class="site-header">
   <div class="top-header">
     <div class="logo-area">
-      <img src="assets/icons/logo.png" alt="Logo" />
-      <p class="domain">www.lovehanyu.com</p>
+      <img src="assets/icons/logo.png" alt="Love Hanyu Logo">
+      <span>www.lovehanyu.com</span>
     </div>
-    <div class="slogan-area">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
-    <div class="contact-area">
-      <p>📞 0123-456-789</p>
-      <p>✉️ contact@lovehanyu.com</p>
-      <p>🔗 Facebook | YouTube | TikTok</p>
-    </div>
+    <div class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
   </div>
 
-  <nav class="nav-bar">
-    <ul class="nav-left">
-      <li><a href="index.html">TRANG CHỦ</a></li>
-      <li><a href="#">GIỚI THIỆU</a></li>
-      <li><a href="#">KHÓA HỌC</a></li>
-      <li><a href="#">TỰ HỌC</a></li>
-      <li><a href="#">THI THỬ HSK</a></li>
-      <li><a href="#">GIẢI TRÍ</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="login-btn">ĐĂNG NHẬP</button>
+  <div class="navbar">
+    <nav class="left">
+      <a href="/">TRANG CHỦ</a>
+      <a href="#">GIỚI THIỆU</a>
+      <a href="#">KHÓA HỌC</a>
+      <a href="#">TỰ HỌC</a>
+      <a href="#">THI THỬ HSK</a>
+      <a href="#">GIẢI TRÍ</a>
+    </nav>
+    <div class="right">
+      <a href="#">ĐĂNG NHẬP</a>
       <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm..." />
-        <img src="assets/icons/find-icon.png" alt="Search Icon" />
+        <input type="text" placeholder="Tìm kiếm..." id="searchInput">
+        <img src="assets/icons/find-icon.png" alt="Search" onclick="handleSearch()">
       </div>
     </div>
-  </nav>
+  </div>
 </header>
