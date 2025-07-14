@@ -174,9 +174,8 @@ nav .menu a:hover {
     flex-direction: column;
     align-items: flex-start; /* ✅ Căn trái nội dung */
     text-align: left;        /* ✅ Căn trái chữ */
-    padding-left: 0.5rem;      /* ✅ Cách mép trái 1 chút (tuỳ chọn) */
+    padding-left: 0.1rem;      /* ✅ Cách mép trái 1 chút (tuỳ chọn) */
     width: 100%;
-    background-color: #922ea9;
   }
 
   nav .menu.show {
@@ -184,7 +183,13 @@ nav .menu a:hover {
   }
 
   nav .menu li {
-    border-bottom: 1px solid #ffffff30;
+    width: 100%; /* ✅ Đảm bảo mỗi mục chiếm toàn bộ chiều ngang */
+  }
+
+  nav .menu a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .menu-toggle {
