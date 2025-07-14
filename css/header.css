@@ -91,8 +91,13 @@
   text-decoration: none;
   color: white;
   font-weight: bold;
-  padding: 5px 10px;
+  padding: 10px 16px;
   display: block;
+  border: 1px solid #ccc;       /* ✅ Viền nhẹ */
+  border-radius: 6px;           /* ✅ Bo góc */
+  background-color: white;      /* ✅ Nền trắng như nút */
+  transition: all 0.3s ease;    /* ✅ Hiệu ứng mượt khi hover */
+  box-shadow: 0 2px 3px rgba(0,0,0,0.05);  /* ✅ Đổ bóng nhẹ */
 }
 .menu a:hover {
   color: #ffe6ff;
