@@ -1,13 +1,10 @@
 // js/main.js
-document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("main-menu");
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("show");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector("nav");
+
+  menuToggle.addEventListener("click", function () {
+    nav.classList.toggle("active");
   });
 });
-function toggleMenu() {
-  const menu = document.querySelector(".navbar-menu");
-  menu.classList.toggle("active");
-}
