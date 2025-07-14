@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-header {
+body {
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -14,14 +14,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
   padding: 15px 5%;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
 }
 
 .logo-area {
   flex: 1;
-  text-align: left;
 }
 .logo-area img {
   height: 50px;
@@ -32,7 +31,7 @@ header {
 }
 
 .slogan-area {
-  flex: 3;
+  flex: 2;
   text-align: center;
 }
 .slogan-area h1 {
@@ -42,7 +41,7 @@ header {
 }
 
 .contact-area {
-  flex: 2;
+  flex: 1.5;
   text-align: right;
   font-size: 0.9rem;
   color: #333;
@@ -52,9 +51,9 @@ header {
   vertical-align: middle;
   margin-right: 5px;
 }
-.contact-area .socials a img {
+.contact-area .socials img {
   height: 20px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 /* Bottom Header */
@@ -64,36 +63,44 @@ header {
   top: 0;
   z-index: 999;
 }
+
 .main-menu ul {
   display: flex;
   list-style: none;
   justify-content: center;
-  padding: 10px 0;
 }
+
 .main-menu ul li {
   position: relative;
 }
+
 .main-menu ul li a {
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
+  padding: 15px 20px;
   display: block;
+  text-decoration: none;
   font-weight: 500;
 }
+
 .main-menu ul li:hover {
-  background: #7a1f8d;
+  background-color: #7a1f8d;
 }
+
+/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  background: #fff;
-  min-width: 150px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 .dropdown-menu li a {
   color: #333;
+  padding: 10px;
 }
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
