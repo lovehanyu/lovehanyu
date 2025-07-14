@@ -1,6 +1,6 @@
 /* ==== HEADER ==== */
 .header-container {
-  background: url('../assets/images/header-bg.jpg') no-repeat center/cover;
+  background: white;
   padding: 1rem;
   min-height: 40px;
   position: relative;
