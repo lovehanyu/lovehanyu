@@ -12,12 +12,12 @@
 /* === TOP HEADER === */
 .top-header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* ⬅️ Căn từ bên trái */
   align-items: center;
+  justify-content: flex-start; /* Căn trái toàn bộ nội dung */
   padding: 10px 20px;
   background-color: #f5f5f5;
   position: relative;
+  gap: 15px; /* Tạo khoảng cách tự nhiên giữa các phần */
 }
 
 .logo-area {
@@ -36,11 +36,11 @@
 }
 
 .slogan-area {
-  margin-left: 10px; /* ⬅️ Cách logo 1 chút */
   font-weight: bold;
   font-size: 1rem;
   color: #922ea9;
-  white-space: nowrap; /* ⬅️ Tránh xuống dòng không cần thiết */
+  white-space: nowrap; /* Tránh xuống dòng */
+  margin-left: 10px;    /* Khoảng cách với logo */
 }
 
 .slogan {
