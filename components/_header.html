@@ -1,27 +1,45 @@
-<header class="site-header">
+<!-- components/_header.html -->
+<header>
+  <!-- Top Header -->
   <div class="top-header">
     <div class="logo-area">
-      <img src="assets/icons/logo.png" alt="Love Hanyu Logo">
-      <span>www.lovehanyu.com</span>
+      <img src="assets/icons/logo.png" alt="Logo" />
+      <p class="domain">www.mysite.com</p>
     </div>
-    <div class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
-  </div>
-
-  <div class="navbar">
-    <nav class="left">
-      <a href="/">TRANG CHỦ</a>
-      <a href="#">GIỚI THIỆU</a>
-      <a href="#">KHÓA HỌC</a>
-      <a href="#">TỰ HỌC</a>
-      <a href="#">THI THỬ HSK</a>
-      <a href="#">GIẢI TRÍ</a>
-    </nav>
-    <div class="right">
-      <a href="#">ĐĂNG NHẬP</a>
-      <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm..." id="searchInput">
-        <img src="assets/icons/find-icon.png" alt="Search" onclick="handleSearch()">
+    <div class="slogan-area">
+      <h1>HỌC MỖI NGÀY – GIỎI MỖI NGÀY!</h1>
+    </div>
+    <div class="contact-area">
+      <div><img src="assets/icons/phone.svg" alt="Phone"> 0123 456 789</div>
+      <div><img src="assets/icons/mail.svg" alt="Mail"> contact@mysite.com</div>
+      <div class="socials">
+        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
       </div>
     </div>
+  </div>
+
+  <!-- Bottom Header (Menu) -->
+  <div class="bottom-header" id="navbar">
+    <nav class="main-menu">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li class="dropdown">
+          <a href="#">Giới thiệu</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Về chúng tôi</a></li>
+            <li><a href="#">Đội ngũ</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Khóa học</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Cơ bản</a></li>
+            <li><a href="#">Nâng cao</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
