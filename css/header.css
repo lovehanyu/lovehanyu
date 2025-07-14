@@ -1,9 +1,8 @@
 .site-header {
   font-family: 'Arial', sans-serif;
-  background-color: ;
+  background-color: #5c0d84;
   color: white;
   width: 100%;
-}
 
 /* TOP HEADER */
 .top-header {
@@ -83,7 +82,7 @@
   transition: background 0.3s;
 }
 .main-menu > li:hover {
-  background-color: ;
+  background-color: #922ea9;
 }
 .main-menu li a {
   color: white;
