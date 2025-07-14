@@ -180,7 +180,13 @@ nav .menu a:hover {
   }
 
   .menu-toggle {
-    display: block; /* hiện nút 3 gạch */
+    display: block;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #922ea9;
+    cursor: pointer;
+    padding: 10px 15px;
   }
 
   /* Ẩn dropdown mặc định nếu không nhấn */
