@@ -158,24 +158,24 @@ nav .menu a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .top-header .slogan-area,
+  .top-header .contact-area {
+    display: none;
+  }
+
   nav {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    padding: 10px 0;
   }
 
   nav .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding-left: 1rem;
+    align-items: flex-start; /* ✅ Căn trái nội dung */
+    text-align: left;        /* ✅ Căn trái chữ */
+    padding-left: 0.1rem;      /* ✅ Cách mép trái 1 chút (tuỳ chọn) */
     width: 100%;
-    background-color: #922ea9; /* màu nền nếu cần cho rõ ràng */
   }
 
   nav .menu.show {
@@ -189,7 +189,7 @@ nav .menu a:hover {
   nav .menu a {
     display: block;
     width: 100%;
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .menu-toggle {
