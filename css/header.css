@@ -188,8 +188,8 @@ nav .menu a:hover {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 15px;
-    left: 15px; /* ✅ đổi từ right sang left để nút nằm trái */
+    top: 30px;
+    left: 10px; /* ✅ đổi từ right sang left để nút nằm trái */
     z-index: 1000;
   }
 
