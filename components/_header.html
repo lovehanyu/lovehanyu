@@ -1,5 +1,5 @@
 <!-- components/_header.html -->
-<header>
+<header class="site-header">
   <!-- TOP HEADER -->
   <div class="top-header">
     <div class="logo-area">
@@ -20,13 +20,13 @@
     </div>
   </div>
 
-  <!-- NAVIGATION MENU -->
+  <!-- Navigation Menu -->
   <nav class="navbar">
     <div class="nav-left">
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
       <ul class="menu" id="main-menu">
         <li><a href="index.html">TRANG CHỦ</a></li>
-        
+        <li class="dropdown">
           <a href="#">GIỚI THIỆU ▾</a>
           <ul class="dropdown-content">
             <li><a href="#">Về chúng tôi</a></li>
@@ -40,52 +40,51 @@
             <li><a href="#">HSK nâng cao</a></li>
           </ul>
         </li>
-        <a href="#">LỊCH KHAI GIẢNG</a>
-        <div class="dropdown-content">
-          <li><a href="#">Tháng này</a></li>
-          <li><a href="#">Tháng sau</a></li>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">TỰ HỌC</a>
-        <div class="dropdown-content">
-           <li><a href="#">Trẻ em</a></li>
-           <li><a href="#">Người lớn</a></li>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">THI THỬ HSK</a>
-        <div class="dropdown-content">
-          <li><a href="#">HSK 3</a></li>
-          <li><a href="#">HSK 5</a></li>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">BÀI VIẾT</a>
-        <div class="dropdown-content">
-          <li><a href="#">Phát âm</a></li>
-          <li><a href="#">Từ vựng</a></li>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">TÀI LIỆU</a>
-        <div class="dropdown-content">
-          <li><a href="#">Sách PDF</a></li>
-          <li><a href="#">Tài liệu video</a></li>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="#">GIẢI TRÍ</a>
-        <div class="dropdown-content">
-          <li><a href="#">Bài hát</a></li>
-          <li><a href="#">Video Hài</a></li>
-        </ul>
+          <li class="dropdown">
+          <a href="#">LỊCH KHAI GIẢNG ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Tháng này</a></li>
+            <li><a href="#">Tháng sau</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a href="#">TỰ HỌC ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Trẻ em</a></li>
+            <li><a href="#">Người lớn</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a href="#">THI THỬ HSK ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">HSK 3</a></li>
+            <li><a href="#">HSK 5</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a href="#">BÀI VIẾT ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Phát âm</a></li>
+            <li><a href="#">Từ vựng</a></li>
+          </ul>
+        </li>
+          <li class="dropdown">
+          <a href="#">TÀI LIỆU ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Sách PDF</a></li>
+            <li><a href="#">Tài liệu video</a></li>
+          </ul>
+        </li>
+          <li class="dropdown"><a href="#">GIẢI TRÍ ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Phim</a></li>
+            <li><a href="#">Bài hát</a></li>
+          </ul>
         </li>
       </ul>
     </div>
-        
     <div class="nav-right">
-      <button class="login-btn">ĐĂNG NHẬP</button>
+      <a href="#" class="login-btn">ĐĂNG NHẬP</a>
       <div class="search-box">
         <input type="text" placeholder="Tìm kiếm...">
         <img src="assets/icons/find-icon.png" alt="Search">
@@ -93,3 +92,4 @@
     </div>
   </nav>
 </header>
+        
