@@ -1,1 +1,51 @@
-# Nếu có CSS responsive riêng
+/* MOBILE: nhỏ hơn 768px */
+@media screen and (max-width: 768px) {
+  /* Top Header */
+  .top-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-header .left,
+  .top-header .center,
+  .top-header .right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Menu */
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-bar .menu li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Search box và nút đăng nhập gọn lại */
+  .nav-bar .search-login {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .login-button {
+    width: 90%;
+  }
+}
+
