@@ -58,37 +58,26 @@
   margin-left: 8px;
 }
 
-/* NAVIGATION */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: url('../assets/images/menu-bg.jpg') center/cover;
-  padding: 10px 30px;
-}
-
-.main-menu {
-  list-style: none;
+/* MENU CHÍNH */
+.navbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 0;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 0;
+}ng: 10px 30px;
 }
-.main-menu > li {
-  position: relative;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-.main-menu > li:hover {
-  background-color: #922ea9;
-}
-.main-menu li a {
-  color: white;
-  text-decoration: none;
-}
+
+/* MENU CHÍNH */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 0;
+}vv
 
 /* Dropdown */
 .dropdown {
