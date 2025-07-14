@@ -16,7 +16,7 @@
 /* === TOP HEADER === */
 .top-header {
   display: grid;
-  grid-template-columns: 1fr 6fr 3fr;
+  grid-template-columns: 1fr 5fr 4fr;
   align-items: center;
   padding: 5px 20px;
   background-color: #f5f5f5;
