@@ -181,12 +181,16 @@ nav .menu a:hover {
 
   .menu-toggle {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: #922ea9;
     background: none;
     border: none;
-    color: #922ea9;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    left: 15px; /* ✅ đổi từ right sang left để nút nằm trái */
+    z-index: 1000;
   }
 
   /* Ẩn dropdown mặc định nếu không nhấn */
