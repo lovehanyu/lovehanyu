@@ -10,43 +10,35 @@
 }
 
 .top-header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
   padding: 10px 20px;
   background-color: #f5f5f5;
-  flex-wrap: wrap;
 }
 
-/* VÙNG TRÁI: Logo + domain */
+/* VÙNG TRÁI */
 .logo-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  min-width: 120px;
   text-align: center;
 }
-
-.logo-area .logo {
+.logo-area img {
   width: 80px;
 }
-
 .logo-area .domain {
   font-size: 1rem;
   color: #922ea9;
   margin-top: 5px;
 }
 
-/* VÙNG GIỮA: Slogan */
+/* VÙNG GIỮA */
 .slogan-area {
-  flex: 2;
-  min-width: 200px;
+  justify-self: start;
   padding-left: 20px;
-  text-align: left;
 }
-
 .slogan {
   font-size: 2.2rem;
   font-family: 'Pacifico', cursive;
@@ -54,35 +46,23 @@
   white-space: nowrap;
 }
 
-/* VÙNG PHẢI: Thông tin liên hệ */
+/* VÙNG PHẢI */
 .contact-area {
-  flex: 1.5;
+  justify-self: end;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
   align-items: center;
   gap: 12px;
   font-size: 0.9rem;
+  flex-wrap: wrap;
 }
-
-.contact-area span,
+.contact-area i {
+  color: #922ea9;
+  font-size: 1rem;
+}
 .contact-area a {
-  display: flex;
-  align-items: center;
-  gap: 5px;
   color: #000;
   text-decoration: none;
-  font-size: 0.9rem;
 }
-
-.contact-area i {
-  font-size: 1rem;          /* Cố định kích thước icon */
-  color: #922ea9;
-  display: inline-block;
-  width: 1em;               /* Đảm bảo cùng chiều rộng */
-  text-align: center;       /* Icon nằm giữa khối */
-}
-
 .contact-area a:hover {
   color: #922ea9;
 }
