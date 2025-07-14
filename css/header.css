@@ -1,93 +1,164 @@
-<!-- File: components/_header.html -->
-<header class="top-header">
-  <div class="header-top">
-    <div class="logo-section">
-      <img src="../assets/icons/logo.png" alt="Love Hanyu Logo" class="logo">
-      <div class="domain">www.lovehanyu.com</div>
-    </div>
+<!-- File: css/header.css -->
+.top-header {
+  width: 100%;
+  background: #f7f2fa;
+  font-family: 'Arial', sans-serif;
+}
 
-    <div class="slogan-section">
-      <p class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</p>
-    </div>
+.header-top {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
 
-    <div class="contact-section">
-      <img src="../assets/icons/phone-icon.png" alt="Phone">
-      <span>0123456987 / 987654321</span>
-      <img src="../assets/icons/mail-icon.png" alt="Email">
-      <span>lovehanyu@gmail.com</span>
-      <a href="#"><img src="../assets/icons/fb.png" alt="Facebook"></a>
-      <a href="#"><img src="../assets/icons/yt.png" alt="YouTube"></a>
-      <a href="#"><img src="../assets/icons/tiktok.png" alt="TikTok"></a>
-    </div>
-  </div>
+.logo-section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.logo {
+  max-height: 60px;
+}
+.domain {
+  font-size: 0.9rem;
+  color: #333;
+}
 
-  <div class="header-nav">
-    <nav class="menu-left">
-      <ul>
-        <li class="dropdown">TRANG CHỦ
-          <ul class="dropdown-content">
-            <li><a href="#">Trang con 1</a></li>
-            <li><a href="#">Trang con 2</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">GIỚI THIỆU
-          <ul class="dropdown-content">
-            <li><a href="#">Về chúng tôi</a></li>
-            <li><a href="#">Tầm nhìn</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">KHOÁ HỌC
-          <ul class="dropdown-content">
-            <li><a href="#">HSK</a></li>
-            <li><a href="#">Giao tiếp</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">LỊCH KHAI GIẢNG
-          <ul class="dropdown-content">
-            <li><a href="#">Tháng 7</a></li>
-            <li><a href="#">Tháng 8</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">TỰ HỌC
-          <ul class="dropdown-content">
-            <li><a href="#">Cho trẻ em</a></li>
-            <li><a href="#">Người lớn</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">THI THỬ HSK
-          <ul class="dropdown-content">
-            <li><a href="#">HSK 4</a></li>
-            <li><a href="#">HSK 5</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">BÀI VIẾT
-          <ul class="dropdown-content">
-            <li><a href="#">Từ vựng</a></li>
-            <li><a href="#">Ngữ pháp</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">TÀI LIỆU
-          <ul class="dropdown-content">
-            <li><a href="#">PDF</a></li>
-            <li><a href="#">Video</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">GIẢI TRÍ
-          <ul class="dropdown-content">
-            <li><a href="#">Phim</a></li>
-            <li><a href="#">Trò chơi</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+.slogan-section {
+  flex: 5;
+  text-align: right;
+}
+.slogan {
+  font-size: 2.2rem;
+  font-family: 'Pacifico', cursive;
+  color: #922ea9;
+  margin: 0;
+}
 
-    <div class="menu-right">
-      <button class="login-btn">ĐĂNG NHẬP</button>
-      <div class="search-box">
-        <input type="text" placeholder="Tìm kiếm...">
-        <img src="../assets/icons/find-icon.png" alt="Tìm kiếm">
-      </div>
-    </div>
-  </div>
-</header>
+.contact-section {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+.contact-section img {
+  height: 20px;
+}
+.contact-section a img {
+  height: 22px;
+}
 
+.header-nav {
+  background-image: url('../assets/images/menu-bg.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.menu-left ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+.menu-left ul li {
+  position: relative;
+  padding: 8px 12px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu-left ul li:hover {
+  background-color: #922ea9;
+  color: #fff;
+}
+.menu-left ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+.menu-left ul li:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-content li a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-btn {
+  background-color: #922ea9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  padding: 8px 30px 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  color: #333;
+}
+.search-box input::placeholder {
+  color: #999;
+}
+.search-box img {
+  position: absolute;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .header-top, .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-left ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .menu-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .search-box input {
+    width: 100%;
+  }
+}
