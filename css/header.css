@@ -7,37 +7,39 @@
 
 .site-header {
   font-family: 'Arial', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
 }
 
+/* === TOP HEADER === */
 .top-header {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 6fr 3fr;
   align-items: center;
   padding: 10px 20px;
   background-color: #f5f5f5;
 }
 
-/* VÙNG TRÁI */
+/* Logo + Domain */
 .logo-area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
 }
-.logo-area img {
-  width: 80px;
+.logo-area .logo {
+  width: 60px;
 }
 .logo-area .domain {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #922ea9;
   margin-top: 5px;
 }
 
-/* VÙNG GIỮA */
+/* Slogan */
 .slogan-area {
-  justify-self: start;
-  padding-left: 20px;
+  text-align: right;
 }
 .slogan {
   font-size: 2.2rem;
@@ -46,120 +48,94 @@
   white-space: nowrap;
 }
 
-/* VÙNG PHẢI */
+/* Contact Info */
 .contact-area {
-  justify-self: end;
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 0.9rem;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 0.9rem;
 }
-.contact-area i {
-  color: #922ea9;
-  font-size: 1rem;
+.contact-area img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
-.contact-area a {
-  color: #000;
-  text-decoration: none;
-}
-.contact-area a:hover {
-  color: #922ea9;
-}
-/* === NAVIGATION MENU === */
-nav {
-  background-color: #922ea9;
+
+/* === NAVIGATION === */
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #922ea9;
   padding: 10px 20px;
   flex-wrap: wrap;
 }
 
-nav .menu {
-  list-style: none;
+/* Menu trái */
+.menu {
   display: flex;
+  flex-wrap: wrap;
+  list-style: none;
   gap: 20px;
+  flex: 8;
 }
-
-nav .menu li {
+.menu li {
   position: relative;
 }
-
-nav .menu a {
+.menu a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
   padding: 5px 10px;
   display: block;
 }
-
-nav .menu a:hover {
-  color: white;
+.menu a:hover {
+  color: #ffe6ff;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #c682d8;
   top: 100%;
   left: 0;
-  min-width: 160px;
+  min-width: 150px;
   z-index: 10;
 }
-
 .dropdown-content li a {
-  color: black;
   padding: 8px 12px;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* === RIGHT AREA === */
+/* Menu phải */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex: 2;
 }
-
 .login-btn {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
-
 .search-box {
   position: relative;
 }
-
 .search-box input {
   padding: 5px 30px 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
 .search-box img {
   position: absolute;
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
   width: 16px;
-}
-
-/* === RESPONSIVE === */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: #922ea9;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  position: absolute;
-  top: 70px;
-  left: 10px;
-  z-index: 1000;
 }
 
 /* Mobile Styles */
