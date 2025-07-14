@@ -7,3 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     menu.classList.toggle("show");
   });
 });
+function toggleMenu() {
+  const menu = document.querySelector(".navbar-menu");
+  menu.classList.toggle("active");
+}
