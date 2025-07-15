@@ -1,133 +1,111 @@
-/* Reset & cấu trúc chung */
-header {
-  font-family: Arial, sans-serif;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+:root {
+  --main-color: #782bf5;
+  --text-color: #fff;
+  --bg-light: #f9f9f9;
 }
 
-.header-top, .header-main {
+header {
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+.header-top,
+.header-main,
+.header-bot {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px 30px;
-  flex-wrap: wrap;
+  padding: 10px 20px;
 }
 
 .header-top {
-  border-bottom: 1px solid #ddd;
+  background: var(--main-color);
+  font-size: 14px;
 }
 
 .header-main {
+  background: #fff;
+  color: #000;
+  align-items: center;
   border-bottom: 1px solid #ccc;
 }
 
-.header-top .logo {
-  height: 50px;
-}
-
-.site-name {
-  margin: 0;
-  font-size: 24px;
-  color: #782bf5;
-}
-
-.slogan {
-  font-size: 14px;
-  color: #888;
-}
-
-.right p {
-  margin: 2px 0;
-  font-size: 14px;
-}
-
-/* Tìm kiếm */
-.search-form {
-  display: flex;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.search-form input {
-  border: none;
-  padding: 8px;
-  outline: none;
-}
-
-.search-form button {
-  background: #782bf5;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-/* Đăng nhập / Đăng ký */
-.btn {
-  background: #782bf5;
-  color: white;
-  padding: 8px 14px;
-  margin-left: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* Menu */
 .header-bot {
-  background: #782bf5;
+  background: var(--main-color);
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 60px;
-  display: flex;
   align-items: center;
-  padding: 0 30px;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.header-bot.scrolled {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  background: #6525d4; /* hơi tối đi một chút khi cuộn */
+.header-col {
+  flex: 1;
+  padding: 5px 10px;
 }
 
-.main-nav ul {
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.logo {
+  max-height: 60px;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.slogan {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.auth-actions .btn {
+  margin-left: 10px;
+  padding: 6px 12px;
+  background: var(--main-color);
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.main-menu ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
-  gap: 30px;
+  display: flex;
+  gap: 15px;
 }
 
-.main-nav a {
-  color: white;
+.main-menu a {
   text-decoration: none;
+  color: white;
   font-weight: bold;
-  padding: 10px 0;
-  display: inline-block;
+  padding: 6px 10px;
 }
 
-.main-nav a:hover {
-  border-bottom: 2px solid white;
+.main-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .header-top, .header-main, .header-bot {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .right {
-    align-self: flex-end;
-  }
+.search-box {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: none;
+  width: 80%;
 }
+
+.support-text {
+  font-size: 14px;
+}
+
 
