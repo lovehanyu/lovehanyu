@@ -2,13 +2,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   await includeHTML("/components/header.html", "header-placeholder");
   await includeHTML("/components/footer.html", "footer-placeholder");
 
-  // Force reflow sau khi nhúng header (rất quan trọng cho sticky!)
-  const header = document.querySelector(".site-header");
-  if (header) {
-    header.style.display = "none";
-    header.offsetHeight; // Force layout
-    header.style.display = "block";
-  }
+  // Nạp lại CSS cho header (rất quan trọng)
+  injectCSS("css/header.css");
 });
 
 function includeHTML(file, elementId) {
@@ -24,4 +19,11 @@ function includeHTML(file, elementId) {
     .catch(error => {
       console.error("Lỗi khi nhúng:", error);
     });
+}
+
+function injectCSS(href) {
+  const link = document.createElement("link");
+  link.rel = "stylesheet";
+  link.href = href + "?v=" + new Date().getTime(); // chống cache
+  document.head.appendChild(link);
 }
