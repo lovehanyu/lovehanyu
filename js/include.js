@@ -15,4 +15,14 @@ function includeHTML(file, elementId) {
     .catch(error => {
       console.error("Lỗi khi nhúng:", error);
     });
+  // Sau khi nhúng xong, gọi force repaint:
+.then(html => {
+  const container = document.getElementById(elementId);
+  container.innerHTML = html;
+
+  // Bắt browser render lại
+  container.style.display = "none";
+  container.offsetHeight; // force reflow
+  container.style.display = "block";
+})
 }
