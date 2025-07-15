@@ -8,8 +8,9 @@
  .site-header {
   height: auto;
   overflow: visible;
-  position: fixed;
+  /*position: relative;*/
   font-family: 'Arial', sans-serif;
+  z-index: 1000;
   background-color: white;
 
 }
@@ -17,12 +18,39 @@
 /* === TOP HEADER === */
 .top-header {
   display: grid;
-  grid-template-columns: 3fr 4fr 3fr;
+  grid-template-columns: 1fr 5fr 4fr;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2px 20px;
   background-color: #f5f5f5;
+}
+
+/* Logo + Domain */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-area .logo {
+  width: 80px;
+  margin-top: 0px;
+}
+.logo-area .domain {
+  font-size: 0.9rem;
+  color: #922ea9;
+  margin-top: 1px;
+}
+
+/* Slogan */
+.slogan-area {
+  text-align: left;
+}
+.slogan {
+  font-size: 2.2rem;
+  font-family: 'Pacifico', cursive;
+  color: #922ea9;
+  white-space: nowrap;
 }
 
 /* Contact Info */
@@ -64,7 +92,9 @@
 
 /* === NAVIGATION === */
 .nav {
-
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: #922ea9;
   padding: 10px 20px;
   display: flex;
@@ -229,7 +259,4 @@
   nav .menu li ul {
     display: none;
   }
-}
-* {
-  outline: 1px solid red; /* Gạch viền toàn bộ phần tử để dễ thấy layout */
 }
