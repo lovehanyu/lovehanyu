@@ -1,1 +1,24 @@
+  <header class="site-header">      */📖header là một thẻ ngữ nghĩa HTML5, dùng để đánh dấu phần đầu trang web ; class="site-header" là tên lớp CSS, để bạn gán style riêng trong header.css*/
+  <div class="container">      */📖Dùng để căn giữa và giới hạn chiều rộng nội dung header (ví dụ: tối đa 1200px).container là một lớp bạn sẽ định nghĩa trong CSS, có thể dùng chung ở nhiều nơi.Tạo layout gọn gàng, không bị kéo dài toàn màn hình.*/
+    <a href="/index.html" class="logo">      */📖Thẻ a là liên kết, khi click sẽ đưa người dùng về trang chủ (index.html).class="logo" để bạn có thể style riêng phần logo. */Bên trong là thẻ <img> – ảnh logo.*/*/
+      <img src="/public/icons/logo.png" alt="Love Hanyu" />      */📖src trỏ tới đường dẫn ảnh logo。alt="Love Hanyu" là đoạn mô tả thay thế, hiển thị nếu ảnh lỗi hoặc cho công cụ đọc màn hình).*/
+    </a>
+    <nav class="main-nav">      */📖nav là một thẻ HTML5 ngữ nghĩa, dùng để chứa phần menu điều hướng.class="main-nav" giúp bạn gán CSS để định dạng menu.*/
 
+      */📖<ul>...</ul>*/
+      */📖ul (unordered list) là danh sách không thứ tự – dùng để liệt kê các mục trong menu.
+      Mỗi phần tử menu sẽ nằm trong thẻ li.li là một mục trong danh sách.*/
+      <ul>
+        <li><a href="/index.html">TRANG CHỦ</a></li>      
+        <li><a href="/page/about/">GIỚI THIỆU</a></li>      */📖 Bên trong là thẻ a, là một liên kết đến trang "Giới thiệu".*/
+        <li><a href="/page/schedule/">LỊCH KHAI GIẢNG</a></li>
+        <li><a href="/page/course/">KHOÁ HỌC</a></li>
+        <li><a href="/page/self-study/">TỰ HỌC</a></li>
+        <li><a href="/page/hsk-test/">THI THỬ HSK</a></li>
+        <li><a href="/page/document/">TÀI LIỆU</a></li>
+        <li><a href="/page/contact/">LIÊN HỆ</a></li>
+        <li><a href="/page/funny/">GIẢI TRÍ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
