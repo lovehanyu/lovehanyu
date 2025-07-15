@@ -1,20 +1,97 @@
-<header class="site-header">   <!-- 📖 header là phần đầu trang web -->
-  <div class="container">     <!-- 📖 Dùng để căn giữa và giới hạn chiều rộng -->
-    <a href="/index.html" class="logo">     <!-- 📖 Liên kết logo về trang chủ -->
-      <img src="/public/icons/logo.png" alt="Love Hanyu" />     <!-- 📖 Logo website -->
-    </a>
-    <nav class="main-nav">     <!-- 📖 Menu điều hướng -->
-      <ul>     <!-- 📖 Danh sách không thứ tự -->
-        <li><a href="/index.html">TRANG CHỦ</a></li>
-        <li><a href="/page/about/">GIỚI THIỆU</a></li>
-        <li><a href="/page/schedule/">LỊCH KHAI GIẢNG</a></li>
-        <li><a href="/page/course/">KHOÁ HỌC</a></li>
-        <li><a href="/page/self-study/">TỰ HỌC</a></li>
-        <li><a href="/page/hsk-test/">THI THỬ HSK</a></li>
-        <li><a href="/page/document/">TÀI LIỆU</a></li>
-        <li><a href="/page/contact/">LIÊN HỆ</a></li>
-        <li><a href="/page/funny/">GIẢI TRÍ</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Love Hanyu - Test Sticky Header</title>
+
+  <style>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Container giữ nội dung header */
+    .site-header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    /* Logo */
+    .logo img {
+      height: 48px;
+    }
+
+    /* Menu ngang */
+    .main-nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .main-nav a:hover {
+      color: #d62828;
+    }
+
+    * {
+      outline: 1px solid red; /* Test layout */
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    main {
+      padding: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/index.html" class="logo">
+        <img src="/public/icons/logo.png" alt="Love Hanyu" />
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/index.html">TRANG CHỦ</a></li>
+          <li><a href="/page/about/">GIỚI THIỆU</a></li>
+          <li><a href="/page/schedule/">LỊCH KHAI GIẢNG</a></li>
+          <li><a href="/page/course/">KHOÁ HỌC</a></li>
+          <li><a href="/page/self-study/">TỰ HỌC</a></li>
+          <li><a href="/page/hsk-test/">THI THỬ HSK</a></li>
+          <li><a href="/page/document/">TÀI LIỆU</a></li>
+          <li><a href="/page/contact/">LIÊN HỆ</a></li>
+          <li><a href="/page/funny/">GIẢI TRÍ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Trang chủ</h1>
+    <p>Cuộn xuống để kiểm tra sticky header.</p>
+    <div style="height: 2000px;"></div>
+  </main>
+
+</body>
+</html>
