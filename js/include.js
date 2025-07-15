@@ -1,29 +1,48 @@
-document.addEventListener("DOMContentLoaded", async function () {
-  await includeHTML("/components/header.html", "header-placeholder");
-  await includeHTML("/components/footer.html", "footer-placeholder");
+function includeHTML(callback) {
+  const elements = document.querySelectorAll("[w3-include-html]");
+  let total = elements.length;
 
-  // Nạp lại CSS cho header (rất quan trọng)
-  injectCSS("css/header.css");
+  if (total === 0) {
+    if (typeof callback === "function") callback();
+    return;
+  }
+
+  elements.forEach((el) => {
+    const file = el.getAttribute("w3-include-html");
+    if (file) {
+      fetch(file)
+        .then((res) => {
+          if (res.ok) return res.text();
+          else throw new Error("Không thể tải " + file);
+        })
+        .then((data) => {
+          el.innerHTML = data;
+          el.removeAttribute("w3-include-html");
+          total--;
+          if (total === 0 && typeof callback === "function") callback();
+        })
+        .catch((err) => {
+          el.innerHTML = "Lỗi khi tải file: " + err.message;
+          total--;
+          if (total === 0 && typeof callback === "function") callback();
+        });
+    } else {
+      total--;
+      if (total === 0 && typeof callback === "function") callback();
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  includeHTML(function () {
+    // ✅ Gắn sự kiện toggle menu sau khi đã nhúng xong
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const menu = document.querySelector("nav .menu");
+
+    if (toggleBtn && menu) {
+      toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("show");
+      });
+    }
+  });
 });
-
-function includeHTML(file, elementId) {
-  return fetch(file)
-    .then(response => {
-      if (!response.ok) throw new Error("Không tải được " + file);
-      return response.text();
-    })
-    .then(html => {
-      const container = document.getElementById(elementId);
-      container.innerHTML = html;
-    })
-    .catch(error => {
-      console.error("Lỗi khi nhúng:", error);
-    });
-}
-
-function injectCSS(href) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.href = href + "?v=" + new Date().getTime(); // chống cache
-  document.head.appendChild(link);
-}
