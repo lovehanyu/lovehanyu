@@ -6,13 +6,13 @@
 }
 
  .site-header {
-  height: auto;
-  overflow: visible;
-  /*position: relative;*/
-  font-family: 'Arial', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   background-color: white;
-
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* === TOP HEADER === */
@@ -35,11 +35,6 @@
 .logo-area .logo {
   width: 80px;
   margin-top: 0px;
-}
-.logo-area .domain {
-  font-size: 0.9rem;
-  color: #922ea9;
-  margin-top: 1px;
 }
 
 /* Slogan */
@@ -92,7 +87,7 @@
 
 /* === NAVIGATION === */
 .nav {
-  position: sticky;
+  position: relative;;
   top: 0;
   z-index: 999;
   background-color: #922ea9;
