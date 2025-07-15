@@ -1,10 +1,18 @@
-document.addEventListener("DOMContentLoaded", function () {
-  includeHTML("/components/header.html", "header-placeholder");
-  includeHTML("/components/footer.html", "footer-placeholder");
+document.addEventListener("DOMContentLoaded", async function () {
+  await includeHTML("/components/header.html", "header-placeholder");
+  await includeHTML("/components/footer.html", "footer-placeholder");
+
+  // Force reflow sau khi nhúng header (rất quan trọng cho sticky!)
+  const header = document.querySelector(".site-header");
+  if (header) {
+    header.style.display = "none";
+    header.offsetHeight; // Force layout
+    header.style.display = "block";
+  }
 });
 
 function includeHTML(file, elementId) {
-  fetch(file)
+  return fetch(file)
     .then(response => {
       if (!response.ok) throw new Error("Không tải được " + file);
       return response.text();
@@ -12,11 +20,6 @@ function includeHTML(file, elementId) {
     .then(html => {
       const container = document.getElementById(elementId);
       container.innerHTML = html;
-
-      // Force reflow (đảm bảo sticky hoạt động nếu render trễ)
-      container.style.display = "none";
-      container.offsetHeight; // Gây reflow
-      container.style.display = "block";
     })
     .catch(error => {
       console.error("Lỗi khi nhúng:", error);
