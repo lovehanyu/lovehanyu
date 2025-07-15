@@ -10,19 +10,15 @@ function includeHTML(file, elementId) {
       return response.text();
     })
     .then(html => {
-      document.getElementById(elementId).innerHTML = html;
+      const container = document.getElementById(elementId);
+      container.innerHTML = html;
+
+      // Force reflow (đảm bảo sticky hoạt động nếu render trễ)
+      container.style.display = "none";
+      container.offsetHeight; // Gây reflow
+      container.style.display = "block";
     })
     .catch(error => {
       console.error("Lỗi khi nhúng:", error);
     });
-  // Sau khi nhúng xong, gọi force repaint:
-.then(html => {
-  const container = document.getElementById(elementId);
-  container.innerHTML = html;
-
-  // Bắt browser render lại
-  container.style.display = "none";
-  container.offsetHeight; // force reflow
-  container.style.display = "block";
-})
 }
