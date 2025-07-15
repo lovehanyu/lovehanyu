@@ -1,1 +1,262 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+ .site-header {
+  height: auto;
+  overflow: visible;
+  /*position: relative;*/
+  font-family: 'Arial', sans-serif;
+  z-index: 1000;
+  background-color: white;
+
+}
+
+/* === TOP HEADER === */
+.top-header {
+  display: grid;
+  grid-template-columns: 1fr 5fr 4fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 20px;
+  background-color: #f5f5f5;
+}
+
+/* Logo + Domain */
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo-area .logo {
+  width: 80px;
+  margin-top: 0px;
+}
+.logo-area .domain {
+  font-size: 0.9rem;
+  color: #922ea9;
+  margin-top: 1px;
+}
+
+/* Slogan */
+.slogan-area {
+  text-align: left;
+}
+.slogan {
+  font-size: 2.2rem;
+  font-family: 'Pacifico', cursive;
+  color: #922ea9;
+  white-space: nowrap;
+}
+
+/* Contact Info */
+.contact-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-area a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.contact-area a:hover {
+  color: #922ea9; /* Tím chủ đạo khi hover */
+}
+
+.contact-area img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border-radius: 50%; /* Làm tròn icon */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-area img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* === NAVIGATION === */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #922ea9;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Menu trái */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 20px;
+  flex: 8;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.2rem;
+}
+.menu li {
+  position: relative;
+}
+
+/* ✅ Thêm hiệu ứng “nút bấm” cho menu chính */
+.menu > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.menu > li > a:hover {
+  background-color: white;
+  color: #922ea9;
+  border-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Giữ nguyên hiệu ứng dropdown */
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  display: block;
+}
+/* Không cần dòng này nữa nếu đã có .menu > li > a ở trên
+.menu a:hover {
+  color: #ffe6ff;
+}
+*/
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c682d8;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  z-index: 10;
+}
+.dropdown-content li a {
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.dropdown-content li a:hover {
+  background-color: #b24fc4;
+  color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Menu phải */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 2;
+}
+.login-btn {
+  color: #922ea9;
+  background-color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.login-btn:hover {
+  background-color: #ffe6ff;
+  color: #922ea9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+}
+.search-box input {
+  padding: 5px 30px 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.search-box img {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .top-header .slogan-area,
+  .top-header .contact-area {
+    display: none;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start; /* ✅ Căn trái nội dung */
+    text-align: left;        /* ✅ Căn trái chữ */
+    padding-left: 0.1rem;      /* ✅ Cách mép trái 1 chút (tuỳ chọn) */
+    width: 100%;
+  }
+
+  nav .menu.show {
+    display: flex;
+  }
+
+  nav .menu li {
+    width: 100%; /* ✅ Đảm bảo mỗi mục chiếm toàn bộ chiều ngang */
+  }
+
+  nav .menu a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav .menu li ul {
+    display: none;
+  }
+}

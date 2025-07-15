@@ -1,0 +1,54 @@
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .top-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .top-header .left,
+  .top-header .center,
+  .top-header .right {
+    width: 100%;
+    align-items: center;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #5c0d84;
+    text-align: center;
+  }
+
+  .main-menu.active {
+    display: flex;
+  }
+
+  .main-menu > li {
+    padding: 12px 0;
+  }
+
+  .main-menu > li .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  .search-login {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .login-button,
+  .search-box input {
+    width: 100%;
+  }
+}
