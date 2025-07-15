@@ -8,9 +8,10 @@
  .site-header {
   height: auto;
   overflow: visible;
-  /*position: relative;*/
+  position: sticky;
+  top: 0;
+  z-index: 999;
   font-family: 'Arial', sans-serif;
-  z-index: 1000;
   background-color: white;
 
 }
@@ -65,9 +66,7 @@
 
 /* === NAVIGATION === */
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
+
   background-color: #922ea9;
   padding: 10px 20px;
   display: flex;
