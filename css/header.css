@@ -1,20 +1,19 @@
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   background-color: white;
-  z-index: 999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Container để canh giữa và bố cục ngang */
+/* Container giữ nội dung header */
 .site-header .container {
   max-width: 1200px;
   margin: 0 auto;
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 16px;
 }
 
 /* Logo */
@@ -41,10 +40,6 @@
 
 .main-nav a:hover {
   color: #d62828;
-}
-
-html, body {
-  overflow-x: hidden;
 }
 * {
   outline: 1px solid red; /* Gạch viền toàn bộ phần tử để dễ thấy layout */
