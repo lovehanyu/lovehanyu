@@ -9,10 +9,10 @@ function includeHTML(file, elementId) {
       if (!response.ok) throw new Error("Không tải được " + file);
       return response.text();
     })
-    .then(data => {
-      document.getElementById(elementId).innerHTML = data;
+    .then(html => {
+      document.getElementById(elementId).innerHTML = html;
     })
     .catch(error => {
-      console.error("Lỗi:", error);
+      console.error("Lỗi khi nhúng:", error);
     });
 }
