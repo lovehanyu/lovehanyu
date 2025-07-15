@@ -42,3 +42,7 @@
 .main-nav a:hover {
   color: #d62828;
 }
+
+html, body {
+  overflow-x: hidden;
+}
