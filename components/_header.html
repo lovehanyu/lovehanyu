@@ -1,32 +1,44 @@
-<!-- TOP HEADER -->
-<div class="top-header">
-  <div class="logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" alt="Logo">
-    <p>www.lovehanyu.com</p>
+<header>
+  <!-- TOP: Logo, tên web, slogan -->
+  <div class="header-top">
+    <div class="left">
+      <img src="/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="center">
+      <h1 class="site-name">Học Tập 4.0</h1>
+      <p class="slogan">Kiến thức cho tương lai</p>
+    </div>
+    <div class="right">
+      <p>Email: lienhe@hoctap40.vn</p>
+      <p>Hotline: 0909 123 456</p>
+    </div>
   </div>
 
-  <div class="slogan">HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
-
-  <div class="contact">
-    <p>📞 0909 123 456</p>
-    <p>✉️ hello@lovehanyu.com</p>
+  <!-- MAIN: Tìm kiếm, đăng ký/đăng nhập -->
+  <div class="header-main">
+    <div class="left">
+      <form class="search-form">
+        <input type="text" placeholder="Tìm kiếm tài liệu, khoá học...">
+        <button type="submit">🔍</button>
+      </form>
+    </div>
+    <div class="center"></div>
+    <div class="right">
+      <a href="#" class="btn">Đăng nhập</a>
+      <a href="#" class="btn">Đăng ký</a>
+    </div>
   </div>
-</div>
 
-<!-- STICKY NAVIGATION -->
-<nav class="bottom-header">
-  <ul class="menu">
-    <li><a href="#">Trang chủ</a></li>
-    <li class="dropdown">
-      <a href="#">Khóa học</a>
-      <ul class="dropdown-content">
-        <li><a href="#">HSK 1</a></li>
-        <li><a href="#">HSK 2</a></li>
+  <!-- BOTTOM: Menu chính (cố định khi cuộn) -->
+  <div class="header-bot">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="#tai-lieu">Tài liệu</a></li>
+        <li><a href="#khoa-hoc">Khoá học</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
       </ul>
-    </li>
-    <li><a href="#">Tự học</a></li>
-    <li><a href="#">Thi thử</a></li>
-    <li><a href="#">Liên hệ</a></li>
-  </ul>
-</nav>
-
+    </nav>
+  </div>
+</header>
