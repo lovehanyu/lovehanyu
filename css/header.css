@@ -260,3 +260,6 @@
     display: none;
   }
 }
+* {
+  outline: 1px solid red; /* Gạch viền toàn bộ phần tử để dễ thấy layout */
+}
