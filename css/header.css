@@ -212,7 +212,7 @@
 }
 
 body {
-  padding-top: 130px; /* Điều chỉnh theo chiều cao thực tế của header */
+  padding-top: 100px; /* Điều chỉnh theo chiều cao thực tế của header */
 }
 
 /* Mobile Styles */
