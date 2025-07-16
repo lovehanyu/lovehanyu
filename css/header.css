@@ -139,7 +139,7 @@
 /* Giữ nguyên hiệu ứng dropdown */
 .menu a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: bold;
   padding: 5px 10px;
   display: block;
