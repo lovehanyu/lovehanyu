@@ -172,6 +172,8 @@
 .nav-right {
   display: flex;
   align-items: center;
+  justify-self: right; 
+  padding: 1px 10px;
   gap: 10px;
   flex: 2;
 }
