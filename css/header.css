@@ -18,7 +18,7 @@
 /* === TOP HEADER === */
 .top-header {
   display: grid;
-  grid-template-columns: 2fr 3fr 5fr;
+  grid-template-columns: 1fr 4fr 5fr;
   align-items: center;
   justify-content: start;
   padding: 0.1px 0.1px;
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-self: center;
+  justify-self: right;
   width: 50px;
   margin-top: 0.1px;
 }
@@ -40,6 +40,7 @@
   text-align: left;
 }
 .slogan {
+  justify-self: left;
   font-size: 1.2rem;
   font-family: 'Pacifico', cursive;
   color: #922ea9;
