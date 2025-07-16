@@ -30,10 +30,12 @@
 .logo-area {
   display: flex;
   flex-direction: column;
+  top: 0;
+  bot:0;
   align-items: center;
 }
 .logo-area .logo {
-  width: 60px;
+  width: 50px;
   margin-top: 0px;
 }
 
@@ -42,7 +44,7 @@
   text-align: left;
 }
 .slogan {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-family: 'Pacifico', cursive;
   color: #922ea9;
   white-space: nowrap;
