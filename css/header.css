@@ -33,6 +33,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  background-image: url('public/images/header-bg.png');
+  background-size: cover;            /* Tự động co giãn phù hợp */
+  background-position: center;       /* Căn giữa ảnh nền */
+  background-repeat: no-repeat;      /* Không lặp lại ảnh nền */
 }
 
 .logo-area img.logo {
