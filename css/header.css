@@ -33,6 +33,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: red;
   
   background-image: url('public/images/homepage-bg.jpg');
   background-size: cover;            /* Tự động co giãn phù hợp */
@@ -41,7 +42,6 @@ body {
 }
 
 .logo-area img.logo {
-  display: none;
   position: relative;
   z-index: 1;
   height: 80%;
