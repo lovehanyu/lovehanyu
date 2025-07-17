@@ -6,7 +6,7 @@
 }
 
 body {
-  padding-top: 70px; /* để tránh bị che bởi header fixed */
+  padding-top: 60px; /* để tránh bị che bởi header fixed */
 }
 
 .site-header {
