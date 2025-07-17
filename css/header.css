@@ -183,4 +183,6 @@ body {
   width: 16px;
 }
 
-
+* {
+  outline: 1px solid red !important;
+}
