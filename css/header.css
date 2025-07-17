@@ -126,7 +126,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 120%;
+  top: 200%;
   left: 0;
   background-color: #c682d8;
   min-width: 150px;
