@@ -29,6 +29,7 @@ body {
 /* Logo: trái (10%) */
 .logo-area {
   width: 10%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
