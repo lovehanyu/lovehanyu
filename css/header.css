@@ -33,21 +33,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  background-image:;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  overflow: hidden;
 }
+.logo-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
 
 .logo-area img.logo {
-  height: 80%;
-  max-height: 100%;
-  object-fit: contain;
   position: relative;
-  z-index: 1; /* cho ảnh logo lên trên nền */
-  background: transparent;
+  z-index: 1;
+  height: 80%;
+  object-fit: contain;
 }
 
 /* Main header: phải (90%) */
