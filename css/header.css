@@ -41,6 +41,7 @@ body {
 }
 
 .logo-area img.logo {
+  display: none;
   position: relative;
   z-index: 1;
   height: 80%;
