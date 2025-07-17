@@ -107,13 +107,13 @@ body {
   padding: 0 20px;
 }
 
-/* Menu: 80% */
+/* Menu: 75% */
 .menu {
   display: flex;
   gap: 5px;
   list-style: none;
   color: white;
-  width: 80%;
+  width: 75%;
   justify-content: flex-start;
 }
 .menu li a {
@@ -154,9 +154,9 @@ body {
   color: white;
 }
 
-/* Login + Search: 10% */
+/* Login + Search: 15% */
 .nav-right {
-  width: 10%;
+  width: 15%;
   display: flex;
   gap: 5px;
   align-items: center;
