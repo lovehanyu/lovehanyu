@@ -39,22 +39,14 @@
 
 <body>
   <!-- Header: sẽ được tự động nhúng & chỉ load 1 lần -->
-  <div id="site-header" w3-include-html="components/_header.html"></div>
+  <div w3-include-html="/components/_header.html"></div>
 
   <!-- Nội dung chính -->
-  <main id="page-content">
-    <section style="padding: 40px 20px; text-align: center;">
-      <h1 style="color: #922ea9; font-size: 2.5rem;">Chào mừng đến với Love Hanyu</h1>
-      <p style="max-width: 700px; margin: auto; font-size: 1.2rem;">
-        Đây là nơi bạn có thể học tiếng Trung một cách hiện đại, dễ hiểu và đầy cảm hứng.
-        Hãy bắt đầu hành trình cùng chúng tôi! 
+   <div id="main-content"></div>
         
-      </p>
-    </section>
-  </main>
 
   <!-- Footer: sẽ tự thêm sau -->
-  <div id="site-footer" w3-include-html="components/_footer.html"></div>
+  <div w3-include-html="/components/_footer.html"></div>
 
   <!-- JavaScript -->
   <script src="js/include.js"></script>
@@ -62,8 +54,7 @@
     includeHTML(); // Gọi hàm để tự động nhúng header + footer
   </script>
   
-  <!-- SPA Router: Giữ nguyên header/footer khi chuyển trang -->
-  <script src="js/spa-router.js" defer></script>
+  <script src="/js/router.js"></script> <!-- Script để load trang -->
   
 </body>
 </html>
