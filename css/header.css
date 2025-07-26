@@ -35,7 +35,7 @@ body {
   justify-content: center;
   
   background-image: url('../assets/images/logo-bg.jpg');
-  background-size: cover;            /* Tự động co giãn phù hợp */
+  background-size: contain;            /* Tự động co giãn phù hợp */
   background-position: center;       /* Căn giữa ảnh nền */
   background-repeat: no-repeat;      /* Không lặp lại ảnh nền */
 }
