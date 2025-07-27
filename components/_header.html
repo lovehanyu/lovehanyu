@@ -28,12 +28,34 @@
       <div class="main-header-bottom">
         <!-- Menu trái (7/10 chiều ngang) -->
         <ul class="menu">
-          <li><a hx-get="/pages/home.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">TRANG CHỦ</a></li>
-          <li><a hx-get="/pages/gioithieu/gioithieu.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">GIỚI THIỆU</a></li>
+          <li><a 
+            href="/pages/home.html"
+            hx-get="/pages/home.html"
+            hx-target="#main-content"
+            hx-swap="innerHTML"
+            hx-push-url="true"
+          >TRANG CHỦ</a></li>
+          
+          <li><a 
+            href="/pages/gioithieu/gioithieu.html"
+            hx-get="/pages/gioithieu/gioithieu.html"
+            hx-target="#main-content"
+            hx-swap="innerHTML"
+            hx-push-url="true"
+          >GIỚI THIỆU</a></li>
+          
           <li class="dropdown"><a href="#">KHOÁ HỌC</a>
             <ul class="dropdown-content">
               <li><a hx-get="/pages/khoahoc/nhapmon/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Nhập môn</a></li>
-              <li><a hx-get="/pages/khoahoc/socap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Sơ cấp</a></li>
+              
+              <li><a 
+                href="/pages/khoahoc/socap/index.html"
+                hx-get="/pages/khoahoc/socap/index.html"
+                hx-target="#main-content"
+                hx-swap="innerHTML"
+                hx-push-url="true"
+                >Sơ cấp</a></li>
+              
               <li><a hx-get="/pages/khoahoc/trungcap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Trung cấp</a></li>
               <li><a hx-get="/pages/khoahoc/caocap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Cao cấp</a></li>
             </ul>
@@ -48,7 +70,14 @@
           <li class="dropdown">
             <a href="#">TỰ HỌC ONLINE</a>
             <ul class="dropdown-content">
-              <li><a hx-get="/tuhoc/tu-vung/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Từ vựng</a></li>
+              <li><a 
+                href="/tuhoc/tu-vung/index.html"
+                hx-get="/tuhoc/tu-vung/index.html"
+                hx-target="#main-content"
+                hx-swap="innerHTML"
+                hx-push-url="true"
+                >Từ vựng</a></li>
+
               <li><a hx-get="/tuhoc/ngu-phap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Ngữ pháp</a></li>
               <li><a hx-get="/tuhoc/luyen-nghe/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Luyện nghe</a></li>
             </ul>
