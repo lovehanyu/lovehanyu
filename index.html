@@ -34,6 +34,15 @@
   </style>
 </head>
 
+<script>
+  function closeModal(event) {
+    const modal = document.getElementById('modal-overlay');
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
 <body>
   <!-- HEADER -->
   <div id="header">
