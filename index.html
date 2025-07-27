@@ -17,10 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+  <!-- Thư viện HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.5"></script>
 
   <style>
     body {
@@ -33,17 +32,140 @@
       text-decoration: none;
     }
   </style>
-  
-  <!-- Script JavaScript điều khiển menu mobile -->
-  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <!-- Header: sẽ được tự động nhúng & chỉ load 1 lần -->
-  <div w3-include-html="/components/_header.html"></div>
+  <!-- HEADER -->
+  <div id="header">
+   <header class="site-header">
+   <div class="top-header">
+     <!-- Logo (1/10 chiều ngang, toàn bộ chiều cao) -->
+     <div class="logo-area">
+       <img src="/assets/icons/logo.png" alt="Logo" class="logo" />
+     </div>
+
+     <!-- Main header (9/10 chiều ngang) -->
+     <div class="main-header">
+       <!-- Top: slogan & contact (2/5 chiều cao) -->
+       <div class="main-header-top">
+         <div class="slogan-area">
+           <div class="slogan">LOVE HANYU ~ HÃY YÊU NGÔN NGỮ BẠN ĐANG HỌC!</div>
+         </div>
+         <div class="contact-area">
+           <span>www.lovehanyu.com</span>
+           <img src="/assets/icons/redphone.png" alt="Phone" />
+           <span>0123456987 / 987654321</span>
+           <img src="/assets/icons/mail.png" alt="Mail" />
+           <span>lovehanyu@gmail.com</span>
+           <a href="#"><img src="/assets/icons/fb.png" alt="Facebook" /></a>
+           <a href="#"><img src="/assets/icons/youtube.png" alt="YouTube" /></a>
+           <a href="#"><img src="/assets/icons/tiktok.png" alt="TikTok" /></a>
+         </div>
+       </div>
+ 
+       <!-- Bottom: menu, login, search (3/5 chiều cao) -->
+       <div class="main-header-bottom">
+         <!-- Menu trái (7/10 chiều ngang) -->
+         <ul class="menu">
+           <li><a 
+             href="/pages/home.html"
+             hx-get="/pages/home.html"
+             hx-target="#main-content"
+             hx-swap="innerHTML"
+             hx-push-url="true"
+           >TRANG CHỦ</a></li>
+          
+           <li><a 
+             href="/pages/gioithieu/gioithieu.html"
+             hx-get="/pages/gioithieu/gioithieu.html"
+             hx-target="#main-content"
+             hx-swap="innerHTML"
+             hx-push-url="true"
+           >GIỚI THIỆU</a></li>
+          
+           <li class="dropdown"><a href="#">KHOÁ HỌC</a>
+             <ul class="dropdown-content">
+               <li><a hx-get="/pages/khoahoc/nhapmon/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Nhập môn</a></li>
+               
+               <li><a 
+                 href="/pages/khoahoc/socap/index.html"
+                 hx-get="/pages/khoahoc/socap/index.html"
+                 hx-target="#main-content"
+                 hx-swap="innerHTML"
+                 hx-push-url="true"
+                 >Sơ cấp</a></li>
+              
+               <li><a hx-get="/pages/khoahoc/trungcap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Trung cấp</a></li>
+               <li><a hx-get="/pages/khoahoc/caocap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Cao cấp</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">LỊCH KHAI GIẢNG</a>
+             <ul class="dropdown-content">
+               <li><a href="#">Tháng này</a></li>
+               <li><a href="#">Tháng sau</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">TỰ HỌC ONLINE</a>
+             <ul class="dropdown-content">
+               <li><a 
+                 href="/tuhoc/tu-vung/index.html"
+                 hx-get="/tuhoc/tu-vung/index.html"
+                 hx-target="#main-content"
+                 hx-swap="innerHTML"
+                 hx-push-url="true"
+                 >Từ vựng</a></li>
+
+               <li><a hx-get="/tuhoc/ngu-phap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Ngữ pháp</a></li>
+               <li><a hx-get="/tuhoc/luyen-nghe/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Luyện nghe</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">THI THỬ HSK</a>
+             <ul class="dropdown-content">
+               <li><a hx-get="/hsk/level-1-3/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">HSK 1-3</a></li>
+               <li><a hx-get="/hsk/level-4-6/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">HSK 4-6</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">BÀI VIẾT</a>
+            <ul class="dropdown-content">
+               <li><a hx-get="/baiviet/ngu-phap.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Học ngữ pháp</a></li>
+               <li><a hx-get="/baiviet/kinh-nghiem.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Kinh nghiệm</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">TÀI LIỆU</a>
+             <ul class="dropdown-content">
+               <li><a hx-get="/tailieu/giaotrinh.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Giáo trình</a></li>
+               <li><a hx-get="/tailieu/pdf.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">PDF tải về</a></li>
+             </ul>
+           </li>
+           <li class="dropdown">
+             <a href="#">GIẢI TRÍ</a>
+             <ul class="dropdown-content">
+               <li><a hx-get="/giaitri/trochoi.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Trò chơi</a></li>
+               <li><a hx-get="/giaitri/video.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Video</a></li>
+             </ul>
+           </li>
+         </ul>
+ 
+         <!-- Login + Search phải (2/10 chiều ngang) -->
+         <div class="nav-right">
+           <a hx-get="/dangnhap.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true" class="login-btn">ĐĂNG NHẬP</a>
+           <div class="search-box">
+             <input type="text" placeholder="Tìm kiếm..." />
+             <img src="/assets/icons/find.png" alt="Tìm kiếm" />
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </div>
 
   <!-- Nội dung chính: sẽ dùng HTMX để tải nội dung -->
-   <main id="main-content"
+  <main id="main-content" style="min-height: 80vh;">
         hx-get="/pages/home.html"
         hx-trigger="load"
         hx-target="#main-content"
@@ -51,13 +173,8 @@
   </main>
         
 
-  <!-- Footer: sẽ tự thêm sau -->
-  <div w3-include-html="/components/_footer.html"></div>
+  <!-- FOOTER -->
+  <div id="footer">
 
-  <!-- JavaScript include -->
-  <script src="js/include.js"></script>
-
-  <!-- Thư viện HTMX -->
-  <script src="https://unpkg.com/htmx.org@1.9.5"></script>
 </body>
 </html>
