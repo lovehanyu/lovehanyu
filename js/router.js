@@ -1,30 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const mainContent = document.getElementById('main-content');
-
-  async function loadPage(path) {
+async function loadPage(path) {
+  try {
     const res = await fetch(path);
+    if (!res.ok) throw new Error('Không thể tải trang');
     const html = await res.text();
-    mainContent.innerHTML = html;
+    document.getElementById('main-content').innerHTML = html;
+
     window.history.pushState({}, '', path);
-    window.scrollTo(0, 0); // Cuộn lên đầu
+    window.scrollTo(0, 0);
+  } catch (err) {
+    document.getElementById('main-content').innerHTML = '<h2>Trang không tồn tại</h2>';
   }
+}
 
-  // Xử lý click vào các link nội bộ
-  document.body.addEventListener('click', (e) => {
-    const target = e.target.closest('a');
-    if (target && target.getAttribute('href')?.startsWith('/khoahoc')) {
-      e.preventDefault();
-      loadPage(target.getAttribute('href'));
-    }
-  });
-
-  // Khi người dùng bấm back/forward
-  window.addEventListener('popstate', () => {
-    loadPage(location.pathname);
-  });
-
-  // Load trang hiện tại nếu không phải index.html
-  if (location.pathname !== '/' && location.pathname !== '/index.html') {
-    loadPage(location.pathname);
+document.body.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (
+    link &&
+    link.getAttribute('href')?.startsWith('/') &&
+    !link.getAttribute('href').includes('.') // bỏ qua .pdf, .jpg, .mp3...
+  ) {
+    e.preventDefault();
+    loadPage(link.getAttribute('href'));
   }
 });
+
+window.addEventListener('popstate', () => {
+  loadPage(location.pathname);
+});
+
+if (location.pathname !== '/' && location.pathname !== '/index.html') {
+  loadPage(location.pathname);
+}
+
