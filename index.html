@@ -205,11 +205,12 @@
   </div>
 
   <!-- Nội dung chính: sẽ dùng HTMX để tải nội dung -->
-  <main id="main-content" style="min-height: 80vh;">
-        hx-get="pages/home.html"
-        hx-trigger="load"
-        hx-target="#main-content"
-        hx-swap="innerHTML">
+  <main id="main-content"
+      hx-get="pages/home.html"
+      hx-trigger="load"
+      hx-target="#main-content"
+      hx-swap="innerHTML"
+      style="min-height: 80vh;">
   </main>
         
 
