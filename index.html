@@ -193,12 +193,14 @@
          <!-- Login + Search phải (2/10 chiều ngang) -->
          <div class="nav-right">
            <a 
+             href="#"
              hx-get="/components/_login.html"
-             hx-target="#main-content"
+             hx-target="#modal-overlay"
              hx-swap="innerHTML"
-             hx-push-url="true" 
+             onclick="document.getElementById('modal-overlay').style.display = 'flex'"
              class="login-btn"
            >ĐĂNG NHẬP</a>
+
            
            <div class="search-box">
              <input type="text" placeholder="Tìm kiếm..." />
