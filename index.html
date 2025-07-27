@@ -236,5 +236,26 @@
   <!-- FOOTER -->
   <div id="footer">
 
+    <!-- Script xử lý tự động tải nội dung theo URL -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const path = window.location.pathname;
+
+      // Nếu truy cập trang chủ thì dùng home.html
+      let filePath = "pages/home.html";
+
+      if (path !== "/" && path !== "") {
+        // Xử lý URL → file path tương ứng
+        filePath = "pages" + path + (path.endsWith("/") ? "index.html" : "/index.html");
+      }
+
+      const main = document.getElementById("main-content");
+      if (main) {
+        main.setAttribute("hx-get", filePath);
+        main.setAttribute("hx-trigger", "load");
+      }
+    });
+  </script>
+    
 </body>
 </html>
