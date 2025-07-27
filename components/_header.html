@@ -28,64 +28,64 @@
       <div class="main-header-bottom">
         <!-- Menu trái (7/10 chiều ngang) -->
         <ul class="menu">
-          <li><a href="/">TRANG CHỦ</a></li>
-          <li><a href="/pages/gioithieu/gioithieu.html">GIỚI THIỆU</a></li>
+          <li><a hx-get="/pages/home.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">TRANG CHỦ</a></li>
+          <li><a hx-get="/pages/gioithieu/gioithieu.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">GIỚI THIỆU</a></li>
           <li class="dropdown"><a href="#">KHOÁ HỌC</a>
             <ul class="dropdown-content">
-	      <li><a href="/pages/khoahoc/socap/index.html">Nhập môn</a></li>
-              <li><a href="/pages/khoahoc/socap/index.html">Sơ cấp</a></li>
-              <li><a href="/pages/khoahoc/trungcap/index.html">Trung cấp</a></li>
-              <li><a href="/pages/khoahoc/caocap/index.html">Cao cấp</a></li>
+              <li><a hx-get="/pages/khoahoc/nhapmon/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Nhập môn</a></li>
+              <li><a hx-get="/pages/khoahoc/socap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Sơ cấp</a></li>
+              <li><a hx-get="/pages/khoahoc/trungcap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Trung cấp</a></li>
+              <li><a hx-get="/pages/khoahoc/caocap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Cao cấp</a></li>
             </ul>
-          	    </li>
-	    <li class="dropdown">
-	      <a href="#">LỊCH KHAI GIẢNG</a>
-	      <ul class="dropdown-content">
-	        <li><a href="#">Tháng này</a></li>
-	        <li><a href="#">Tháng sau</a></li>
-	      </ul>
-	    </li>
-	    <li class="dropdown">
-	      <a href="#">TỰ HỌC ONLINE</a>
-	      <ul class="dropdown-content">
-	        <li><a href="/tuhoc/tu-vung/index.html">Từ vựng</a></li>
-	        <li><a href="/tuhoc/ngu-phap/index.html">Ngữ pháp</a></li>
-		<li><a href="/tuhoc/luyen-nghe/index.html">Luyện nghe</a></li>      
-	      </ul>
-	    </li>
-	    <li class="dropdown">
-	      <a href="#">THI THỬ HSK</a>
-	      <ul class="dropdown-content">
-	        <li><a href="/hsk/level-1-3/index.html">HSK 1-3</a></li>
-	        <li><a href="/hsk/level-4-6/index.html">HSK 4-6</a></li>
-	      </ul>
-	    </li>
-	    <li class="dropdown">
-	      <a href="#">BÀI VIẾT</a>
-	      <ul class="dropdown-content">
-	        <li><a href="/baiviet/ngu-phap.html">Học ngữ pháp</a></li>
-	        <li><a href="/baiviet/kinh-nghiem.html">Kinh nghiệm</a></li>
-	      </ul>
-	    </li>
-        <li class="dropdown">
-	      <a href="#">TÀI LIỆU</a>
-	      <ul class="dropdown-content">
-	        <li><a href="/tailieu/giaotrinh.html">Giáo trình</a></li>
-	        <li><a href="/tailieu/pdf.html">PDF tải về</a></li>
-	      </ul>
-	    </li>
-	    <li class="dropdown">
-	      <a href="#">GIẢI TRÍ</a>
-	      <ul class="dropdown-content">
-	        <li><a href="/giaitri/trochoi.html">Trò chơi</a></li>
-	        <li><a href="/giaitri/video.html">Video</a></li>
-	      </ul>
-	    </li>
-	  </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">LỊCH KHAI GIẢNG</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Tháng này</a></li>
+              <li><a href="#">Tháng sau</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">TỰ HỌC ONLINE</a>
+            <ul class="dropdown-content">
+              <li><a hx-get="/tuhoc/tu-vung/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Từ vựng</a></li>
+              <li><a hx-get="/tuhoc/ngu-phap/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Ngữ pháp</a></li>
+              <li><a hx-get="/tuhoc/luyen-nghe/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Luyện nghe</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">THI THỬ HSK</a>
+            <ul class="dropdown-content">
+              <li><a hx-get="/hsk/level-1-3/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">HSK 1-3</a></li>
+              <li><a hx-get="/hsk/level-4-6/index.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">HSK 4-6</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">BÀI VIẾT</a>
+            <ul class="dropdown-content">
+              <li><a hx-get="/baiviet/ngu-phap.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Học ngữ pháp</a></li>
+              <li><a hx-get="/baiviet/kinh-nghiem.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Kinh nghiệm</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">TÀI LIỆU</a>
+            <ul class="dropdown-content">
+              <li><a hx-get="/tailieu/giaotrinh.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Giáo trình</a></li>
+              <li><a hx-get="/tailieu/pdf.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">PDF tải về</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">GIẢI TRÍ</a>
+            <ul class="dropdown-content">
+              <li><a hx-get="/giaitri/trochoi.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Trò chơi</a></li>
+              <li><a hx-get="/giaitri/video.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true">Video</a></li>
+            </ul>
+          </li>
+        </ul>
 
         <!-- Login + Search phải (2/10 chiều ngang) -->
         <div class="nav-right">
-          <a href="/dangnhap.html" class="login-btn">ĐĂNG NHẬP</a>
+          <a hx-get="/dangnhap.html" hx-target="#main-content" hx-swap="innerHTML" hx-push-url="true" class="login-btn">ĐĂNG NHẬP</a>
           <div class="search-box">
             <input type="text" placeholder="Tìm kiếm..." />
             <img src="/assets/icons/find.png" alt="Tìm kiếm" />
