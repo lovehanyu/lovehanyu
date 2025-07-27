@@ -6,7 +6,7 @@
   <!-- SEO cơ bản -->
   <title>Love Hanyu - Học tiếng Trung dễ dàng</title>
   <meta name="description" content="Chia sẻ kinh nghiệm học và dạy tiếng Trung từ cơ bản đến nâng cao. Tài liệu, đề thi, giải trí, luyện thi HSK hiệu quả.">
-  <meta name="keywords" content="học tiếng Trung, tiếng Trung, luyện thi HSK, tự học Hán ngữ, LoveHanyu">
+  <meta name="keywords" content="học tiếng Trung, tiếng Trung online, luyện thi HSK, tự học Hán ngữ, LoveHanyu, Yêu tiếng Trung">
   <meta name="author" content="Love Hanyu Team">
 
   <!-- Favicon (nếu có) -->
@@ -33,6 +33,7 @@
       text-decoration: none;
     }
   </style>
+  
   <!-- Script JavaScript điều khiển menu mobile -->
   <script src="js/main.js" defer></script>
 </head>
@@ -41,23 +42,22 @@
   <!-- Header: sẽ được tự động nhúng & chỉ load 1 lần -->
   <div w3-include-html="/components/_header.html"></div>
 
-  <!-- Nội dung chính -->
-   <div id="main-content"></div>
+  <!-- Nội dung chính: sẽ dùng HTMX để tải nội dung -->
+   <main id="main-content"
+        hx-get="/pages/home.html"
+        hx-trigger="load"
+        hx-target="#main-content"
+        hx-swap="innerHTML">
+  </main>
         
 
   <!-- Footer: sẽ tự thêm sau -->
   <div w3-include-html="/components/_footer.html"></div>
 
-  <!-- JavaScript -->
+  <!-- JavaScript include -->
   <script src="js/include.js"></script>
-  <script>
-    includeHTML(() => {
-      // Gọi router sau khi header/footer đã được nhúng
-      const script = document.createElement('script');
-      script.src = '/js/router.js';
-      document.body.appendChild(script);
-    });
-  </script>
-  
+
+  <!-- Thư viện HTMX -->
+  <script src="https://unpkg.com/htmx.org@1.9.5"></script>
 </body>
 </html>
